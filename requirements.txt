@@ -1,0 +1,6 @@
+streamlit
+pandas
+streamlit_authenticator
+yaml
+plotly
+json

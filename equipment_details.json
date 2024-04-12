@@ -1,0 +1,467 @@
+{
+    "Central Lab, 5th floor": {
+        "Refrigerated Incubator Shaker": {
+            "image": "Refrigerated_Incubator_Shaker.jpg",
+            "details": "Innova 4340, NEW BRUNSWICK SCIENTIFIC.",
+            "enabled": true
+        },
+        "Centrifuge (swing rotor)": {
+            "image": "Centrifuge.jpg",
+            "details": "Megafuge8, Thermo Scientific",
+            "enabled": true
+        },
+        "Incubator Shaker 1": {
+            "image": "Incubator_Shaker_1.jpg",
+            "details": "MaxQ 8000, Thermo Scientific",
+            "enabled": true
+        },
+        "Incubator Shaker 2": {
+            "image": "Incubator_Shaker_2.jpg",
+            "details": "MaxQ 8000, Thermo Scientific",
+            "enabled": true
+        }
+    },
+    "Microscope Room, 5th floor": {
+        "Stereo Microscope": {
+            "image": "Stereo_Microscope.jpg",
+            "details": "ZEISS",
+            "enabled": true
+        },
+        "Fluorescence Microscope": {
+            "image": "Fluorescence_Microscope.jpg",
+            "details": "Axioplan2 ZEISS",
+            "enabled": true
+        },
+        "Fluorescence Microscope (Contact before use)": {
+            "image": "Fluorescence_Microscope_Contact_Before_Use.jpg",
+            "details": "Thunder Imager LEICA. Contact \u0e2d.\u0e28\u0e38\u0e20\u0e0a\u0e31\u0e22 before use.",
+            "enabled": true
+        },
+        "-80 Freezer": {
+            "image": "-80_Freezer.jpg",
+            "details": "Forma Scientific",
+            "enabled": true
+        }
+    },
+    "Hallway, 6th floor": {
+        "Autoclave 1": {
+            "image": "Autoclave_1.jpg",
+            "details": "SX-700E TOMY",
+            "enabled": true
+        },
+        "Autoclave 2": {
+            "image": "Autoclave_2.jpg",
+            "details": "SS-325 TOMY",
+            "enabled": true
+        },
+        "Autoclave 3 Out of service": {
+            "image": "Autoclave_3_Out_of_service.jpg",
+            "details": "SX-700 TOMY",
+            "enabled": false
+        },
+        "Autoclave 4 Out of service": {
+            "image": "Autoclave_4_Out_of_service.jpg",
+            "details": "SS-325 TOMY",
+            "enabled": false
+        },
+        "Isotemp Oven": {
+            "image": "Isotemp_Oven.jpg",
+            "details": "Fisher Scientific",
+            "enabled": true
+        },
+        "Incubator": {
+            "image": "Incubator.jpg",
+            "details": "LI20-2 SHEL LAB",
+            "enabled": true
+        }
+    },
+    "Central Lab, 6th floor": {
+        "Gel Doc": {
+            "image": "Gel_Doc.jpg",
+            "details": "Universal Hood II BIO RAD",
+            "enabled": true
+        },
+        "UV Cabinet": {
+            "image": "UV_Cabinet.jpg",
+            "details": "Vilber Lourmat",
+            "enabled": true
+        },
+        "Fume Hood": {
+            "image": "Fume_Hood.jpg",
+            "details": "",
+            "enabled": true
+        },
+        "UV/VIS Spectrometer": {
+            "image": "UV_VIS_Spectrometer.jpg",
+            "details": "Lambda Bio PERKIN ELMER",
+            "enabled": true
+        },
+        "Gene Pulser Xcell Electroporation": {
+            "image": "Gene_Pulser_Xcell_Electroporation.jpg",
+            "details": "BIO RAD",
+            "enabled": true
+        },
+        "BioSpectrometer": {
+            "image": "BioSpectrometer.jpg",
+            "details": "eppendorf",
+            "enabled": true
+        },
+        "C-Digit Blot Scanner": {
+            "image": "C-Digit_Blot_Scanner.jpg",
+            "details": "LI-COR",
+            "enabled": true
+        },
+        "Trans-Blot Turbo": {
+            "image": "Trans-Blot_Turbo.jpg",
+            "details": "BIO RAD",
+            "enabled": true
+        },
+        "Homogenizer": {
+            "image": "Homogenizer.jpg",
+            "details": "",
+            "enabled": true
+        },
+        "Ultrasonic Processors": {
+            "image": "Ultrasonic_Processors.jpg",
+            "details": "Sonics Vibra Cell",
+            "enabled": true
+        },
+        "CO2 Incubator": {
+            "image": "CO2_Incubator.jpg",
+            "details": "2400 Shel lab",
+            "enabled": true
+        },
+        "Incubator Shaker": {
+            "image": "Incubator_Shaker.jpg",
+            "details": "SI-600R Lab Companion",
+            "enabled": true
+        },
+        "Incubator 1": {
+            "image": "Incubator_1.jpg",
+            "details": "MEMMERT",
+            "enabled": true
+        },
+        "Incubator 2": {
+            "image": "Incubator_2.jpg",
+            "details": "MEMMERT",
+            "enabled": true
+        },
+        "Incubator 3": {
+            "image": "Incubator_3.jpg",
+            "details": "1525 Shel lab",
+            "enabled": true
+        },
+        "Incubator 4": {
+            "image": "Incubator_4.jpg",
+            "details": "SANYO",
+            "enabled": true
+        },
+        "Water Bath 1": {
+            "image": "Water_Bath_1.jpg",
+            "details": "SBD50 HETO",
+            "enabled": true
+        },
+        "Water Bath 2": {
+            "image": "Water_Bath_2.jpg",
+            "details": "MEMMERT",
+            "enabled": true
+        },
+        "Heat Block": {
+            "image": "Heat_Block.jpg",
+            "details": "Bioer",
+            "enabled": true
+        },
+        "Magnetic Stirrer": {
+            "image": "Magnetic_Stirrer.jpg",
+            "details": "Clifton",
+            "enabled": true
+        },
+        "TissueLyser II": {
+            "image": "TissueLyser_II.jpg",
+            "details": "QIAGEN",
+            "enabled": true
+        },
+        "Vacuum Pump": {
+            "image": "Vacuum_Pump.jpg",
+            "details": "MZ 2C Vacuubrand",
+            "enabled": true
+        },
+        "Mini Plate Spinner": {
+            "image": "Mini_Plate_Spinner.jpg",
+            "details": "mps1000 Labnet",
+            "enabled": true
+        },
+        "Tube Mill Control": {
+            "image": "Tube_Mill_Control.jpg",
+            "details": "IKA",
+            "enabled": true
+        },
+        "Digital Dry Bath 1": {
+            "image": "Digital_Dry_Bath_1.jpg",
+            "details": "Labnet",
+            "enabled": true
+        },
+        "Digital Dry Bath 2": {
+            "image": "Digital_Dry_Bath_2.jpg",
+            "details": "Miulab",
+            "enabled": true
+        },
+        "Digital Dry Bath 3": {
+            "image": "Digital_Dry_Bath_3.jpg",
+            "details": "Miulab",
+            "enabled": true
+        },
+        "pH Meter 1": {
+            "image": "pH_Meter_1.jpg",
+            "details": "pH100 IONIX",
+            "enabled": true
+        },
+        "pH Meter 2": {
+            "image": "pH_Meter_2.jpg",
+            "details": "PL-700PC EZDO GONDO",
+            "enabled": true
+        },
+        "NANODROP 1": {
+            "image": "NANODROP_1.jpg",
+            "details": "NANODROP 2000 Thermo Scientific",
+            "enabled": true
+        },
+        "NANODROP 2": {
+            "image": "NANODROP_2.jpg",
+            "details": "NANODROP ONE Thermo Scientific",
+            "enabled": true
+        },
+        "Automated Cell Counter": {
+            "image": "Automated_Cell_Counter.jpg",
+            "details": "TC20 BIO RAD",
+            "enabled": true
+        },
+        "Speed Vacuum Concentrator": {
+            "image": "Speed_Vacuum_Concentrator.jpg",
+            "details": "",
+            "enabled": true
+        },
+        "Microcentrifuge 1": {
+            "image": "Microcentrifuge_1.jpg",
+            "details": "Scanspeed mini LABOGENE",
+            "enabled": true
+        },
+        "Microcentrifuge 2": {
+            "image": "Microcentrifuge_2.jpg",
+            "details": "Prism Labnet",
+            "enabled": true
+        },
+        "Centrifuge 1": {
+            "image": "Centrifuge_1.jpg",
+            "details": "Megafuge8 Thermo Scientific",
+            "enabled": true
+        },
+        "Centrifuge 2": {
+            "image": "Centrifuge_2.jpg",
+            "details": "Legend Micro 17 Thermo Scientific",
+            "enabled": true
+        },
+        "Centrifuge 3": {
+            "image": "Centrifuge_3.jpg",
+            "details": "Pico 21 Thermo Scientific",
+            "enabled": true
+        },
+        "Centrifuge 4": {
+            "image": "Centrifuge_4.jpg",
+            "details": "HERMLE",
+            "enabled": true
+        },
+        "Centrifuge 5": {
+            "image": "Centrifuge_5.jpg",
+            "details": "Centurion",
+            "enabled": true
+        },
+        "Refrigerated Centrifuge 1": {
+            "image": "Refrigerated_Centrifuge_1.jpg",
+            "details": "5418 R eppendorf",
+            "enabled": true
+        },
+        "Refrigerated Centrifuge 2": {
+            "image": "Refrigerated_Centrifuge_2.jpg",
+            "details": "5418 R eppendorf",
+            "enabled": true
+        },
+        "Refrigerated Centrifuge 3": {
+            "image": "Refrigerated_Centrifuge_3.jpg",
+            "details": "Allegra 25R BECKMAN COULTER",
+            "enabled": true
+        },
+        "Refrigerated Centrifuge 4": {
+            "image": "Refrigerated_Centrifuge_4.jpg",
+            "details": "4-16KS SIGMA",
+            "enabled": true
+        },
+        "Refrigerated Centrifuge 5": {
+            "image": "Refrigerated_Centrifuge_5.jpg",
+            "details": "4-16KS SIGMA",
+            "enabled": true
+        },
+        "Low Temperature Circulator": {
+            "image": "Low_Temperature_Circulator.jpg",
+            "details": "N1-2RC",
+            "enabled": true
+        },
+        "Hot Plate 1": {
+            "image": "Hot_Plate_1.jpg",
+            "details": "",
+            "enabled": true
+        },
+        "Hot Plate 2": {
+            "image": "Hot_Plate_2.jpg",
+            "details": "",
+            "enabled": true
+        },
+        "UV Transilluminator": {
+            "image": "UV_Transilluminator.jpg",
+            "details": "",
+            "enabled": true
+        },
+        "Spindown": {
+            "image": "Spindown.jpg",
+            "details": "",
+            "enabled": true
+        },
+        "Analytical Balance": {
+            "image": "Analytical_Balance_1.jpg",
+            "details": "TC-205 Denver Instrument Company",
+            "enabled": true
+        },
+        "Analytical Balance 2": {
+            "image": "Analytical_Balance_2.jpg",
+            "details": "Adventurer OHAUS",
+            "enabled": true
+        },
+        "Analytical Balance 3": {
+            "image": "Analytical_Balance_3.jpg",
+            "details": "ME204T/00 METTLER TOLEDO",
+            "enabled": true
+        },
+        "Laminar flow": {
+            "image": "Laminar_flow.jpg",
+            "details": "",
+            "enabled": true
+        },
+        "Bombard (Contact before use)": {
+            "image": "Bombard.jpg",
+            "details": "PDS-100/He BIO RAD",
+            "enabled": true
+        },
+        "FPLC (Contact before use)": {
+            "image": "FPLC.jpg",
+            "details": "AKTA go Cytiva",
+            "enabled": true
+        }
+    },
+    "PCR Machines": {
+        "PCR 1": {
+            "image": "PCR_1.jpg",
+            "details": "T-Personal 48 BIOMETRA",
+            "enabled": true
+        },
+        "PCR 2": {
+            "image": "PCR_2.jpg",
+            "details": "T-Personal 48 BIOMETRA",
+            "enabled": true
+        },
+        "PCR 3": {
+            "image": "PCR_3.jpg",
+            "details": "T-Personal 48 BIOMETRA",
+            "enabled": true
+        },
+        "PCR 4 Out of service": {
+            "image": "PCR_4.jpg",
+            "details": "",
+            "enabled": false
+        },
+        "PCR 5 Out of service": {
+            "image": "PCR_5.jpg",
+            "details": "T100 Thermal Cycler BIO RAD",
+            "enabled": false
+        },
+        "PCR 6": {
+            "image": "PCR_6.jpg",
+            "details": "T100 Thermal Cycler BIO RAD",
+            "enabled": true
+        },
+        "PCR 7 (Contact Before Use:Lab 4612) Out of service": {
+            "image": "PCR_7.jpg",
+            "details": "S1000 Thermal Cycler BIO RAD",
+            "enabled": false
+        },
+        "PCR 7.1 Out of service": {
+            "image": "PCR_7_1.jpg",
+            "details": "Mastercycle nexus eppendorf",
+            "enabled": false
+        },
+        "PCR 7.2 Out of service": {
+            "image": "PCR_7_2.jpg",
+            "details": "Mastercycle nexus eco eppendorf",
+            "enabled": false
+        },
+        "PCR 7.3 Out of service": {
+            "image": "PCR_7_3.jpg",
+            "details": "Mastercycle nexus eco eppendorf",
+            "enabled": false
+        },
+        "PCR 8 (Contact Before Use:Lab 4612)": {
+            "image": "PCR_8.jpg",
+            "details": "T100 Thermal Cycler BIO RAD",
+            "enabled": true
+        },
+        "PCR 8.1 Out of service": {
+            "image": "PCR_8_1.jpg",
+            "details": "Mastercycle nexus eppendorf",
+            "enabled": false
+        },
+        "PCR 8.2 Out of service": {
+            "image": "PCR_8_2.jpg",
+            "details": "Mastercycle nexus eco eppendorf",
+            "enabled": false
+        },
+        "PCR 8.3 Out of service": {
+            "image": "PCR_8_3.jpg",
+            "details": "Mastercycle nexus eco eppendorf",
+            "enabled": false
+        },
+        "PCR 9A (Contact Before Use:Lab 4612) Out of service": {
+            "image": "PCR_9.jpg",
+            "details": "C1000 Thermal Cycler BIO RAD",
+            "enabled": false
+        },
+        "PCR 9B (Contact Before Use:Lab 4612) Out of service": {
+            "image": "PCR_9.jpg",
+            "details": "C1000 Thermal Cycler BIO RAD",
+            "enabled": false
+        },
+        "PCR 9.1 Out of service": {
+            "image": "PCR_9_1.jpg",
+            "details": "Mastercycle pro eppendorf",
+            "enabled": false
+        },
+        "PCR 9.2 Out of service": {
+            "image": "PCR_9_2.jpg",
+            "details": "Mastercycle pro eppendorf",
+            "enabled": false
+        },
+        "PCR 9.3": {
+            "image": "PCR_9_3.jpg",
+            "details": "Mastercycle pro eppendorf",
+            "enabled": true
+        },
+        "PCR 10": {
+            "image": "PCR_10.jpg",
+            "details": "T100 Thermal Cycler BIO RAD",
+            "enabled": true
+        },
+        "Real Time PCR": {
+            "image": "Real_Time_PCR.jpg",
+            "details": "CFX Connect Real Time System BIO RAD",
+            "enabled": true
+        }
+    }
+}
