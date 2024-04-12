@@ -33,14 +33,6 @@ def load_or_initialize_df(key, columns):
 reservations_df = load_or_initialize_df('reservations_df', ['Username', 'Room', 'Equipment', 'Start_Time', 'End_Time'])
 pcr_reservations_df = load_or_initialize_df('pcr_reservations_df', ['Username', 'Room', 'Equipment', 'Start_Time', 'End_Time'])
 
-authenticator = stauth.Authenticate(
-    config['credentials'],
-    config['cookie']['name'],
-    config['cookie']['key'],
-    config['cookie']['expiry_days'],
-    config['pre-authorized']
-)
-
 authenticator.login()
 
 # Function to load equipment details from the JSON file
