@@ -10,7 +10,7 @@ from io import StringIO
 import os, time
 
 try:
-    # Set the new timezone to 'America/Los_Angeles'
+    # Set the new timezone to ''Asia/Bangkok''
     os.environ['TZ'] = 'Asia/Bangkok'
 
     # Apply the timezone change
@@ -20,7 +20,6 @@ try:
 
 
     # Function to load equipment details from the JSON file
-    @st.cache_data(show_spinner=False)
     def load_json(file_path):
         with open(file_path, 'r') as file:
             return json.load(file)
@@ -39,7 +38,7 @@ try:
 
 
     # Function to safely display an image or a placeholder if the image is missing
-    @st.cache_data(show_spinner=False)
+    
     def image_exists(image_path):
         import os
         return os.path.exists(image_path)
@@ -89,7 +88,6 @@ try:
     st.markdown(css, unsafe_allow_html=True)
 
 
-    @st.cache_data(show_spinner=False)
     def load_or_initialize_df(key, columns):
         if key not in st.session_state:
             st.session_state[key] = pd.DataFrame(columns=columns)
@@ -109,7 +107,7 @@ try:
         return output.getvalue()
 
 
-    @st.cache_data
+
     def generate_time_slots():
         slots = [{
                      "label": f"Slot {i + 1}: {datetime.time(hour=h).strftime('%H:%M')}-{datetime.time(hour=h + 3).strftime('%H:%M')}",
