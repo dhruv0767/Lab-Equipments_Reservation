@@ -199,7 +199,7 @@ if st.session_state["authentication_status"]:
         return output.getvalue().encode('utf-8')
 
 
-    Adding download buttons in the sidebar for each DataFrame
+    # Adding download buttons in the sidebar for each DataFrame
     st.sidebar.download_button(
         label="Download General Reservations as CSV",
         data=convert_df_to_csv(st.session_state.reservations_df),
