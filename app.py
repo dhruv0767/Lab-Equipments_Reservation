@@ -502,7 +502,7 @@ if st.session_state["authentication_status"]:
                 st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
-        local_css("style/style.css")
+        local_css("style.css")
 
 
 elif st.session_state["authentication_status"] is False:
