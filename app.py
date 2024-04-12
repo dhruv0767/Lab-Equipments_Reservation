@@ -155,8 +155,8 @@ def clear_reservation_data():
 
 # Admin Interface for enabling/disabling equipment
 if st.session_state.get("name") in admin_usernames:
-    st.write(st.session_state.reservations_df)
-    st.write(st.session_state.pcr_reservations_df)
+    # st.write(st.session_state.reservations_df)
+    # st.write(st.session_state.pcr_reservations_df)
     st.sidebar.write("Admin Interface")
     selected_room_admin = st.sidebar.selectbox("Select a room to manage equipment:",
                                                list(room_equipment_details.keys()))
