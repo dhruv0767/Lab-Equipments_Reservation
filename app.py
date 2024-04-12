@@ -10,15 +10,35 @@ from io import StringIO
 
 st.set_page_config(layout="wide")
 
+authenticator = stauth.Authenticate(
+    config['credentials'],
+    config['cookie']['name'],
+    config['cookie']['key'],
+    config['cookie']['expiry_days'],
+    config['pre-authorized']
+)
+
+authenticator.login()
 
 @st.cache_data(show_spinner=False)
 def load_or_initialize_df(key, columns):
     if key not in st.session_state:
         st.session_state[key] = pd.DataFrame(columns=columns)
+        st.write(f"Initialized {key} in session_state.")
     return st.session_state[key]
 
 reservations_df = load_or_initialize_df('reservations_df', ['Username', 'Room', 'Equipment', 'Start_Time', 'End_Time'])
 pcr_reservations_df = load_or_initialize_df('pcr_reservations_df', ['Username', 'Room', 'Equipment', 'Start_Time', 'End_Time'])
+
+authenticator = stauth.Authenticate(
+    config['credentials'],
+    config['cookie']['name'],
+    config['cookie']['key'],
+    config['cookie']['expiry_days'],
+    config['pre-authorized']
+)
+
+authenticator.login()
 
 # Function to load equipment details from the JSON file
 @st.cache_data(show_spinner=False)
@@ -36,9 +56,6 @@ def save_equipment_details(details, json_file_path='equipment_details.json'):
     with open(json_file_path, 'w') as file:
         json.dump(details, file, indent=4)
 
-# Function to safely display an image or a placeholder if the image is missing
-import os
-
 @st.cache_data(show_spinner=False)
 def image_exists(image_path):
     import os
@@ -52,16 +69,6 @@ def safe_display_image(image_path, width=100, offset=0):
             st.image(image_path, width=width)
     else:
         st.error("Image not available.")
-
-authenticator = stauth.Authenticate(
-    config['credentials'],
-    config['cookie']['name'],
-    config['cookie']['key'],
-    config['cookie']['expiry_days'],
-    config['pre-authorized']
-)
-
-authenticator.login()
 
 # Load equipment details from JSON instead of hardcoding
 room_equipment_details = equipment_details
