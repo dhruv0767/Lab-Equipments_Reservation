@@ -27,14 +27,12 @@ authenticator.login()
 def load_or_initialize_df(key, columns):
     if key not in st.session_state:
         st.session_state[key] = pd.DataFrame(columns=columns)
-        st.write(f"Initialized {key} in session_state.")
+        # st.write(f"Initialized {key} in session_state.")
     return st.session_state[key]
 
 reservations_df = load_or_initialize_df('reservations_df', ['Username', 'Room', 'Equipment', 'Start_Time', 'End_Time'])
 pcr_reservations_df = load_or_initialize_df('pcr_reservations_df', ['Username', 'Room', 'Equipment', 'Start_Time', 'End_Time'])
 
-st.write(reservations_df)
-st.write(pcr_reservations_df)
 # Function to load equipment details from the JSON file
 @st.cache_data(show_spinner=False)
 def load_json(file_path):
