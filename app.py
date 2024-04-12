@@ -197,19 +197,19 @@ if st.session_state["authentication_status"]:
 
 
     # Adding download buttons in the sidebar for each DataFrame
-    st.sidebar.download_button(
-        label="Download General Reservations as CSV",
-        data=convert_df_to_csv(st.session_state.reservations_df),
-        file_name='general_reservations.csv',
-        mime='text/csv'
-    )
+    # st.sidebar.download_button(
+    #     label="Download General Reservations as CSV",
+    #     data=convert_df_to_csv(st.session_state.reservations_df),
+    #     file_name='general_reservations.csv',
+    #     mime='text/csv'
+    # )
 
-    st.sidebar.download_button(
-        label="Download PCR Reservations as CSV",
-        data=convert_df_to_csv(st.session_state.pcr_reservations_df),
-        file_name='pcr_reservations.csv',
-        mime='text/csv'
-    )
+    # st.sidebar.download_button(
+    #     label="Download PCR Reservations as CSV",
+    #     data=convert_df_to_csv(st.session_state.pcr_reservations_df),
+    #     file_name='pcr_reservations.csv',
+    #     mime='text/csv'
+    # )
 
     with tab1:
         # st.subheader("Reservation Tables")
