@@ -10,6 +10,16 @@ from io import StringIO
 
 st.set_page_config(layout="wide")
 
+
+@st.cache_data(show_spinner=False)
+def load_or_initialize_df(key, columns):
+    if key not in st.session_state:
+        st.session_state[key] = pd.DataFrame(columns=columns)
+    return st.session_state[key]
+
+reservations_df = load_or_initialize_df('reservations_df', ['Username', 'Room', 'Equipment', 'Start_Time', 'End_Time'])
+pcr_reservations_df = load_or_initialize_df('pcr_reservations_df', ['Username', 'Room', 'Equipment', 'Start_Time', 'End_Time'])
+
 # Function to load equipment details from the JSON file
 @st.cache_data(show_spinner=False)
 def load_json(file_path):
@@ -75,15 +85,6 @@ css = '''
 </style>
 '''
 st.markdown(css, unsafe_allow_html=True)
-
-@st.cache_data(show_spinner=False)
-def load_or_initialize_df(key, columns):
-    if key not in st.session_state:
-        st.session_state[key] = pd.DataFrame(columns=columns)
-    return st.session_state[key]
-
-reservations_df = load_or_initialize_df('reservations_df', ['Username', 'Room', 'Equipment', 'Start_Time', 'End_Time'])
-pcr_reservations_df = load_or_initialize_df('pcr_reservations_df', ['Username', 'Room', 'Equipment', 'Start_Time', 'End_Time'])
 
 # Function to convert DataFrame to CSV
 def convert_df_to_csv(df):
@@ -198,20 +199,20 @@ if st.session_state["authentication_status"]:
         return output.getvalue().encode('utf-8')
 
 
-    # Adding download buttons in the sidebar for each DataFrame
-    # st.sidebar.download_button(
-    #     label="Download General Reservations as CSV",
-    #     data=convert_df_to_csv(st.session_state.reservations_df),
-    #     file_name='general_reservations.csv',
-    #     mime='text/csv'
-    # )
+    Adding download buttons in the sidebar for each DataFrame
+    st.sidebar.download_button(
+        label="Download General Reservations as CSV",
+        data=convert_df_to_csv(st.session_state.reservations_df),
+        file_name='general_reservations.csv',
+        mime='text/csv'
+    )
 
-    # st.sidebar.download_button(
-    #     label="Download PCR Reservations as CSV",
-    #     data=convert_df_to_csv(st.session_state.pcr_reservations_df),
-    #     file_name='pcr_reservations.csv',
-    #     mime='text/csv'
-    # )
+    st.sidebar.download_button(
+        label="Download PCR Reservations as CSV",
+        data=convert_df_to_csv(st.session_state.pcr_reservations_df),
+        file_name='pcr_reservations.csv',
+        mime='text/csv'
+    )
 
     with tab1:
         # st.subheader("Reservation Tables")
