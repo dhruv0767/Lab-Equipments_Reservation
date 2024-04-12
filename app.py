@@ -10,6 +10,9 @@ from io import StringIO
 
 st.set_page_config(layout="wide")
 
+with open('config.yaml') as file:
+    config = yaml.load(file, Loader=SafeLoader)
+
 authenticator = stauth.Authenticate(
     config['credentials'],
     config['cookie']['name'],
@@ -47,9 +50,6 @@ def load_json(file_path):
         return json.load(file)
 
 equipment_details = load_json('equipment_details.json')
-
-with open('config.yaml') as file:
-    config = yaml.load(file, Loader=SafeLoader)
 
 # Function to save equipment details back to the JSON file
 def save_equipment_details(details, json_file_path='equipment_details.json'):
