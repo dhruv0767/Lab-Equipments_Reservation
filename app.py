@@ -13,11 +13,11 @@ st.set_page_config(layout="wide")
 conn = st.connection("gsheets", type=GSheetsConnection)
 
 # Read reservation data from Google Sheets
-df_non_pcr = conn.read(worksheet='Non_PCR', usecols=list(range(5)), ttl=60)
+df_non_pcr = conn.read(worksheet='Non_PCR', usecols=list(range(5)), ttl=10)
 df_non_pcr['Start_Time'] = pd.to_datetime(df_non_pcr['Start_Time'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
 df_non_pcr['End_Time'] = pd.to_datetime(df_non_pcr['End_Time'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
 
-df_pcr = conn.read(worksheet='PCR', usecols=list(range(5)), ttl=60)
+df_pcr = conn.read(worksheet='PCR', usecols=list(range(5)), ttl=10)
 df_pcr['Start_Time'] = pd.to_datetime(df_pcr['Start_Time'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
 df_pcr['End_Time'] = pd.to_datetime(df_pcr['End_Time'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
 
@@ -355,7 +355,7 @@ if st.session_state["authentication_status"]:
                     df_pcr['Start_Time'] = pd.to_datetime(df_pcr['Start_Time'], format='%Y-%m-%d %H:%M:%S',
                                                           errors='coerce')
                     df_pcr['End_Time'] = pd.to_datetime(df_pcr['End_Time'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
-                    st.write(df_pcr)
+                    # st.write(df_pcr)
 
                     start_datetime = datetime.datetime.combine(reservation_date, selected_slot['start'])
                     end_datetime = datetime.datetime.combine(reservation_date, selected_slot['end'])
