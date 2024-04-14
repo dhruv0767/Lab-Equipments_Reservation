@@ -13,13 +13,13 @@ st.set_page_config(layout="wide")
 conn = st.connection("gsheets", type=GSheetsConnection)
 
 # Read reservation data from Google Sheets
-df_non_pcr = conn.read(worksheet='Non_PCR', usecols=list(range(5)), ttl=10)
-df_non_pcr['Start_Time'] = pd.to_datetime(df_non_pcr['Start_Time'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
-df_non_pcr['End_Time'] = pd.to_datetime(df_non_pcr['End_Time'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
+df_non_pcr = conn.read(worksheet='Non_PCR', usecols=list(range(5)), ttl=60)
+df_non_pcr['Start_Time'] = pd.to_datetime(df_non_pcr['Start_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
+df_non_pcr['End_Time'] = pd.to_datetime(df_non_pcr['End_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
 
-df_pcr = conn.read(worksheet='PCR', usecols=list(range(5)), ttl=10)
-df_pcr['Start_Time'] = pd.to_datetime(df_pcr['Start_Time'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
-df_pcr['End_Time'] = pd.to_datetime(df_pcr['End_Time'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
+df_pcr = conn.read(worksheet='PCR', usecols=list(range(5)), ttl=60)
+df_pcr['Start_Time'] = pd.to_datetime(df_pcr['Start_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
+df_pcr['End_Time'] = pd.to_datetime(df_pcr['End_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
 
 df_pcr.dropna(inplace= True)
 df_non_pcr.dropna(inplace= True)
@@ -352,10 +352,9 @@ if st.session_state["authentication_status"]:
                 if st.button('### Submit PCR Reservation'):
                     df_pcr = conn.read(worksheet='PCR', usecols=list(range(5)), ttl=0)
                     df_pcr.dropna(inplace=True)
-                    df_pcr['Start_Time'] = pd.to_datetime(df_pcr['Start_Time'], format='%Y-%m-%d %H:%M:%S',
+                    df_pcr['Start_Time'] = pd.to_datetime(df_pcr['Start_Time'], format='%Y/%m/%d %H:%M:%S',
                                                           errors='coerce')
-                    df_pcr['End_Time'] = pd.to_datetime(df_pcr['End_Time'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
-                    # st.write(df_pcr)
+                    df_pcr['End_Time'] = pd.to_datetime(df_pcr['End_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
 
                     start_datetime = datetime.datetime.combine(reservation_date, selected_slot['start'])
                     end_datetime = datetime.datetime.combine(reservation_date, selected_slot['end'])
@@ -403,14 +402,14 @@ if st.session_state["authentication_status"]:
                         df_pcr_buffer = pd.concat([df_pcr, new_reservation], ignore_index=True)
                         df_pcr_buffer.reset_index(drop=True, inplace=True)
 
-                        df_pcr_buffer['Start_Time'] = df_pcr_buffer['Start_Time'].dt.strftime('%Y-%m-%d %H:%M:%S')
-                        df_pcr_buffer['End_Time'] = df_pcr_buffer['End_Time'].dt.strftime('%Y-%m-%d %H:%M:%S')
+                        df_pcr_buffer['Start_Time'] = df_pcr_buffer['Start_Time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+                        df_pcr_buffer['End_Time'] = df_pcr_buffer['End_Time'].dt.strftime('%Y/%m/%d %H:%M:%S')
 
                         # Update the Google Sheet with the new buffer DataFrame
                         conn.update(worksheet="PCR", data=df_pcr_buffer)
 
                         st.success(
-                            f"Reservation successful for {selected_equipment} from {start_datetime.strftime('%Y-%m-%d %H:%M')} to {end_datetime.strftime('%Y-%m-%d %H:%M')}")
+                            f"Reservation successful for {selected_equipment} from {start_datetime.strftime('%Y/%m/%d %H:%M')} to {end_datetime.strftime('%Y/%m/%d %H:%M')}")
 
 
             else:
@@ -437,9 +436,9 @@ if st.session_state["authentication_status"]:
                     if submit_button:
                         df_non_pcr = conn.read(worksheet='Non_PCR', usecols=list(range(5)), ttl=0)
                         df_non_pcr.dropna(inplace=True)
-                        df_non_pcr['Start_Time'] = pd.to_datetime(df_non_pcr['Start_Time'], format='%Y-%m-%d %H:%M:%S',
+                        df_non_pcr['Start_Time'] = pd.to_datetime(df_non_pcr['Start_Time'], format='%Y/%m/%d %H:%M:%S',
                                                               errors='coerce')
-                        df_non_pcr['End_Time'] = pd.to_datetime(df_non_pcr['End_Time'], format='%Y-%m-%d %H:%M:%S',
+                        df_non_pcr['End_Time'] = pd.to_datetime(df_non_pcr['End_Time'], format='%Y/%m/%d %H:%M:%S',
                                                             errors='coerce')
 
                         if start_datetime >= end_datetime:
@@ -469,9 +468,9 @@ if st.session_state["authentication_status"]:
                                 df_non_pcr_buffer.reset_index(drop=True, inplace=True)
 
                                 df_non_pcr_buffer['Start_Time'] = df_non_pcr_buffer['Start_Time'].dt.strftime(
-                                    '%Y-%m-%d %H:%M:%S')
+                                    '%Y/%m/%d %H:%M:%S')
                                 df_non_pcr_buffer['End_Time'] = df_non_pcr_buffer['End_Time'].dt.strftime(
-                                    '%Y-%m-%d %H:%M:%S')
+                                    '%Y/%m/%d %H:%M:%S')
 
                                 conn.update(worksheet="Non_PCR", data=df_non_pcr_buffer)
 
@@ -486,16 +485,16 @@ if st.session_state["authentication_status"]:
 
         df_non_pcr = conn.read(worksheet='Non_PCR', usecols=list(range(5)), ttl=0)
         df_non_pcr.dropna(inplace=True)
-        df_non_pcr['Start_Time'] = pd.to_datetime(df_non_pcr['Start_Time'], format='%Y-%m-%d %H:%M:%S',
+        df_non_pcr['Start_Time'] = pd.to_datetime(df_non_pcr['Start_Time'], format='%Y/%m/%d %H:%M:%S',
                                                   errors='coerce')
-        df_non_pcr['End_Time'] = pd.to_datetime(df_non_pcr['End_Time'], format='%Y-%m-%d %H:%M:%S',
+        df_non_pcr['End_Time'] = pd.to_datetime(df_non_pcr['End_Time'], format='%Y/%m/%d %H:%M:%S',
                                                 errors='coerce')
-        
+
         df_pcr = conn.read(worksheet='PCR', usecols=list(range(5)), ttl=0)
         df_pcr.dropna(inplace=True)
-        df_pcr['Start_Time'] = pd.to_datetime(df_pcr['Start_Time'], format='%Y-%m-%d %H:%M:%S',
+        df_pcr['Start_Time'] = pd.to_datetime(df_pcr['Start_Time'], format='%Y/%m/%d %H:%M:%S',
                                               errors='coerce')
-        df_pcr['End_Time'] = pd.to_datetime(df_pcr['End_Time'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
+        df_pcr['End_Time'] = pd.to_datetime(df_pcr['End_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
 
         # Combining both dataframes to get user-specific reservations
         user_reservations_pcr = df_pcr[df_pcr['Name'] == st.session_state["name"]]
@@ -508,7 +507,7 @@ if st.session_state["authentication_status"]:
                 "## Your Reservations:",
                 options=range(len(user_reservations)),
                 format_func=lambda
-                    x: f"{user_reservations.iloc[x]['Equipments']} on {user_reservations.iloc[x]['Start_Time'].strftime('%Y-%m-%d %H:%M')}"
+                    x: f"{user_reservations.iloc[x]['Equipments']} on {user_reservations.iloc[x]['Start_Time'].strftime('%Y/%m/%d %H:%M')}"
             )
 
             # Cancel reservation button
