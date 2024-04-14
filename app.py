@@ -484,18 +484,18 @@ if st.session_state["authentication_status"]:
     with tab3:
         # st.subheader("Reservation Cancellation")
 
-        # df_non_pcr = conn.read(worksheet='Non_PCR', usecols=list(range(5)), ttl=0)
-        # df_non_pcr.dropna(inplace=True)
-        # df_non_pcr['Start_Time'] = pd.to_datetime(df_non_pcr['Start_Time'], format='%Y-%m-%d %H:%M:%S',
-        #                                           errors='coerce')
-        # df_non_pcr['End_Time'] = pd.to_datetime(df_non_pcr['End_Time'], format='%Y-%m-%d %H:%M:%S',
-        #                                         errors='coerce')
-        #
-        # df_pcr = conn.read(worksheet='PCR', usecols=list(range(5)), ttl=0)
-        # df_pcr.dropna(inplace=True)
-        # df_pcr['Start_Time'] = pd.to_datetime(df_pcr['Start_Time'], format='%Y-%m-%d %H:%M:%S',
-        #                                       errors='coerce')
-        # df_pcr['End_Time'] = pd.to_datetime(df_pcr['End_Time'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
+        df_non_pcr = conn.read(worksheet='Non_PCR', usecols=list(range(5)), ttl=0)
+        df_non_pcr.dropna(inplace=True)
+        df_non_pcr['Start_Time'] = pd.to_datetime(df_non_pcr['Start_Time'], format='%Y-%m-%d %H:%M:%S',
+                                                  errors='coerce')
+        df_non_pcr['End_Time'] = pd.to_datetime(df_non_pcr['End_Time'], format='%Y-%m-%d %H:%M:%S',
+                                                errors='coerce')
+        
+        df_pcr = conn.read(worksheet='PCR', usecols=list(range(5)), ttl=0)
+        df_pcr.dropna(inplace=True)
+        df_pcr['Start_Time'] = pd.to_datetime(df_pcr['Start_Time'], format='%Y-%m-%d %H:%M:%S',
+                                              errors='coerce')
+        df_pcr['End_Time'] = pd.to_datetime(df_pcr['End_Time'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
 
         # Combining both dataframes to get user-specific reservations
         user_reservations_pcr = df_pcr[df_pcr['Name'] == st.session_state["name"]]
