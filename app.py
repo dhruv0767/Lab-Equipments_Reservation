@@ -77,18 +77,41 @@ def safe_display_image(image_path, width=100, offset=0):
 # Custom CSS
 css = '''
 <style>
+    /* Style adjustments for tabs */
     .stTabs [data-baseweb="tab-list"] button [data-testid="stMarkdownContainer"] p {
-    font-size:2rem; 
-    margin-right: 25px;
+        font-size: 2rem;
+        margin-right: 25px;
     }
     [data-testid="stMarkdownContainer"] {
         font-size: 25px;
-        color: White;
         margin-left: 0px;
+    }
+    /* Welcome message styles */
+    .welcome-message {
+        font-size: 40px;
+        font-family: Arial;
+    }
+    /* Light and Dark mode adaptations */
+    @media (prefers-color-scheme: dark) {
+        .welcome-message {
+            color: #DDD; /* Lighter color for dark mode */
+        }
+        [data-testid="stMarkdownContainer"] {
+            color: #DDD; /* Adjusting text color for dark mode */
+        }
+    }
+    @media (prefers-color-scheme: light) {
+        .welcome-message {
+            color: #333; /* Darker color for light mode */
+        }
+        [data-testid="stMarkdownContainer"] {
+            color: #333; /* Adjusting text color for light mode */
+        }
     }
 </style>
 '''
 st.markdown(css, unsafe_allow_html=True)
+
 
 def convert_df_to_csv(df):
     """Converts a DataFrame to a CSV string."""
@@ -137,7 +160,8 @@ if st.session_state.get("name") in admin_Names:
 
 if st.session_state["authentication_status"]:
     authenticator.logout(location='sidebar')
-    message = f"## Welcome <span style='color: White; font-size: 40px; font-family: Arial;'>{st.session_state['name']}</span>"
+    # Usage of the welcome message
+    message = f"## Welcome <span class='welcome-message'>{st.session_state['name']}</span>"
     st.markdown(message, unsafe_allow_html=True)
     tab1, tab2, tab3, tab4 = st.tabs(["Reservation Tables", "Reservation Forms", "Reservation Cancellation", "Contact Us"])
 
