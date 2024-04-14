@@ -409,7 +409,7 @@ if st.session_state["authentication_status"]:
                         conn.update(worksheet="PCR", data=df_pcr_buffer)
 
                         st.success(
-                            f"Reservation successful for {selected_equipment} from {start_datetime.strftime('%Y/%m/%d %H:%M')} to {end_datetime.strftime('%Y/%m/%d %H:%M')}")
+                            f"Reservation successful for {selected_equipment} from {start_datetime.strftime('%Y/%m/%d %H:%M:%S')} to {end_datetime.strftime('%Y/%m/%d %H:%M:%S')}")
 
 
             else:
@@ -506,8 +506,9 @@ if st.session_state["authentication_status"]:
             selected_reservation_index = st.selectbox(
                 "## Your Reservations:",
                 options=range(len(user_reservations)),
-                format_func=lambda
-                    x: f"{user_reservations.iloc[x]['Equipments']} on {user_reservations.iloc[x]['Start_Time'].strftime('%Y/%m/%d %H:%M')}"
+                format_func=lambda x: f"{user_reservations.iloc[x]['Equipments']} on " +
+                                      (user_reservations.iloc[x]['Start_Time'].strftime('%Y/%m/%d %H:%M:%S') if pd.notnull(
+                                          user_reservations.iloc[x]['Start_Time']) else "Date not available")
             )
 
             # Cancel reservation button
@@ -525,6 +526,7 @@ if st.session_state["authentication_status"]:
 
         else:
             st.write("## You have no reservations.")
+
     with tab4:
         st.subheader("Error reports or Inconvenient issues")
 
