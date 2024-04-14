@@ -3,4 +3,4 @@ pandas
 streamlit_authenticator
 plotly
 pytz
-st-gsheets-connection
+git+https://github.com/streamlit/gsheets-connection
