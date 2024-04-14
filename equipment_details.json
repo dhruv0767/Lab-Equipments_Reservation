@@ -463,5 +463,17 @@
             "details": "CFX Connect Real Time System BIO RAD",
             "enabled": true
         }
+    },
+    "BSL-2": {
+        "BSC-1": {
+            "image": "BSC-1.jpg",
+            "details": "Biosafety cabinet",
+            "enabled": true
+        },
+        "BSC-2": {
+            "image": "BSC-2.jpg",
+            "details": "Biosafety cabinet",
+            "enabled": true
+        }
     }
 }
