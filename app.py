@@ -12,18 +12,6 @@ st.set_page_config(layout="wide")
 # Initialize connection to Google Sheets
 conn = st.connection("gsheets", type=GSheetsConnection)
 
-# Read reservation data from Google Sheets
-df_non_pcr = conn.read(worksheet='Non_PCR', usecols=list(range(5)), ttl=10)
-df_non_pcr['Start_Time'] = pd.to_datetime(df_non_pcr['Start_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
-df_non_pcr['End_Time'] = pd.to_datetime(df_non_pcr['End_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
-
-df_pcr = conn.read(worksheet='PCR', usecols=list(range(5)), ttl=10)
-df_pcr['Start_Time'] = pd.to_datetime(df_pcr['Start_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
-df_pcr['End_Time'] = pd.to_datetime(df_pcr['End_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
-
-df_pcr.dropna(inplace= True)
-df_non_pcr.dropna(inplace= True)
-
 # Set the timezone
 os.environ['TZ'] = 'Asia/Bangkok'
 time.tzset()
@@ -52,6 +40,17 @@ authenticator = stauth.Authenticate(
 
 authenticator.login()
 
+# Read reservation data from Google Sheets
+df_non_pcr = conn.read(worksheet='Non_PCR', usecols=list(range(5)), ttl=10)
+df_non_pcr['Start_Time'] = pd.to_datetime(df_non_pcr['Start_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
+df_non_pcr['End_Time'] = pd.to_datetime(df_non_pcr['End_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
+
+df_pcr = conn.read(worksheet='PCR', usecols=list(range(5)), ttl=10)
+df_pcr['Start_Time'] = pd.to_datetime(df_pcr['Start_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
+df_pcr['End_Time'] = pd.to_datetime(df_pcr['End_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
+
+df_pcr.dropna(inplace= True)
+df_non_pcr.dropna(inplace= True)
 
 # Equipments details handling
 def load_json(file_path):
