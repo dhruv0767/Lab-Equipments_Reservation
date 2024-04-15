@@ -13,11 +13,11 @@ st.set_page_config(layout="wide")
 conn = st.connection("gsheets", type=GSheetsConnection)
 
 # Read reservation data from Google Sheets
-df_non_pcr = conn.read(worksheet='Non_PCR', usecols=list(range(5)), ttl=60)
+df_non_pcr = conn.read(worksheet='Non_PCR', usecols=list(range(5)), ttl=10)
 df_non_pcr['Start_Time'] = pd.to_datetime(df_non_pcr['Start_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
 df_non_pcr['End_Time'] = pd.to_datetime(df_non_pcr['End_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
 
-df_pcr = conn.read(worksheet='PCR', usecols=list(range(5)), ttl=60)
+df_pcr = conn.read(worksheet='PCR', usecols=list(range(5)), ttl=10)
 df_pcr['Start_Time'] = pd.to_datetime(df_pcr['Start_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
 df_pcr['End_Time'] = pd.to_datetime(df_pcr['End_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
 
@@ -350,7 +350,7 @@ if st.session_state["authentication_status"]:
                     st.error("No available slots for the selected day.")
 
                 if st.button('### Submit PCR Reservation'):
-                    df_pcr = conn.read(worksheet='PCR', usecols=list(range(5)), ttl=0)
+                    df_pcr = conn.read(worksheet='PCR', usecols=list(range(5)), ttl=10)
                     df_pcr.dropna(inplace=True)
                     df_pcr['Start_Time'] = pd.to_datetime(df_pcr['Start_Time'], format='%Y/%m/%d %H:%M:%S',
                                                           errors='coerce')
@@ -434,7 +434,7 @@ if st.session_state["authentication_status"]:
                         submit_button = st.form_submit_button("### Submit Reservation")
 
                     if submit_button:
-                        df_non_pcr = conn.read(worksheet='Non_PCR', usecols=list(range(5)), ttl=0)
+                        df_non_pcr = conn.read(worksheet='Non_PCR', usecols=list(range(5)), ttl=10)
                         df_non_pcr.dropna(inplace=True)
                         df_non_pcr['Start_Time'] = pd.to_datetime(df_non_pcr['Start_Time'], format='%Y/%m/%d %H:%M:%S',
                                                               errors='coerce')
@@ -483,14 +483,14 @@ if st.session_state["authentication_status"]:
     with tab3:
         # st.subheader("Reservation Cancellation")
 
-        df_non_pcr = conn.read(worksheet='Non_PCR', usecols=list(range(5)), ttl=0)
+        df_non_pcr = conn.read(worksheet='Non_PCR', usecols=list(range(5)), ttl=10)
         df_non_pcr.dropna(inplace=True)
         df_non_pcr['Start_Time'] = pd.to_datetime(df_non_pcr['Start_Time'], format='%Y/%m/%d %H:%M:%S',
                                                   errors='coerce')
         df_non_pcr['End_Time'] = pd.to_datetime(df_non_pcr['End_Time'], format='%Y/%m/%d %H:%M:%S',
                                                 errors='coerce')
 
-        df_pcr = conn.read(worksheet='PCR', usecols=list(range(5)), ttl=0)
+        df_pcr = conn.read(worksheet='PCR', usecols=list(range(5)), ttl=10)
         df_pcr.dropna(inplace=True)
         df_pcr['Start_Time'] = pd.to_datetime(df_pcr['Start_Time'], format='%Y/%m/%d %H:%M:%S',
                                               errors='coerce')
