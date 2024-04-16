@@ -500,6 +500,11 @@ if st.session_state["authentication_status"]:
         user_reservations_non_pcr = df_non_pcr[df_non_pcr['Name'] == st.session_state["name"]]
         user_reservations = pd.concat([user_reservations_pcr, user_reservations_non_pcr])
 
+        # Filter the DataFrame to only include reservations for today and tomorrow
+        filtered_reservations = user_reservations[
+            user_reservations['Start_Time'].dt.date.isin([today, tomorrow])
+        ]
+
         if not user_reservations.empty:
             # Display the reservations in a selectbox
             selected_reservation_index = st.selectbox(
