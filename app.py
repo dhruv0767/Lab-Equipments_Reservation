@@ -515,7 +515,7 @@ if st.session_state["authentication_status"]:
                 "## Your Reservations:",
                 options=range(len(user_reservations)),
                 format_func=lambda x: f"{user_reservations.iloc[x]['Equipments']} on " +
-                                      (user_reservations.iloc[x]['Start_Time'].strftime('%Y/%m/%d %H:%M:%S') if pd.notnull(
+                                      (user_reservations.iloc[x]['Start_Time'].strftime('%Y/%m/%d %H:%M:%S') + ' To ' + user_reservations.iloc[x]['End_Time'].strftime('%Y/%m/%d %H:%M:%S') if pd.notnull(
                                           user_reservations.iloc[x]['Start_Time']) else "Date not available")
             )
 
