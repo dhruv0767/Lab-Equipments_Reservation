@@ -531,9 +531,15 @@ if st.session_state["authentication_status"]:
                 reservation_to_cancel = user_reservations.iloc[selected_reservation_index]
                 if "PCR" in reservation_to_cancel['Equipments']:
                     df_pcr.drop(index=reservation_to_cancel.name, inplace=True)
+                    df_pcr['Start_Time'] = df_pcr['Start_Time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+                    df_pcr['End_Time'] = df_pcr['End_Time'].dt.strftime('%Y/%m/%d %H:%M:%S')
                     conn.update(worksheet="PCR", data=df_pcr)  # Writing updated dataframe back
                 else:
                     df_non_pcr.drop(index=reservation_to_cancel.name, inplace=True)
+                    df_non_pcr['Start_Time'] = df_non_pcr['Start_Time'].dt.strftime(
+                        '%Y/%m/%d %H:%M:%S')
+                    df_non_pcr['End_Time'] = df_non_pcr['End_Time'].dt.strftime(
+                        '%Y/%m/%d %H:%M:%S')
                     conn.update(worksheet="Non_PCR", data=df_non_pcr)  # Writing updated dataframe back
 
                 st.success("Reservation canceled successfully.")
