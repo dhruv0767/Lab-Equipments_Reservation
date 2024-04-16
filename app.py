@@ -411,71 +411,93 @@ if st.session_state["authentication_status"]:
                             f"Reservation successful for {selected_equipment} from {start_datetime.strftime('%Y/%m/%d %H:%M:%S')} to {end_datetime.strftime('%Y/%m/%d %H:%M:%S')}")
 
 
+
             else:
-                # General reservation logic for non-PCR equipment
+
                 if "PCR" not in selected_equipment:
-                    with st.form(key='NonPCR_Reservation_Form'):
-                        st.subheader(f"Reserve {selected_equipment}")
 
-                        tomorrow = datetime.date.today() + datetime.timedelta(days=1)
-                        start_date = st.date_input("## Start Date", min_value=datetime.date.today(),
-                                                   max_value=tomorrow)
-                        start_time = st.time_input("## Start Time",
-                                                   value=datetime.datetime.now().replace(second=0,microsecond=0).time())
-                        end_time = st.time_input("## End Time",
-                                                 value=(datetime.datetime.now() + datetime.timedelta(
-                                                     hours=1)).replace(
-                                                     second=0, microsecond=0).time())
+                    st.subheader(f"Reserve {selected_equipment}")
 
-                        start_datetime = datetime.datetime.combine(start_date, start_time)
-                        end_datetime = datetime.datetime.combine(start_date, end_time)
+                    tomorrow = datetime.date.today() + datetime.timedelta(days=1)
 
-                        submit_button = st.form_submit_button("### Submit Reservation")
+                    start_date = st.date_input("## Start Date", min_value=datetime.date.today(),
 
-                    if submit_button:
-                        df_non_pcr = conn.read(worksheet='Non_PCR', usecols=list(range(5)), ttl=10)
-                        df_non_pcr.dropna(inplace=True)
-                        df_non_pcr['Start_Time'] = pd.to_datetime(df_non_pcr['Start_Time'], format='%Y/%m/%d %H:%M:%S',
-                                                              errors='coerce')
-                        df_non_pcr['End_Time'] = pd.to_datetime(df_non_pcr['End_Time'], format='%Y/%m/%d %H:%M:%S',
-                                                            errors='coerce')
+                                               max_value=tomorrow)
 
-                        if start_datetime >= end_datetime:
-                            st.error("The start time must be before the end time. Please adjust your selection.")
+                    current_time = datetime.datetime.now().replace(second=0, microsecond=0)
+
+                    min_time = current_time.time() if start_date == datetime.date.today() else datetime.time(0, 0)
+
+                    start_time = st.time_input("## Start Time", value=min_time)
+
+                    end_time = st.time_input("## End Time",
+
+                                             value=(current_time + datetime.timedelta(hours=1)).time())
+
+                    start_datetime = datetime.datetime.combine(start_date, start_time)
+
+                    end_datetime = datetime.datetime.combine(start_date, end_time)
+
+                if st.button("### Submit Reservation"):
+
+                    if start_datetime < current_time:
+
+                        st.error("Cannot book a reservation in the past. Please select a future time.")
+
+                    elif start_datetime >= end_datetime:
+
+                        st.error("The start time must be before the end time. Please adjust your selection.")
+
+                    else:
+
+                        # Assuming df_non_pcr is already loaded and filtered as needed
+
+                        overlapping_reservations = df_non_pcr[
+
+                            (df_non_pcr['Room'] == selected_room) &
+
+                            (df_non_pcr['Equipments'] == selected_equipment) &
+
+                            ((df_non_pcr['Start_Time'] < end_datetime) & (df_non_pcr['End_Time'] > start_datetime))
+
+                            ]
+
+                        if not overlapping_reservations.empty:
+
+                            st.error("This time slot is already reserved. Please choose another time.")
+
                         else:
-                            # Check for overlapping reservations
-                            overlapping_reservations = df_non_pcr[
-                                (df_non_pcr['Room'] == selected_room) &
-                                (df_non_pcr['Equipments'] == selected_equipment) &
-                                (df_non_pcr['Start_Time'] < end_datetime) &
-                                (df_non_pcr['End_Time'] > start_datetime)
-                                ]
 
-                            if not overlapping_reservations.empty:
-                                st.error("This time slot is already reserved. Please choose another time.")
-                            else:
-                                new_reservation = {
-                                    'Name': st.session_state["name"],
-                                    'Room': selected_room,
-                                    'Equipments': selected_equipment,
-                                    'Start_Time': start_datetime,
-                                    'End_Time': end_datetime
-                                }
-                                new_reservation_df = pd.DataFrame([new_reservation])
-                                df_non_pcr_buffer = pd.concat([df_non_pcr, new_reservation_df], ignore_index=True)
+                            new_reservation = {
 
-                                df_non_pcr_buffer.reset_index(drop=True, inplace=True)
+                                'Name': st.session_state["name"],
 
-                                df_non_pcr_buffer['Start_Time'] = df_non_pcr_buffer['Start_Time'].dt.strftime(
-                                    '%Y/%m/%d %H:%M:%S')
-                                df_non_pcr_buffer['End_Time'] = df_non_pcr_buffer['End_Time'].dt.strftime(
-                                    '%Y/%m/%d %H:%M:%S')
+                                'Room': selected_room,
 
-                                conn.update(worksheet="Non_PCR", data=df_non_pcr_buffer)
+                                'Equipments': selected_equipment,
 
-                                st.success(
-                                    f"Reservation successful for {selected_equipment} in {selected_room} from "
-                                    f"{start_datetime} to {end_datetime}")
+                                'Start_Time': start_datetime,
+
+                                'End_Time': end_datetime
+
+                            }
+
+                            new_reservation_df = pd.DataFrame([new_reservation])
+
+                            df_non_pcr_buffer = pd.concat([df_non_pcr, new_reservation_df], ignore_index=True)
+
+                            df_non_pcr_buffer.reset_index(drop=True, inplace=True)
+
+                            df_non_pcr_buffer['Start_Time'] = df_non_pcr_buffer['Start_Time'].dt.strftime(
+                                '%Y/%m/%d %H:%M:%S')
+
+                            df_non_pcr_buffer['End_Time'] = df_non_pcr_buffer['End_Time'].dt.strftime(
+                                '%Y/%m/%d %H:%M:%S')
+
+                            conn.update(worksheet="Non_PCR", data=df_non_pcr_buffer)
+
+                            st.success(
+                                f"Reservation successful for {selected_equipment} in {selected_room} from {start_datetime.strftime('%Y/%m/%d %H:%M:%S')} to {end_datetime.strftime('%Y/%m/%d %H:%M:%S')}")
         else:
             st.error("This equipment is currently not available for reservation.")
 
