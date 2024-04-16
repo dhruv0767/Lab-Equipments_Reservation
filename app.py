@@ -500,6 +500,10 @@ if st.session_state["authentication_status"]:
         user_reservations_non_pcr = df_non_pcr[df_non_pcr['Name'] == st.session_state["name"]]
         user_reservations = pd.concat([user_reservations_pcr, user_reservations_non_pcr])
 
+        # Current date and tomorrow's date
+        today = datetime.date.today()
+        tomorrow = today + datetime.timedelta(days=1)
+
         # Filter the DataFrame to only include reservations for today and tomorrow
         filtered_reservations = user_reservations[
             user_reservations['Start_Time'].dt.date.isin([today, tomorrow])
