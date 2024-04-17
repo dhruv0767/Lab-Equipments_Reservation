@@ -56,7 +56,7 @@ st.markdown(
 
 # Adding the watermark to your Streamlit app
 st.markdown(
-    '<p class="watermark">Designed by Yanawat Pattharapistthorn and 4511 Lab members.</p>',
+    '<p class="watermark">Designed by Yanawat Pattharapistthorn and TE Group (2024).</p>',
     unsafe_allow_html=True
 )
 
