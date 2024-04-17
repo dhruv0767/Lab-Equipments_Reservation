@@ -44,23 +44,23 @@
         }
     },
     "Hallway, 6th floor": {
-        "Autoclave 1": {
+        "Autoclave 1 (Drain the water every 5 times after using)": {
             "image": "Autoclave_1.jpg",
             "details": "SX-700E TOMY",
             "enabled": true
         },
-        "Autoclave 2": {
+        "Autoclave 2 (Drain the water every 5 times after using)": {
             "image": "Autoclave_2.jpg",
             "details": "SS-325 TOMY",
             "enabled": true
         },
-        "Autoclave 3 Out of service": {
-            "image": "Autoclave_3_Out_of_service.jpg",
+        "Autoclave 3 For Waste (Drain the water everytime after using)": {
+            "image": "Autoclave_3.jpg",
             "details": "SX-700 TOMY",
             "enabled": false
         },
-        "Autoclave 4 Out of service": {
-            "image": "Autoclave_4_Out_of_service.jpg",
+        "Autoclave 4 For Waste (Drain the water everytime after using)": {
+            "image": "Autoclave_4.jpg",
             "details": "SS-325 TOMY",
             "enabled": false
         },
