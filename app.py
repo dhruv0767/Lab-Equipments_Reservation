@@ -7,6 +7,25 @@ import json
 from io import StringIO
 import os, time
 from streamlit_gsheets import GSheetsConnection
+
+# Custom CSS to inject into the HTML of the Streamlit app
+def add_watermark():
+    st.markdown("""
+        <style>
+        .watermark {
+            position: fixed;
+            color: gray;  # Watermark text color
+            opacity: 0.25;  # Watermark opacity
+            font-size: 2.5em;  # Watermark font size
+            transform: rotate(-30deg);  # Rotated watermark text
+            transform-origin: 0 0;
+            left: 85px;  # Position from the left
+            top: 300px;  # Position from the top
+        }
+        </style>
+        <div class='watermark'>Created by Yanawat Pattharapistthorn (Asst. Prof. Dr. Teerasak E-kobon 4511 Team)</div>
+    """, unsafe_allow_html=True)
+
 st.set_page_config(layout="wide")
 
 # Initialize connection to Google Sheets
@@ -39,6 +58,10 @@ authenticator = stauth.Authenticate(
 )
 
 authenticator.login()
+
+add_watermark()
+
+
 
 # Read reservation data from Google Sheets
 df_non_pcr = conn.read(worksheet='Non_PCR', usecols=list(range(5)), ttl=10)
@@ -524,7 +547,6 @@ if st.session_state["authentication_status"]:
 
         # Current datetime and 30 minutes before now
         current_datetime = datetime.datetime.now()
-        thirty_minutes_later = current_datetime + datetime.timedelta(minutes=30)
 
         # Current date and tomorrow's date for filtering
         today = datetime.date.today()
@@ -533,8 +555,7 @@ if st.session_state["authentication_status"]:
         # Filter the DataFrame to only include reservations for today and tomorrow
         user_reservations = user_reservations[
             (user_reservations['Start_Time'].dt.date.isin([today, tomorrow])) &
-            (user_reservations['Start_Time'] > thirty_minutes_later)
-            # Exclude reservations starting within the next 30 minutes
+            (user_reservations['Start_Time'] > current_datetime)
             ]
 
         if not user_reservations.empty:
