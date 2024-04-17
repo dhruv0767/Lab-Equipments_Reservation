@@ -8,24 +8,6 @@ from io import StringIO
 import os, time
 from streamlit_gsheets import GSheetsConnection
 
-# Custom CSS to inject into the HTML of the Streamlit app
-def add_watermark():
-    st.markdown("""
-        <style>
-        .watermark {
-            position: fixed;
-            color: gray;  # Watermark text color
-            opacity: 0.25;  # Watermark opacity
-            font-size: 2.5em;  # Watermark font size
-            transform: rotate(-30deg);  # Rotated watermark text
-            transform-origin: 0 0;
-            left: 85px;  # Position from the left
-            top: 300px;  # Position from the top
-        }
-        </style>
-        <div class='watermark'>Created by Yanawat Pattharapistthorn (Asst. Prof. Dr. Teerasak E-kobon 4511 Team)</div>
-    """, unsafe_allow_html=True)
-
 st.set_page_config(layout="wide")
 
 # Initialize connection to Google Sheets
@@ -58,10 +40,25 @@ authenticator = stauth.Authenticate(
 )
 
 authenticator.login()
+# Custom CSS to make the watermark less conspicuous
+st.markdown(
+    """
+    <style>
+    .watermark {
+        font-size: 15px;
+        text-align: center;
+        color: gray;
+        margin-top: 3px;  # Adjust the position as needed
+    }
+    </style>
+    """, unsafe_allow_html=True
+)
 
-add_watermark()
-
-
+# Adding the watermark to your Streamlit app
+st.markdown(
+    '<p class="watermark">Designed by Yanawat Pattharapistthorn and 4511 Lab members.</p>',
+    unsafe_allow_html=True
+)
 
 # Read reservation data from Google Sheets
 df_non_pcr = conn.read(worksheet='Non_PCR', usecols=list(range(5)), ttl=10)
