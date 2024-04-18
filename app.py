@@ -25,6 +25,7 @@ credentials = {
             "username": user,
             "email": st.secrets["credentials"]["usernames"][user]["email"],
             "password": st.secrets["credentials"]["usernames"][user]["password"],
+            "role": st.secrets["credentials"]["usernames"][user]["role"]
         }
         for user in st.secrets["credentials"]["usernames"]
     }
@@ -40,6 +41,9 @@ authenticator = stauth.Authenticate(
 )
 
 authenticator.login()
+
+st.session_state['role'] = credentials['usernames'][st.session_state['username']]['role']
+
 # Custom CSS to make the watermark less conspicuous
 st.markdown(
     """
@@ -151,10 +155,7 @@ slots = generate_time_slots()
 # Load equipment details from JSON instead of hardcoding
 room_equipment_details = load_json('equipment_details.json')
 
-# Simulated admin Names list - ensure this matches with your authenticator setup
-admin_Names = ['GeneticsKU@Admins', 'Admins']
-
-if st.session_state.get("name") in admin_Names:
+if st.session_state.get("role") == 'Admins':
     # Display reservation data from Google Sheets
     st.write(df_pcr, "PCR Equipments Reservations")
     st.write(df_non_pcr, "Non-PCR Equipments Reservations")
@@ -177,9 +178,26 @@ if st.session_state.get("name") in admin_Names:
         conn.clear(worksheet="Non_PCR")
         st.sidebar.success("All reservation data has been cleared.")
 
+# Check if the user is authorized (either an admin or a lecturer) and allow them to post an announcement
+if st.session_state["role"] in ["Admins", "Lecturer"]:
+    with st.sidebar:
+        st.write("Admin and Lecturer Controls")
+        announcement_text = st.text_area("Enter announcement:")
+        if st.button("Update Announcement"):
+            st.session_state['announcement'] = announcement_text
+            st.session_state['show_announcement'] = True
+
+# Always check if there's an announcement to display
+if 'show_announcement' in st.session_state and st.session_state['show_announcement']:
+    # Using st.markdown to insert HTML for a moving text effect
+    st.markdown(
+        f"<marquee style='width: 100%; color: red; font-size: 24px;'>{st.session_state['announcement']}</marquee>",
+        unsafe_allow_html=True
+    )
+
+# Usual app interface
 if st.session_state["authentication_status"]:
     authenticator.logout(location='sidebar')
-    # Usage of the welcome message
     message = f"## Welcome <span class='welcome-message'>{st.session_state['name']}</span>"
     st.markdown(message, unsafe_allow_html=True)
     tab1, tab2, tab3, tab4 = st.tabs(["Reservation Tables", "Reservation Forms", "Reservation Cancellation", "Contact Us"])
@@ -201,15 +219,18 @@ if st.session_state["authentication_status"]:
 
     with tab1:
         room_selection = st.selectbox("### Select a Room", list(room_equipment_details.keys()), key='tab1 select room')
-        view_date = st.radio("### View reservations for", ("## Today", "## Tomorrow"))
-        selected_date = datetime.date.today() if view_date == "## Today" else datetime.date.today() + datetime.timedelta(
-            days=1)
+
+        # Generate a list of dates for the next week
+        dates = [(datetime.date.today() + datetime.timedelta(days=i)).strftime('%Y-%m-%d') for i in range(7)]
+        view_date = st.selectbox("### View reservations for", dates)
+        selected_date = datetime.datetime.strptime(view_date, '%Y-%m-%d').date()
 
         full_day_start = datetime.datetime.combine(selected_date, datetime.time(0, 0))
         full_day_end = datetime.datetime.combine(selected_date, datetime.time(23, 59))
         pcr_start = datetime.datetime.combine(selected_date, datetime.time(8, 0))
         pcr_end = datetime.datetime.combine(selected_date, datetime.time(20, 0))
 
+        # Filter DataFrames for the selected day
         df_pcr_filtered = df_pcr[(df_pcr['Room'] == room_selection) & (df_pcr['Start_Time'].dt.date == selected_date)]
         df_non_pcr_filtered = df_non_pcr[
             (df_non_pcr['Room'] == room_selection) & (df_non_pcr['Start_Time'].dt.date == selected_date)]
@@ -438,86 +459,62 @@ if st.session_state["authentication_status"]:
 
                     st.subheader(f"Reserve {selected_equipment}")
 
-                    tomorrow = datetime.date.today() + datetime.timedelta(days=1)
+                    # Set the maximum days in advance based on the equipment type
+                    max_days_advance = 1 if "Autoclave" in selected_equipment else 7
+                    max_date = datetime.date.today() + datetime.timedelta(days=max_days_advance)
 
-                    start_date = st.date_input("## Start Date", min_value=datetime.date.today(),
-
-                                               max_value=tomorrow)
+                    start_date = st.date_input("## Start Date", min_value=datetime.date.today(), max_value=max_date)
 
                     current_time = datetime.datetime.now().replace(second=0, microsecond=0)
-
+                    # Set minimum time for the start time input based on whether the reservation date is today
                     min_time = current_time.time() if start_date == datetime.date.today() else datetime.time(0, 0)
 
                     start_time = st.time_input("## Start Time", value=min_time)
-
                     end_time = st.time_input("## End Time",
-
-                                             value=(current_time + datetime.timedelta(hours=1)).time())
+                                             value=(current_time + datetime.timedelta(
+                                                 hours=1)).time() if start_date == datetime.date.today() else datetime.time(
+                                                 1, 0))
 
                     start_datetime = datetime.datetime.combine(start_date, start_time)
-
                     end_datetime = datetime.datetime.combine(start_date, end_time)
 
-                if st.button("### Submit Reservation"):
-
-                    if start_datetime < current_time:
-
-                        st.error("Cannot book a reservation in the past. Please select a future time.")
-
-                    elif start_datetime >= end_datetime:
-
-                        st.error("The start time must be before the end time. Please adjust your selection.")
-
-                    else:
-
-                        # Assuming df_non_pcr is already loaded and filtered as needed
-
-                        overlapping_reservations = df_non_pcr[
-
-                            (df_non_pcr['Room'] == selected_room) &
-
-                            (df_non_pcr['Equipments'] == selected_equipment) &
-
-                            ((df_non_pcr['Start_Time'] < end_datetime) & (df_non_pcr['End_Time'] > start_datetime))
-
-                            ]
-
-                        if not overlapping_reservations.empty:
-
-                            st.error("This time slot is already reserved. Please choose another time.")
-
+                    if st.button("### Submit Reservation"):
+                        if start_datetime < current_time:
+                            st.error("Cannot book a reservation in the past. Please select a future time.")
+                        elif start_datetime >= end_datetime:
+                            st.error("The start time must be before the end time. Please adjust your selection.")
                         else:
+                            # Assuming df_non_pcr is already loaded and filtered as needed
+                            overlapping_reservations = df_non_pcr[
+                                (df_non_pcr['Room'] == selected_room) &
+                                (df_non_pcr['Equipments'] == selected_equipment) &
+                                ((df_non_pcr['Start_Time'] < end_datetime) & (df_non_pcr['End_Time'] > start_datetime))
+                                ]
 
-                            new_reservation = {
+                            if not overlapping_reservations.empty:
+                                st.error("This time slot is already reserved. Please choose another time.")
+                            else:
+                                new_reservation = {
+                                    'Name': st.session_state["name"],
+                                    'Room': selected_room,
+                                    'Equipments': selected_equipment,
+                                    'Start_Time': start_datetime,
+                                    'End_Time': end_datetime
+                                }
 
-                                'Name': st.session_state["name"],
+                                new_reservation_df = pd.DataFrame([new_reservation])
+                                df_non_pcr_buffer = pd.concat([df_non_pcr, new_reservation_df], ignore_index=True)
 
-                                'Room': selected_room,
+                                df_non_pcr_buffer.reset_index(drop=True, inplace=True)
+                                df_non_pcr_buffer['Start_Time'] = df_non_pcr_buffer['Start_Time'].dt.strftime(
+                                    '%Y/%m/%d %H:%M:%S')
+                                df_non_pcr_buffer['End_Time'] = df_non_pcr_buffer['End_Time'].dt.strftime(
+                                    '%Y/%m/%d %H:%M:%S')
 
-                                'Equipments': selected_equipment,
+                                conn.update(worksheet="Non_PCR", data=df_non_pcr_buffer)
 
-                                'Start_Time': start_datetime,
-
-                                'End_Time': end_datetime
-
-                            }
-
-                            new_reservation_df = pd.DataFrame([new_reservation])
-
-                            df_non_pcr_buffer = pd.concat([df_non_pcr, new_reservation_df], ignore_index=True)
-
-                            df_non_pcr_buffer.reset_index(drop=True, inplace=True)
-
-                            df_non_pcr_buffer['Start_Time'] = df_non_pcr_buffer['Start_Time'].dt.strftime(
-                                '%Y/%m/%d %H:%M:%S')
-
-                            df_non_pcr_buffer['End_Time'] = df_non_pcr_buffer['End_Time'].dt.strftime(
-                                '%Y/%m/%d %H:%M:%S')
-
-                            conn.update(worksheet="Non_PCR", data=df_non_pcr_buffer)
-
-                            st.success(
-                                f"Reservation successful for {selected_equipment} in {selected_room} from {start_datetime.strftime('%Y/%m/%d %H:%M:%S')} to {end_datetime.strftime('%Y/%m/%d %H:%M:%S')}")
+                                st.success(
+                                    f"Reservation successful for {selected_equipment} in {selected_room} from {start_datetime.strftime('%Y/%m/%d %H:%M:%S')} to {end_datetime.strftime('%Y/%m/%d %H:%M:%S')}")
         else:
             st.error("This equipment is currently not available for reservation.")
 
