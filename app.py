@@ -42,9 +42,7 @@ authenticator = stauth.Authenticate(
 
 authenticator.login()
 
-if st.session_state["authentication_status"]:
-    st.session_state['role'] = credentials['usernames'][st.session_state['username']]['role']
-
+role = credentials['usernames'][st.session_state['username']]['role']
 
 # Custom CSS to make the watermark less conspicuous
 st.markdown(
@@ -157,7 +155,7 @@ slots = generate_time_slots()
 # Load equipment details from JSON instead of hardcoding
 room_equipment_details = load_json('equipment_details.json')
 
-if st.session_state.get("role") == 'Admins':
+if role == 'Admins':
     # Display reservation data from Google Sheets
     st.write(df_pcr, "PCR Equipments Reservations")
     st.write(df_non_pcr, "Non-PCR Equipments Reservations")
@@ -181,7 +179,7 @@ if st.session_state.get("role") == 'Admins':
         st.sidebar.success("All reservation data has been cleared.")
 
 # Check if the user is authorized (either an admin or a lecturer) and allow them to post an announcement
-if st.session_state["role"] in ["Admins", "Lecturer"]:
+if role in ["Admins", "Lecturer"]:
     with st.sidebar:
         st.write("Admin and Lecturer Controls")
         announcement_text = st.text_area("Enter announcement:")
