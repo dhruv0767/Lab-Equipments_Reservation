@@ -42,8 +42,8 @@ authenticator = stauth.Authenticate(
 
 authenticator.login()
 
-st.session_state['role'] = credentials['usernames'][st.session_state['username']]['role']
-st.write(st.session_state['username'])
+if st.session_state["authentication_status"]:
+    st.session_state['role'] = credentials['usernames'][st.session_state['username']]['role']
 
 
 # Custom CSS to make the watermark less conspicuous
