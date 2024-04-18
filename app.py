@@ -42,8 +42,6 @@ authenticator = stauth.Authenticate(
 
 authenticator.login()
 
-role = credentials['usernames'][st.session_state['username']]['role']
-
 # Custom CSS to make the watermark less conspicuous
 st.markdown(
     """
@@ -155,37 +153,40 @@ slots = generate_time_slots()
 # Load equipment details from JSON instead of hardcoding
 room_equipment_details = load_json('equipment_details.json')
 
-if role == 'Admins':
-    # Display reservation data from Google Sheets
-    st.write(df_pcr, "PCR Equipments Reservations")
-    st.write(df_non_pcr, "Non-PCR Equipments Reservations")
-    st.sidebar.write("Admin Interface")
-    selected_room_admin = st.sidebar.selectbox("Select a room to manage equipment:", list(room_equipment_details.keys()))
-    equipment_list = list(room_equipment_details[selected_room_admin].keys())
-    selected_equipment_admin = st.sidebar.selectbox("Select equipment to toggle availability:", equipment_list)
+if st.session_state["authentication_status"]:
+    role = credentials['usernames'][st.session_state['username']]['role']
 
-    if st.sidebar.button("Toggle Availability"):
-        # Toggle equipment availability status
-        current_status = room_equipment_details[selected_room_admin][selected_equipment_admin]['enabled']
-        room_equipment_details[selected_room_admin][selected_equipment_admin]['enabled'] = not current_status
-        # Show success message and save updated status
-        st.sidebar.success(f"{'Disabled' if current_status else 'Enabled'} {selected_equipment_admin}")
-        save_equipment_details(room_equipment_details)
+    if role == 'Admins':
+        # Display reservation data from Google Sheets
+        st.write(df_pcr, "PCR Equipments Reservations")
+        st.write(df_non_pcr, "Non-PCR Equipments Reservations")
+        st.sidebar.write("Admin Interface")
+        selected_room_admin = st.sidebar.selectbox("Select a room to manage equipment:", list(room_equipment_details.keys()))
+        equipment_list = list(room_equipment_details[selected_room_admin].keys())
+        selected_equipment_admin = st.sidebar.selectbox("Select equipment to toggle availability:", equipment_list)
 
-    # Button to clear all reservation data
-    if st.sidebar.button("Clear All Reservations"):
-        conn.clear(worksheet="PCR")
-        conn.clear(worksheet="Non_PCR")
-        st.sidebar.success("All reservation data has been cleared.")
+        if st.sidebar.button("Toggle Availability"):
+            # Toggle equipment availability status
+            current_status = room_equipment_details[selected_room_admin][selected_equipment_admin]['enabled']
+            room_equipment_details[selected_room_admin][selected_equipment_admin]['enabled'] = not current_status
+            # Show success message and save updated status
+            st.sidebar.success(f"{'Disabled' if current_status else 'Enabled'} {selected_equipment_admin}")
+            save_equipment_details(room_equipment_details)
 
-# Check if the user is authorized (either an admin or a lecturer) and allow them to post an announcement
-if role in ["Admins", "Lecturer"]:
-    with st.sidebar:
-        st.write("Admin and Lecturer Controls")
-        announcement_text = st.text_area("Enter announcement:")
-        if st.button("Update Announcement"):
-            st.session_state['announcement'] = announcement_text
-            st.session_state['show_announcement'] = True
+        # Button to clear all reservation data
+        if st.sidebar.button("Clear All Reservations"):
+            conn.clear(worksheet="PCR")
+            conn.clear(worksheet="Non_PCR")
+            st.sidebar.success("All reservation data has been cleared.")
+
+    # Check if the user is authorized (either an admin or a lecturer) and allow them to post an announcement
+    if role in ["Admins", "Lecturer"]:
+        with st.sidebar:
+            st.write("Admin and Lecturer Controls")
+            announcement_text = st.text_area("Enter announcement:")
+            if st.button("Update Announcement"):
+                st.session_state['announcement'] = announcement_text
+                st.session_state['show_announcement'] = True
 
 # Always check if there's an announcement to display
 if 'show_announcement' in st.session_state and st.session_state['show_announcement']:
