@@ -222,7 +222,7 @@ if st.session_state["authentication_status"]:
         room_selection = st.selectbox("### Select a Room", list(room_equipment_details.keys()), key='tab1 select room')
 
         # Generate a list of dates for the next week
-        dates = [(datetime.date.today() + datetime.timedelta(days=i)).strftime('%Y-%m-%d') for i in range(7)]
+        dates = [(datetime.date.today() + datetime.timedelta(days=i)).strftime('%Y-%m-%d') for i in range(60)]
         view_date = st.selectbox("### View reservations for", dates)
         selected_date = datetime.datetime.strptime(view_date, '%Y-%m-%d').date()
 
@@ -460,21 +460,28 @@ if st.session_state["authentication_status"]:
 
                     st.subheader(f"Reserve {selected_equipment}")
 
-                    # Set the maximum days in advance based on the equipment type
-                    max_days_advance = 1 if "Autoclave" in selected_equipment else 7
+                    # Determine max days based on user role
+                    if role in ["Admins", "Lecturer"]:
+                        max_days_advance = 60  # Admins and Lecturers can book up to 2 months in advance
+                    else:
+                        max_days_advance = 30  # Other roles can book up to 1 month in advance
+
+                    # Adjust for Autoclave which has a specific constraint
+                    if "Autoclave" in selected_equipment:
+                        max_days_advance = min(max_days_advance,
+                                               1)  # Limit Autoclave reservation to 1 day in advance regardless of role
+
+                    # Set the maximum reservation date
                     max_date = datetime.date.today() + datetime.timedelta(days=max_days_advance)
 
                     start_date = st.date_input("## Start Date", min_value=datetime.date.today(), max_value=max_date)
 
                     current_time = datetime.datetime.now().replace(second=0, microsecond=0)
-                    # Set minimum time for the start time input based on whether the reservation date is today
                     min_time = current_time.time() if start_date == datetime.date.today() else datetime.time(0, 0)
 
                     start_time = st.time_input("## Start Time", value=min_time)
-                    end_time = st.time_input("## End Time",
-                                             value=(current_time + datetime.timedelta(
-                                                 hours=1)).time() if start_date == datetime.date.today() else datetime.time(
-                                                 1, 0))
+                    end_time = st.time_input("## End Time", value=(current_time + datetime.timedelta(
+                        hours=1)).time() if start_date == datetime.date.today() else datetime.time(1, 0))
 
                     start_datetime = datetime.datetime.combine(start_date, start_time)
                     end_datetime = datetime.datetime.combine(start_date, end_time)
@@ -485,7 +492,7 @@ if st.session_state["authentication_status"]:
                         elif start_datetime >= end_datetime:
                             st.error("The start time must be before the end time. Please adjust your selection.")
                         else:
-                            # Assuming df_non_pcr is already loaded and filtered as needed
+                            # Check for overlapping reservations
                             overlapping_reservations = df_non_pcr[
                                 (df_non_pcr['Room'] == selected_room) &
                                 (df_non_pcr['Equipments'] == selected_equipment) &
@@ -516,6 +523,7 @@ if st.session_state["authentication_status"]:
 
                                 st.success(
                                     f"Reservation successful for {selected_equipment} in {selected_room} from {start_datetime.strftime('%Y/%m/%d %H:%M:%S')} to {end_datetime.strftime('%Y/%m/%d %H:%M:%S')}")
+
         else:
             st.error("This equipment is currently not available for reservation.")
 
