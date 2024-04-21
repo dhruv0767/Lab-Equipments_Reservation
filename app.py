@@ -158,7 +158,7 @@ if 'Autoclave 1 (Drain the water every 5 times after using)_count' not in st.ses
     st.session_state['Autoclave 1 (Drain the water every 5 times after using)_count'] = 0
 if 'Autoclave 2 (Drain the water every 5 times after using)_count' not in st.session_state:
     st.session_state['Autoclave 2 (Drain the water every 5 times after using)_count'] = 0
-st.write(st.session_state)
+
 if st.session_state["authentication_status"]:
     role = credentials['usernames'][st.session_state['username']]['role']
 
