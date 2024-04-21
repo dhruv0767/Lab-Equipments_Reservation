@@ -153,13 +153,19 @@ slots = generate_time_slots()
 # Load equipment details from JSON instead of hardcoding
 room_equipment_details = load_json('equipment_details.json')
 
+# Set session state defaults for autoclave counters if not already set
+if 'Autoclave 1 (Drain the water every 5 times after using)_count' not in st.session_state:
+    st.session_state['Autoclave 1 (Drain the water every 5 times after using)_count'] = 0
+if 'Autoclave 2 (Drain the water every 5 times after using)_count' not in st.session_state:
+    st.session_state['Autoclave 2 (Drain the water every 5 times after using)_count'] = 0
+st.write(st.session_state)
 if st.session_state["authentication_status"]:
     role = credentials['usernames'][st.session_state['username']]['role']
 
     if role == 'Admins':
         # Display reservation data from Google Sheets
-        st.write(df_pcr, "PCR Equipments Reservations")
-        st.write(df_non_pcr, "Non-PCR Equipments Reservations")
+        # st.write(df_pcr, "PCR Equipments Reservations")
+        # st.write(df_non_pcr, "Non-PCR Equipments Reservations")
         st.sidebar.write("Admin Interface")
         selected_room_admin = st.sidebar.selectbox("Select a room to manage equipment:", list(room_equipment_details.keys()))
         equipment_list = list(room_equipment_details[selected_room_admin].keys())
@@ -520,6 +526,19 @@ if st.session_state["authentication_status"]:
                                     '%Y/%m/%d %H:%M:%S')
 
                                 conn.update(worksheet="Non_PCR", data=df_non_pcr_buffer)
+
+                                # Handle specific autoclave counters
+                                if selected_equipment in ['Autoclave 1 (Drain the water every 5 times after using)',
+                                                          'Autoclave 2 (Drain the water every 5 times after using)']:
+                                    counter_key = f"{selected_equipment}_count"
+                                    st.session_state[counter_key] += 1
+                                    usage_count = st.session_state[counter_key]
+                                    if usage_count == 5:
+                                        st.info(
+                                            "You are the fifth user of this autoclave. Please remember to drain the water after using it.")
+                                        st.session_state[counter_key] = 0  # Reset the counter
+                                    else:
+                                        st.info(f"You are the {usage_count} user of this autoclave.")
 
                                 st.success(
                                     f"Reservation successful for {selected_equipment} in {selected_room} from {start_datetime.strftime('%Y/%m/%d %H:%M:%S')} to {end_datetime.strftime('%Y/%m/%d %H:%M:%S')}")
