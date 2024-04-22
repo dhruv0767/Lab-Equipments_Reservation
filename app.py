@@ -158,7 +158,7 @@ if 'Autoclave 1 (Drain the water every 5 times after using)_count' not in st.ses
     st.session_state['Autoclave 1 (Drain the water every 5 times after using)_count'] = 0
 if 'Autoclave 2 (Drain the water every 5 times after using)_count' not in st.session_state:
     st.session_state['Autoclave 2 (Drain the water every 5 times after using)_count'] = 0
-
+st.write(st.session_state)
 if st.session_state["authentication_status"]:
     role = credentials['usernames'][st.session_state['username']]['role']
 
@@ -572,11 +572,11 @@ if st.session_state["authentication_status"]:
 
         # Current date and tomorrow's date for filtering
         today = datetime.date.today()
-        tomorrow = today + datetime.timedelta(days=1)
+        max_date_60 = today + datetime.timedelta(days=60)
 
         # Filter the DataFrame to only include reservations for today and tomorrow
         user_reservations = user_reservations[
-            (user_reservations['Start_Time'].dt.date.isin([today, tomorrow])) &
+            (user_reservations['Start_Time'].dt.date.isin([today, max_date_60])) &
             (user_reservations['Start_Time'] > current_datetime)
             ]
 
