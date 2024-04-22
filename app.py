@@ -71,6 +71,9 @@ df_pcr = conn.read(worksheet='PCR', usecols=list(range(5)), ttl=10)
 df_pcr['Start_Time'] = pd.to_datetime(df_pcr['Start_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
 df_pcr['End_Time'] = pd.to_datetime(df_pcr['End_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
 
+autoclaves_count = conn.read(worksheet="Counts", usecols= list(range(1)), ttl=10)
+
+autoclaves_count.dropna(inplace= True)
 df_pcr.dropna(inplace= True)
 df_non_pcr.dropna(inplace= True)
 
@@ -154,15 +157,6 @@ slots = generate_time_slots()
 room_equipment_details = load_json('equipment_details.json')
 
 # Set session state defaults for autoclave counters if not already set
-def read_autoclave_count(equipment_name):
-    # Read the count from Google Sheets; this is just a placeholder
-    # Actual implementation will depend on how you access and read from Google Sheets
-    return int(conn.read(worksheet="Counts", cell=f"{equipment_name}_cell"))
-
-def update_autoclave_count(equipment_name, count):
-    # Update the count in Google Sheets; this is just a placeholder
-    conn.update(worksheet="Counts", cell=f"{equipment_name}_cell", data=str(count))
-    
 if st.session_state["authentication_status"]:
     role = credentials['usernames'][st.session_state['username']]['role']
 
@@ -532,17 +526,20 @@ if st.session_state["authentication_status"]:
                                 conn.update(worksheet="Non_PCR", data=df_non_pcr_buffer)
 
                                 # Handle autoclave usage counting
-                                if selected_equipment in ['Autoclave 1 (Drain the water every 5 times after using)', 
+                                if selected_equipment in ['Autoclave 1 (Drain the water every 5 times after using)',
                                                           'Autoclave 2 (Drain the water every 5 times after using)']:
-                                    current_count = read_autoclave_count(selected_equipment)
+                                    current_count = len(autoclaves_count[autoclaves_count['Counts'] == f'{selected_equipment}'])
                                     new_count = current_count + 1
                                     if new_count >= 5:
-                                        st.info(
-                                            "You are the fifth user of this autoclave. Please remember to drain the water after using it.")
+                                        st.info("You are the fifth user of this autoclave. Please remember to drain the water after using it.")
                                         new_count = 0  # Reset the counter
                                     else:
                                         st.info(f"You are the {new_count} user of this autoclave.")
-                                    update_autoclave_count(selected_equipment, new_count)
+
+                                    counts = {'Counts': selected_equipment}
+                                    counts = pd.DataFrame([counts])
+                                    autoclaves_count_buffer = pd.concat([autoclaves_count, counts], ignore_index=True)
+                                    conn.update(worksheet="Counts", data=autoclaves_count_buffer)
 
                                 st.success(
                                     f"Reservation successful for {selected_equipment} in {selected_room} from {start_datetime.strftime('%Y/%m/%d %H:%M:%S')} to {end_datetime.strftime('%Y/%m/%d %H:%M:%S')}")
