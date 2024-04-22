@@ -528,18 +528,20 @@ if st.session_state["authentication_status"]:
                                 # Handle autoclave usage counting
                                 if selected_equipment in ['Autoclave 1 (Drain the water every 5 times after using)',
                                                           'Autoclave 2 (Drain the water every 5 times after using)']:
-                                    current_count = len(autoclaves_count[autoclaves_count['Counts'] == f'{selected_equipment}'])
+                                    current_count = len(autoclaves_count[autoclaves_count['Counts'] == selected_equipment])
                                     new_count = current_count + 1
                                     if new_count >= 5:
                                         st.info("You are the fifth user of this autoclave. Please remember to drain the water after using it.")
-                                        new_count = 0  # Reset the counter
+                                        autoclaves_count = autoclaves_count.drop(autoclaves_count[autoclaves_count['Counts'] == selected_equipment].index)
+                                        conn.update(worksheet="Counts", data=autoclaves_count)
+
                                     else:
                                         st.info(f"You are the {new_count} user of this autoclave.")
 
-                                    counts = {'Counts': selected_equipment}
-                                    counts = pd.DataFrame([counts])
-                                    autoclaves_count_buffer = pd.concat([autoclaves_count, counts], ignore_index=True)
-                                    conn.update(worksheet="Counts", data=autoclaves_count_buffer)
+                                        counts = {'Counts': selected_equipment}
+                                        counts = pd.DataFrame([counts])
+                                        autoclaves_count_buffer = pd.concat([autoclaves_count, counts], ignore_index=True)
+                                        conn.update(worksheet="Counts", data=autoclaves_count_buffer)
 
                                 st.success(
                                     f"Reservation successful for {selected_equipment} in {selected_room} from {start_datetime.strftime('%Y/%m/%d %H:%M:%S')} to {end_datetime.strftime('%Y/%m/%d %H:%M:%S')}")
