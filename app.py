@@ -17,7 +17,7 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 os.environ['TZ'] = 'Asia/Bangkok'
 time.tzset()
 
-
+st.write(st.session_state)
 
 # Device type selection in sidebar
 mobile = st.toggle('Mobile')
