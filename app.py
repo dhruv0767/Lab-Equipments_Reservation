@@ -483,68 +483,68 @@ if st.session_state["authentication_status"]:
                     current_time = datetime.datetime.now().replace(second=0, microsecond=0)
                     min_time = current_time.time() if start_date == datetime.date.today() else datetime.time(0, 0)
 
-                    start_time = st.time_input("## Start Time", value=min_time)
-                    end_time = st.time_input("## End Time", value=(current_time + datetime.timedelta(
-                        hours=1)).time() if start_date == datetime.date.today() else datetime.time(1, 0))
+                    start_time = st.time_input("## Start Time", value=None)
+                    end_time = st.time_input("## End Time", value=None)
 
-                    start_datetime = datetime.datetime.combine(start_date, start_time)
-                    end_datetime = datetime.datetime.combine(start_date, end_time)
+                    if start_time and end_time:
+                        start_datetime = datetime.datetime.combine(start_date, start_time)
+                        end_datetime = datetime.datetime.combine(start_date, end_time)
 
-                    if st.button("### Submit Reservation"):
-                        if start_datetime < current_time:
-                            st.error("Cannot book a reservation in the past. Please select a future time.")
-                        elif start_datetime >= end_datetime:
-                            st.error("The start time must be before the end time. Please adjust your selection.")
-                        else:
-                            # Check for overlapping reservations
-                            overlapping_reservations = df_non_pcr[
-                                (df_non_pcr['Room'] == selected_room) &
-                                (df_non_pcr['Equipments'] == selected_equipment) &
-                                ((df_non_pcr['Start_Time'] < end_datetime) & (df_non_pcr['End_Time'] > start_datetime))
-                                ]
-
-                            if not overlapping_reservations.empty:
-                                st.error("This time slot is already reserved. Please choose another time.")
+                        if st.button("### Submit Reservation"):
+                            if start_datetime < current_time:
+                                st.error("Cannot book a reservation in the past. Please select a future time.")
+                            elif start_datetime >= end_datetime:
+                                st.error("The start time must be before the end time. Please adjust your selection.")
                             else:
-                                new_reservation = {
-                                    'Name': st.session_state["name"],
-                                    'Room': selected_room,
-                                    'Equipments': selected_equipment,
-                                    'Start_Time': start_datetime,
-                                    'End_Time': end_datetime
-                                }
+                                # Check for overlapping reservations
+                                overlapping_reservations = df_non_pcr[
+                                    (df_non_pcr['Room'] == selected_room) &
+                                    (df_non_pcr['Equipments'] == selected_equipment) &
+                                    ((df_non_pcr['Start_Time'] < end_datetime) & (df_non_pcr['End_Time'] > start_datetime))
+                                    ]
 
-                                new_reservation_df = pd.DataFrame([new_reservation])
-                                df_non_pcr_buffer = pd.concat([df_non_pcr, new_reservation_df], ignore_index=True)
+                                if not overlapping_reservations.empty:
+                                    st.error("This time slot is already reserved. Please choose another time.")
+                                else:
+                                    new_reservation = {
+                                        'Name': st.session_state["name"],
+                                        'Room': selected_room,
+                                        'Equipments': selected_equipment,
+                                        'Start_Time': start_datetime,
+                                        'End_Time': end_datetime
+                                    }
 
-                                df_non_pcr_buffer.reset_index(drop=True, inplace=True)
-                                df_non_pcr_buffer['Start_Time'] = df_non_pcr_buffer['Start_Time'].dt.strftime(
-                                    '%Y/%m/%d %H:%M:%S')
-                                df_non_pcr_buffer['End_Time'] = df_non_pcr_buffer['End_Time'].dt.strftime(
-                                    '%Y/%m/%d %H:%M:%S')
+                                    new_reservation_df = pd.DataFrame([new_reservation])
+                                    df_non_pcr_buffer = pd.concat([df_non_pcr, new_reservation_df], ignore_index=True)
 
-                                conn.update(worksheet="Non_PCR", data=df_non_pcr_buffer)
+                                    df_non_pcr_buffer.reset_index(drop=True, inplace=True)
+                                    df_non_pcr_buffer['Start_Time'] = df_non_pcr_buffer['Start_Time'].dt.strftime(
+                                        '%Y/%m/%d %H:%M:%S')
+                                    df_non_pcr_buffer['End_Time'] = df_non_pcr_buffer['End_Time'].dt.strftime(
+                                        '%Y/%m/%d %H:%M:%S')
 
-                                # Handle autoclave usage counting
-                                if selected_equipment in ['Autoclave 1 (Drain the water every 5 times after using)',
-                                                          'Autoclave 2 (Drain the water every 5 times after using)']:
-                                    current_count = len(autoclaves_count[autoclaves_count['Counts'] == selected_equipment])
-                                    new_count = current_count + 1
-                                    if new_count >= 5:
-                                        st.info("You are the fifth user of this autoclave. Please remember to drain the water after using it.")
-                                        autoclaves_count = autoclaves_count.drop(autoclaves_count[autoclaves_count['Counts'] == selected_equipment].index)
-                                        conn.update(worksheet="Counts", data=autoclaves_count)
+                                    conn.update(worksheet="Non_PCR", data=df_non_pcr_buffer)
 
-                                    else:
-                                        st.info(f"You are the {new_count} user of this autoclave.")
+                                    # Handle autoclave usage counting
+                                    if selected_equipment in ['Autoclave 1 (Drain the water every 5 times after using)',
+                                                              'Autoclave 2 (Drain the water every 5 times after using)']:
+                                        current_count = len(autoclaves_count[autoclaves_count['Counts'] == selected_equipment])
+                                        new_count = current_count + 1
+                                        if new_count >= 5:
+                                            st.info("You are the fifth user of this autoclave. Please remember to drain the water after using it.")
+                                            autoclaves_count = autoclaves_count.drop(autoclaves_count[autoclaves_count['Counts'] == selected_equipment].index)
+                                            conn.update(worksheet="Counts", data=autoclaves_count)
 
-                                        counts = {'Counts': selected_equipment}
-                                        counts = pd.DataFrame([counts])
-                                        autoclaves_count_buffer = pd.concat([autoclaves_count, counts], ignore_index=True)
-                                        conn.update(worksheet="Counts", data=autoclaves_count_buffer)
+                                        else:
+                                            st.info(f"You are the {new_count} user of this autoclave.")
 
-                                st.success(
-                                    f"Reservation successful for {selected_equipment} in {selected_room} from {start_datetime.strftime('%Y/%m/%d %H:%M:%S')} to {end_datetime.strftime('%Y/%m/%d %H:%M:%S')}")
+                                            counts = {'Counts': selected_equipment}
+                                            counts = pd.DataFrame([counts])
+                                            autoclaves_count_buffer = pd.concat([autoclaves_count, counts], ignore_index=True)
+                                            conn.update(worksheet="Counts", data=autoclaves_count_buffer)
+
+                                    st.success(
+                                        f"Reservation successful for {selected_equipment} in {selected_room} from {start_datetime.strftime('%Y/%m/%d %H:%M:%S')} to {end_datetime.strftime('%Y/%m/%d %H:%M:%S')}")
 
         else:
             st.error("This equipment is currently not available for reservation.")
