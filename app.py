@@ -632,9 +632,9 @@ else:
 
     credentials = {
         "usernames": {
-            user: {
+            user.lower(): {
                 "name": st.secrets["credentials"]["usernames"][user]["name"],
-                "username": user,
+                "username": user.lower(),
                 "email": st.secrets["credentials"]["usernames"][user]["email"],
                 "password": st.secrets["credentials"]["usernames"][user]["password"],
                 "role": st.secrets["credentials"]["usernames"][user]["role"]
