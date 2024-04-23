@@ -16,7 +16,9 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 # Set the timezone
 os.environ['TZ'] = 'Asia/Bangkok'
 time.tzset()
-st.write(st.session_state)
+
+
+
 # Device type selection in sidebar
 mobile = st.toggle('Mobile')
 
@@ -179,7 +181,7 @@ if mobile:
     load_equipment_details()
 
     if st.session_state["authentication_status"]:
-        role = credentials['usernames'][st.session_state['username']]['role']
+        role = credentials['usernames'][st.session_state['username'].lower()]['role']
         st.session_state['authenticator'].logout(location='main')
 
 
@@ -775,7 +777,7 @@ else:
     load_equipment_details()
 
     if st.session_state["authentication_status"]:
-        role = credentials['usernames'][st.session_state['username']]['role']
+        role = credentials['usernames'][st.session_state['username'].lower()]['role']
 
         if role == 'Admins':
             # Display reservation data from Google Sheets
