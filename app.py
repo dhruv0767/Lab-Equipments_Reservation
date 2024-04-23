@@ -16,7 +16,7 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 # Set the timezone
 os.environ['TZ'] = 'Asia/Bangkok'
 time.tzset()
-st.write(st.session_state)
+
 # Device type selection in sidebar
 mobile = st.toggle('Mobile')
 
@@ -71,25 +71,21 @@ if mobile:
 
 
     # Equipments details handling
-    @st.cache_data()
     def load_json(file_path):
         with open(file_path, 'r') as file:
             return json.load(file)
 
 
-    @st.cache_data()
     def save_equipment_details(details, json_file_path='equipment_details.json'):
         with open(json_file_path, 'w') as file:
             json.dump(details, file, indent=4)
 
 
-    @st.cache_data()
     # Image handling
     def image_exists(image_path):
         return os.path.exists(image_path)
 
 
-    @st.cache_data()
     def safe_display_image(image_path, width=100, offset=0):
         if image_exists(image_path):
             cols = st.columns([offset, 1])
@@ -138,7 +134,6 @@ if mobile:
     st.markdown(css, unsafe_allow_html=True)
 
 
-    @st.cache_data()
     def fetch_data(worksheet_name):
         # Read data from Google Sheets
         df = conn.read(worksheet=worksheet_name, usecols=list(range(5)), ttl=180)
@@ -147,7 +142,6 @@ if mobile:
         return df
 
 
-    @st.cache_data()
     def convert_df_to_csv(df):
         """Converts a DataFrame to a CSV string."""
         output = StringIO()
@@ -155,19 +149,16 @@ if mobile:
         return output.getvalue().encode('utf-8')
 
 
-    @st.cache_data()
     def download_non_pcr():
         df_non_pcr = fetch_data('Non_PCR')
         return df_non_pcr
 
 
-    @st.cache_data()
     def download_pcr():
         df_pcr = fetch_data('PCR')
         return df_pcr
 
 
-    @st.cache_data()
     def generate_time_slots():
         slots = [{
             "label": f"Slot {i + 1}: {datetime.time(hour=h).strftime('%H:%M')}-{datetime.time(hour=h + 3).strftime('%H:%M')}",
@@ -179,7 +170,6 @@ if mobile:
     slots = generate_time_slots()
 
 
-    @st.cache_data()
     def load_equipment_details():
         if 'equipment_details' not in st.session_state:
             st.session_state.equipment_details = load_json('equipment_details.json')
@@ -688,22 +678,18 @@ else:
 
 
     # Equipments details handling
-    @st.cache_data()
     def load_json(file_path):
         with open(file_path, 'r') as file:
             return json.load(file)
 
-    @st.cache_data()
     def save_equipment_details(details, json_file_path='equipment_details.json'):
         with open(json_file_path, 'w') as file:
             json.dump(details, file, indent=4)
 
-    @st.cache_data()
     # Image handling
     def image_exists(image_path):
         return os.path.exists(image_path)
 
-    @st.cache_data()
     def safe_display_image(image_path, width=100, offset=0):
         if image_exists(image_path):
             cols = st.columns([offset, 1])
@@ -750,7 +736,6 @@ else:
     '''
     st.markdown(css, unsafe_allow_html=True)
 
-    @st.cache_data()
     def fetch_data(worksheet_name):
         # Read data from Google Sheets
         df = conn.read(worksheet=worksheet_name, usecols=list(range(5)), ttl=180)
@@ -758,24 +743,20 @@ else:
         df['End_Time'] = pd.to_datetime(df['End_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
         return df
 
-    @st.cache_data()
     def convert_df_to_csv(df):
         """Converts a DataFrame to a CSV string."""
         output = StringIO()
         df.to_csv(output, index=False)
         return output.getvalue().encode('utf-8')
 
-    @st.cache_data()
     def download_non_pcr():
         df_non_pcr = fetch_data('Non_PCR')
         return df_non_pcr
 
-    @st.cache_data()
     def download_pcr():
         df_pcr = fetch_data('PCR')
         return df_pcr
 
-    @st.cache_data()
     def generate_time_slots():
         slots = [{
             "label": f"Slot {i + 1}: {datetime.time(hour=h).strftime('%H:%M')}-{datetime.time(hour=h + 3).strftime('%H:%M')}",
@@ -786,7 +767,6 @@ else:
 
     slots = generate_time_slots()
 
-    @st.cache_data()
     def load_equipment_details():
         if 'equipment_details' not in st.session_state:
             st.session_state.equipment_details = load_json('equipment_details.json')
