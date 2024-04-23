@@ -379,7 +379,7 @@ if mobile:
             equipment_info = enabled_equipments[selected_equipment]
 
             # Display selected equipment details and image
-            safe_display_image(equipment_info['image'], width=450, offset=0.5)  # Adjust width as necessary
+            safe_display_image(equipment_info['image'], width=300, offset=0.5)  # Adjust width as necessary
             st.write(f"#### Details : {equipment_info['details']}")
 
             if "PCR" in selected_equipment:
