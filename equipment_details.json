@@ -79,7 +79,7 @@
         "Gel Doc": {
             "image": "Gel_Doc.jpg",
             "details": "Universal Hood II BIO RAD",
-            "enabled": true
+            "enabled": false
         },
         "UV Cabinet": {
             "image": "UV_Cabinet.jpg",
@@ -224,12 +224,12 @@
         "NANODROP 1": {
             "image": "NANODROP_1.jpg",
             "details": "NANODROP 2000 Thermo Scientific",
-            "enabled": true
+            "enabled": false
         },
         "NANODROP 2": {
             "image": "NANODROP_2.jpg",
             "details": "NANODROP ONE Thermo Scientific",
-            "enabled": true
+            "enabled": false
         },
         "Automated Cell Counter": {
             "image": "Automated_Cell_Counter.jpg",
