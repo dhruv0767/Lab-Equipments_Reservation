@@ -290,14 +290,14 @@ if mobile:
                     title=dict(
                         text=f"Equipments Reservations for {room_selection}",
                         # Also corrected here if updating layout separately
-                        font=dict(size=26),
+                        font=dict(size=22),
                         x=0,
                         y=0.95,
                     ),
                     xaxis=dict(
                         title="Time",
-                        title_font=dict(size=20),
-                        tickfont=dict(size=18),
+                        title_font=dict(size=16),
+                        tickfont=dict(size=14),
                         showgrid=True,
                         gridcolor="LightGrey",
                         side="top",
@@ -306,14 +306,14 @@ if mobile:
                     ),
                     yaxis=dict(
                         title="Equipments",
-                        title_font=dict(size=20),
-                        tickfont=dict(size=18),
+                        title_font=dict(size=16),
+                        tickfont=dict(size=14),
                         showgrid=True,
                         gridcolor="LightGrey"
                     ),
-                    margin=dict(t=200),  # Adjust if needed
+                    margin=dict(t=150),  # Adjust if needed
                     height=600,
-                    width=1000
+                    width=700
                 )
                 for trace in fig_pcr.data:
                     if trace.name == "Available":
@@ -333,14 +333,14 @@ if mobile:
                     title=dict(
                         text=f"Equipments Reservations for {room_selection}",
                         # Also corrected here if updating layout separately
-                        font=dict(size=26),
+                        font=dict(size=22),
                         x=0,
                         y=0.95,
                     ),
                     xaxis=dict(
                         title="Time",
-                        title_font=dict(size=20),
-                        tickfont=dict(size=18),
+                        title_font=dict(size=16),
+                        tickfont=dict(size=14),
                         showgrid=True,
                         gridcolor="LightGrey",
                         side="top",
@@ -349,14 +349,14 @@ if mobile:
                     ),
                     yaxis=dict(
                         title="Equipments",
-                        title_font=dict(size=20),
-                        tickfont=dict(size=18),
+                        title_font=dict(size=16),
+                        tickfont=dict(size=14),
                         showgrid=True,
                         gridcolor="LightGrey"
                     ),
-                    margin=dict(t=200),  # Adjust if needed
+                    margin=dict(t=150),  # Adjust if needed
                     height=600,
-                    width=1000
+                    width=770
                 )
                 for trace in fig_non_pcr.data:
                     if trace.name == "Available":
