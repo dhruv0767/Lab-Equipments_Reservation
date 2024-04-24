@@ -296,8 +296,8 @@ if mobile:
                     ),
                     xaxis=dict(
                         title="Time",
-                        title_font=dict(size=16),
-                        tickfont=dict(size=14),
+                        title_font=dict(size=14),
+                        tickfont=dict(size=12),
                         showgrid=True,
                         gridcolor="LightGrey",
                         side="top",
@@ -306,8 +306,8 @@ if mobile:
                     ),
                     yaxis=dict(
                         title="Equipments",
-                        title_font=dict(size=16),
-                        tickfont=dict(size=14),
+                        title_font=dict(size=14),
+                        tickfont=dict(size=12),
                         showgrid=True,
                         gridcolor="LightGrey"
                     ),
@@ -339,8 +339,8 @@ if mobile:
                     ),
                     xaxis=dict(
                         title="Time",
-                        title_font=dict(size=16),
-                        tickfont=dict(size=14),
+                        title_font=dict(size=14),
+                        tickfont=dict(size=12),
                         showgrid=True,
                         gridcolor="LightGrey",
                         side="top",
@@ -349,8 +349,8 @@ if mobile:
                     ),
                     yaxis=dict(
                         title="Equipments",
-                        title_font=dict(size=16),
-                        tickfont=dict(size=14),
+                        title_font=dict(size=14),
+                        tickfont=dict(size=12),
                         showgrid=True,
                         gridcolor="LightGrey"
                     ),
