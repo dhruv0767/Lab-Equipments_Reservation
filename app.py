@@ -489,6 +489,7 @@ if mobile:
                         df_non_pcr = fetch_data('Non_PCR')
                         df_non_pcr.dropna(inplace=True)
                         autoclaves_count = conn.read(worksheet="Counts", usecols=list(range(1)), ttl=10)
+                        autoclaves_count.dropna(inplace=True)
 
                         if start_datetime < current_time:
                             st.error("Cannot book a reservation in the past. Please select a future time.")
@@ -1109,6 +1110,7 @@ else:
                         df_non_pcr = fetch_data('Non_PCR')
                         df_non_pcr.dropna(inplace=True)
                         autoclaves_count = conn.read(worksheet="Counts", usecols=list(range(1)), ttl=10)
+                        autoclaves_count.dropna(inplace=True)
 
                         if start_datetime < current_time:
                             st.error("Cannot book a reservation in the past. Please select a future time.")
