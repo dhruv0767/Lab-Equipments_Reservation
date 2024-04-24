@@ -311,9 +311,9 @@ if mobile:
                         showgrid=True,
                         gridcolor="LightGrey"
                     ),
-                    margin=dict(t=150),  # Adjust if needed
+                    margin=dict(t=165),  # Adjust if needed
                     height=600,
-                    width=700
+                    width=530
                 )
                 for trace in fig_pcr.data:
                     if trace.name == "Available":
@@ -354,9 +354,9 @@ if mobile:
                         showgrid=True,
                         gridcolor="LightGrey"
                     ),
-                    margin=dict(t=150),  # Adjust if needed
+                    margin=dict(t=165),  # Adjust if needed
                     height=600,
-                    width=770
+                    width=530
                 )
                 for trace in fig_non_pcr.data:
                     if trace.name == "Available":
