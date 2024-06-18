@@ -6,18 +6,148 @@ import plotly.express as px
 import json
 from io import StringIO
 import os, time
-from streamlit_gsheets import GSheetsConnection
 
 st.set_page_config(layout="wide")
 
-# Initialize connection to Google Sheets
-conn = st.connection("gsheets", type=GSheetsConnection)
+# Constants
+PCR_FILE_PATH = 'pcr_data.csv'
+NON_PCR_FILE_PATH = 'non_pcr_data.csv'
+ANNOUNCEMENT_FILE_PATH = 'announcement.txt'
+AUTOCLAVES_PATH = 'autoclaves_count.csv'
+log_file_path = "change_log.csv"
+
+def init_file(file_path, columns=None):
+    if not os.path.exists(file_path):
+        df = pd.DataFrame(columns=columns) if columns else pd.DataFrame()
+        df.to_csv(file_path, index=False)
+
+# Initialize the announcement text file if it doesn't exist
+def init_announcement_file():
+    if not os.path.exists(ANNOUNCEMENT_FILE_PATH):
+        with open(ANNOUNCEMENT_FILE_PATH, 'w') as f:
+            f.write('')
+
+# Read the announcement from the text file
+def read_announcement():
+    if os.path.exists(ANNOUNCEMENT_FILE_PATH):
+        with open(ANNOUNCEMENT_FILE_PATH, 'r') as f:
+            announcement = f.read().strip()
+        return announcement
+    else:
+        return ''
+
+init_file(PCR_FILE_PATH, ['Name', 'Room', 'Equipments', 'Start_Time', 'End_Time'])
+init_file(NON_PCR_FILE_PATH, ['Name', 'Room', 'Equipments', 'Start_Time', 'End_Time'])
+init_file(AUTOCLAVES_PATH, ['Counts'])
+
+# Initialize the announcement file at the start
+init_announcement_file()
+announcement_text = read_announcement()
+
+# Update the announcement in the text file
+def update_announcement(text):
+    with open(ANNOUNCEMENT_FILE_PATH, 'w') as f:
+        f.write(text)
+
+# Function to load data from CSV
+def load_data(file_path):
+    if os.path.exists(file_path):
+        return pd.read_csv(file_path)
+    else:
+        return pd.DataFrame(columns=['Equipments', 'Start_Time', 'End_Time', 'Name'])
+
+# Function to save data to CSV
+def save_data(df, file_path):
+    df.to_csv(file_path, index=False)
+
+# Function to convert DataFrame to CSV string
+def convert_df_to_csv(df):
+    output = StringIO()
+    df.to_csv(output, index=False)
+    return output.getvalue().encode('utf-8')
+
+# Equipments details handling
+def load_json(file_path):
+    with open(file_path, 'r') as file:
+        return json.load(file)
+
+
+def save_equipment_details(details, json_file_path='equipment_details.json'):
+    with open(json_file_path, 'w') as file:
+        json.dump(details, file, indent=4)
+
+
+# Image handling
+def image_exists(image_path):
+    return os.path.exists(image_path)
+
+
+def safe_display_image(image_path, width=100, offset=0):
+    if image_exists(image_path):
+        cols = st.columns([offset, 1])
+        with cols[1]:
+            st.image(image_path, width=width)
+    else:
+        st.error("Image not available.")
+
+# Fetch data from CSV files
+def fetch_data(file_path):
+    df = load_data(file_path)
+    df['Start_Time'] = pd.to_datetime(df['Start_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
+    df['End_Time'] = pd.to_datetime(df['End_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
+    return df
+
+def download_non_pcr():
+    df_non_pcr = fetch_data(NON_PCR_FILE_PATH)
+    return df_non_pcr
+
+def download_pcr():
+    df_pcr = fetch_data(PCR_FILE_PATH)
+    return df_pcr
+
+def generate_time_slots():
+    slots = [{
+        "label": f"Slot {i + 1}: {datetime.time(hour=h).strftime('%H:%M')}-{datetime.time(hour=h + 3).strftime('%H:%M')}",
+        "start": datetime.time(hour=h), "end": datetime.time(hour=h + 3)}
+        for i, h in enumerate(range(8, 20, 3))]
+    return slots
+
+
+slots = generate_time_slots()
+
+
+def load_equipment_details():
+    if 'equipment_details' not in st.session_state:
+        st.session_state.equipment_details = load_json('equipment_details.json')
+
+
+# Load equipment details once
+load_equipment_details()
+
+
+def log_action(action, user, details):
+    log_entry = {
+        "timestamp": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "action": action,
+        "user": user,
+        "details": details
+    }
+
+    log_file_path = "change_log.csv"
+    try:
+        if os.path.exists(log_file_path):
+            log_df = pd.read_csv(log_file_path)
+        else:
+            log_df = pd.DataFrame(columns=["timestamp", "action", "user", "details"])
+
+        log_df = pd.concat([log_df, pd.DataFrame([log_entry])], ignore_index=True)
+        log_df.to_csv(log_file_path, index=False)
+    except Exception as e:
+        st.error(f"Error logging action: {e}")
 
 # Set the timezone
 os.environ['TZ'] = 'Asia/Bangkok'
 time.tzset()
-
-
 
 # Device type selection in sidebar
 mobile = st.toggle('Mobile')
@@ -71,32 +201,6 @@ if mobile:
         unsafe_allow_html=True
     )
 
-
-    # Equipments details handling
-    def load_json(file_path):
-        with open(file_path, 'r') as file:
-            return json.load(file)
-
-
-    def save_equipment_details(details, json_file_path='equipment_details.json'):
-        with open(json_file_path, 'w') as file:
-            json.dump(details, file, indent=4)
-
-
-    # Image handling
-    def image_exists(image_path):
-        return os.path.exists(image_path)
-
-
-    def safe_display_image(image_path, width=100, offset=0):
-        if image_exists(image_path):
-            cols = st.columns([offset, 1])
-            with cols[1]:
-                st.image(image_path, width=width)
-        else:
-            st.error("Image not available.")
-
-
     # Custom CSS
     css = '''
         <style>
@@ -136,50 +240,6 @@ if mobile:
     st.markdown(css, unsafe_allow_html=True)
 
 
-    def fetch_data(worksheet_name):
-        # Read data from Google Sheets
-        df = conn.read(worksheet=worksheet_name, usecols=list(range(5)), ttl=180)
-        df['Start_Time'] = pd.to_datetime(df['Start_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
-        df['End_Time'] = pd.to_datetime(df['End_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
-        return df
-
-
-    def convert_df_to_csv(df):
-        """Converts a DataFrame to a CSV string."""
-        output = StringIO()
-        df.to_csv(output, index=False)
-        return output.getvalue().encode('utf-8')
-
-
-    def download_non_pcr():
-        df_non_pcr = fetch_data('Non_PCR')
-        return df_non_pcr
-
-
-    def download_pcr():
-        df_pcr = fetch_data('PCR')
-        return df_pcr
-
-
-    def generate_time_slots():
-        slots = [{
-            "label": f"Slot {i + 1}: {datetime.time(hour=h).strftime('%H:%M')}-{datetime.time(hour=h + 3).strftime('%H:%M')}",
-            "start": datetime.time(hour=h), "end": datetime.time(hour=h + 3)}
-            for i, h in enumerate(range(8, 20, 3))]
-        return slots
-
-
-    slots = generate_time_slots()
-
-
-    def load_equipment_details():
-        if 'equipment_details' not in st.session_state:
-            st.session_state.equipment_details = load_json('equipment_details.json')
-
-
-    # Load equipment details once
-    load_equipment_details()
-
     if st.session_state["authentication_status"]:
         role = credentials['usernames'][st.session_state['username'].lower()]['role']
         st.session_state['authenticator'].logout(location='main')
@@ -203,17 +263,22 @@ if mobile:
                 st.sidebar.success(f"{'Disabled' if current_status else 'Enabled'} {selected_equipment_admin}")
                 save_equipment_details(st.session_state.equipment_details)
 
-            # Button to clear all reservation data
-            if st.sidebar.button("Clear All Reservations"):
-                conn.clear(worksheet="PCR")
-                conn.clear(worksheet="Non_PCR")
-                st.sidebar.success("All reservation data has been cleared.")
+        # Always check if there's an announcement to display
+        if announcement_text:
+            # Using st.markdown to insert HTML for a moving text effect
+
+            st.markdown(
+
+                f"<marquee style='width: 40%; color: red; font-size: 20px;'>{announcement_text}</marquee>",
+
+                unsafe_allow_html=True
+
+            )
 
         # Usual app interface
         message = f"### Welcome <span class='welcome-message'>{st.session_state['name']}</span>"
         st.markdown(message, unsafe_allow_html=True)
-        selected_tab = st.selectbox("### Select Actions",
-                                            ["Reservation Tables", "Reservation Forms", "Reservation Cancellation", "Announcement"])
+        selected_tab = st.selectbox("### Select Actions", ["Reservation Tables", "Reservation Forms", "Reservation Cancellation", "Announcement"])
 
         if selected_tab == "Reservation Tables":
             room_selection = st.selectbox("### Select a Room", list(st.session_state.equipment_details.keys()),
@@ -229,18 +294,12 @@ if mobile:
             pcr_start = datetime.datetime.combine(selected_date, datetime.time(8, 0))
             pcr_end = datetime.datetime.combine(selected_date, datetime.time(20, 0))
 
-            # Read reservation data from Google Sheets
-            df_non_pcr = fetch_data('Non_PCR')
+            # Read reservation data from CSV files
+            df_non_pcr = fetch_data(NON_PCR_FILE_PATH)
             df_non_pcr.dropna(inplace=True)
 
-            df_pcr = fetch_data('PCR')
+            df_pcr = fetch_data(PCR_FILE_PATH)
             df_pcr.dropna(inplace=True)
-
-            autoclaves_count = conn.read(worksheet="Counts", usecols=list(range(1)), ttl=10)
-
-            autoclaves_count.dropna(inplace=True)
-            df_pcr.dropna(inplace=True)
-            df_non_pcr.dropna(inplace=True)
 
             # Filter DataFrames for the selected day
             df_pcr_filtered = df_pcr[
@@ -326,8 +385,7 @@ if mobile:
                 fig_non_pcr = px.timeline(gantt_df_non_pcr, x_start="Start", x_end="Finish", y="Task", color="User",
                                           title=f"Non-PCR Equipments Reservations for {room_selection}")
                 fig_non_pcr.update_xaxes(range=[full_day_start, full_day_end], tickformat="%H:%M\n%Y-%m-%d",
-                                         showgrid=True,
-                                         gridcolor='LightGrey')
+                                         showgrid=True, gridcolor='LightGrey')
                 fig_non_pcr.update_yaxes(showgrid=True, gridcolor='LightGrey')
                 fig_non_pcr.update_layout(
                     title=dict(
@@ -364,269 +422,423 @@ if mobile:
 
                 st.plotly_chart(fig_non_pcr)
 
+
+
         elif selected_tab == "Reservation Forms":
+
             # Room selection
+
             selected_room = st.selectbox("### Select a Room", list(st.session_state.equipment_details.keys()))
 
             # Equipments selection based on the selected room
+
             # Filter to show only enabled equipments
+
             enabled_equipments = {eq: info for eq, info in st.session_state.equipment_details[selected_room].items() if
+
                                   info.get('enabled', False)}
 
             selected_equipment = st.selectbox("### Select Equipments", list(enabled_equipments.keys()))
 
             # Fetch equipment information
+
             equipment_info = enabled_equipments[selected_equipment]
 
             # Display selected equipment details and image
+
             safe_display_image(equipment_info['image'], width=300, offset=0.5)  # Adjust width as necessary
+
             st.write(f"#### Details : {equipment_info['details']}")
 
             if "PCR" in selected_equipment:
+
                 st.subheader("Book Your PCR Slot")
 
                 # Date and slot selection within the form to prevent re-run on change
+
                 today = datetime.date.today()
+
                 tomorrow = today + datetime.timedelta(days=1)
+
                 reservation_date = st.date_input("## Reservation Date", min_value=today, max_value=tomorrow)
 
                 current_datetime = datetime.datetime.now()
+
                 slots = generate_time_slots()  # Function to generate time slots
+
                 if reservation_date == today:
                     slots = [slot for slot in slots if
+
                              datetime.datetime.combine(today, slot['end']) > current_datetime]
 
                 if slots:
+
                     available_slots = [slot['label'] for slot in slots]
+
                     selected_slot_label = st.selectbox("## Select a Time Slot", available_slots)
+
                     selected_slot = next((slot for slot in slots if slot['label'] == selected_slot_label), None)
+
                 else:
+
                     st.error("No available slots for the selected day.")
 
                 if st.button('### Submit PCR Reservation'):
-                    df_pcr = fetch_data('PCR')
+
+                    df_pcr = fetch_data(PCR_FILE_PATH)
+
                     df_pcr.dropna(inplace=True)
 
                     start_datetime = datetime.datetime.combine(reservation_date, selected_slot['start'])
+
                     end_datetime = datetime.datetime.combine(reservation_date, selected_slot['end'])
 
                     # Convert start and end times to datetime format
+
                     df_pcr['Start_Time'] = pd.to_datetime(df_pcr['Start_Time'])
+
                     df_pcr['End_Time'] = pd.to_datetime(df_pcr['End_Time'])
 
                     # Filter user's reservations on the same day for the same room and equipment
+
                     user_reservations = df_pcr[
+
                         (df_pcr['Name'] == st.session_state["name"]) &
+
                         (df_pcr['Room'] == selected_room) &
+
                         (df_pcr['Equipments'] == selected_equipment) &
+
                         (df_pcr['Start_Time'].dt.date == reservation_date)
+
                         ]
 
                     continuous_slot_booked = False
+
                     for _, res in user_reservations.iterrows():
+
                         if res['End_Time'] == start_datetime or res['Start_Time'] == end_datetime:
                             continuous_slot_booked = True
+
                             break
 
                     # Check for overlapping reservations
+
                     overlapping_reservations = df_pcr[
+
                         (df_pcr['Room'] == selected_room) &
+
                         (df_pcr['Equipments'] == selected_equipment) &
+
                         ((df_pcr['Start_Time'] < end_datetime) & (df_pcr['End_Time'] > start_datetime))
+
                         ]
 
                     if not overlapping_reservations.empty:
+
                         st.error("This slot is already booked. Please choose another slot.")
+
                     elif continuous_slot_booked:
+
                         st.error("Cannot book continuous slots. Please select a non-continuous slot.")
+
                     else:
+
                         # Create and add new reservation
+
                         new_reservation = pd.DataFrame([{
+
                             'Name': st.session_state["name"],
+
                             'Room': selected_room,
+
                             'Equipments': selected_equipment,
+
                             'Start_Time': start_datetime,
+
                             'End_Time': end_datetime
+
                         }])
 
                         # Concatenate the DataFrames
+
                         df_pcr_buffer = pd.concat([df_pcr, new_reservation], ignore_index=True)
+
                         df_pcr_buffer.reset_index(drop=True, inplace=True)
 
                         df_pcr_buffer['Start_Time'] = df_pcr_buffer['Start_Time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+
                         df_pcr_buffer['End_Time'] = df_pcr_buffer['End_Time'].dt.strftime('%Y/%m/%d %H:%M:%S')
 
-                        # Update the Google Sheet with the new buffer DataFrame
-                        conn.update(worksheet="PCR", data=df_pcr_buffer)
+                        log_action("Add Reservation", st.session_state["name"], new_reservation)
+
+                        # Save the updated DataFrame back to the CSV file
+
+                        save_data(df_pcr_buffer, PCR_FILE_PATH)
 
                         st.success(
+
                             f"Reservation successful for {selected_equipment} from {start_datetime.strftime('%Y/%m/%d %H:%M:%S')} to {end_datetime.strftime('%Y/%m/%d %H:%M:%S')}")
+
 
             else:
 
                 st.subheader(f"Reserve {selected_equipment}")
 
                 # Non-PCR Equipment reservation logic
+
                 max_days_advance = 60 if role in ["Admins", "Lecturer"] else 30
+
                 if "Autoclave" in selected_equipment:
                     max_days_advance = min(max_days_advance, 1)
 
                 max_date = datetime.date.today() + datetime.timedelta(days=max_days_advance)
 
                 start_date = st.date_input("## Start Date", min_value=datetime.date.today(), max_value=max_date)
+
                 current_time = datetime.datetime.now()
+
                 min_time = current_time.time() if start_date == datetime.date.today() else datetime.time(0, 0)
 
                 start_time = st.time_input("## Start Time", value=None)
+
                 end_time = st.time_input("## End Time", value=None)
 
                 if start_time and end_time:
+
                     start_datetime = datetime.datetime.combine(start_date, start_time)
+
                     end_datetime = datetime.datetime.combine(start_date, end_time)
 
                     if st.button("### Submit Reservation"):
 
-                        df_non_pcr = fetch_data('Non_PCR')
+                        df_non_pcr = fetch_data(NON_PCR_FILE_PATH)
+
                         df_non_pcr.dropna(inplace=True)
-                        autoclaves_count = conn.read(worksheet="Counts", usecols=list(range(1)), ttl=10)
-                        autoclaves_count.dropna(inplace=True)
 
                         if start_datetime < current_time:
+
                             st.error("Cannot book a reservation in the past. Please select a future time.")
+
                         elif start_datetime >= end_datetime:
+
                             st.error("The start time must be before the end time. Please adjust your selection.")
+
                         else:
+
                             # Check for overlapping reservations
+
                             overlapping_reservations = df_non_pcr[
+
                                 (df_non_pcr['Room'] == selected_room) &
+
                                 (df_non_pcr['Equipments'] == selected_equipment) &
+
                                 ((df_non_pcr['Start_Time'] < end_datetime) & (df_non_pcr['End_Time'] > start_datetime))
+
                                 ]
 
                             if not overlapping_reservations.empty:
+
                                 st.error("This time slot is already reserved. Please choose another time.")
+
                             else:
+
                                 new_reservation = {
+
                                     'Name': st.session_state["name"],
+
                                     'Room': selected_room,
+
                                     'Equipments': selected_equipment,
+
                                     'Start_Time': start_datetime,
+
                                     'End_Time': end_datetime
+
                                 }
 
                                 new_reservation_df = pd.DataFrame([new_reservation])
+
                                 df_non_pcr_buffer = pd.concat([df_non_pcr, new_reservation_df], ignore_index=True)
 
                                 df_non_pcr_buffer.reset_index(drop=True, inplace=True)
+
                                 df_non_pcr_buffer['Start_Time'] = df_non_pcr_buffer['Start_Time'].dt.strftime(
                                     '%Y/%m/%d %H:%M:%S')
+
                                 df_non_pcr_buffer['End_Time'] = df_non_pcr_buffer['End_Time'].dt.strftime(
                                     '%Y/%m/%d %H:%M:%S')
 
-                                conn.update(worksheet="Non_PCR", data=df_non_pcr_buffer)
+                                # Save the updated DataFrame back to the CSV file
+
+                                save_data(df_non_pcr_buffer, NON_PCR_FILE_PATH)
 
                                 # Handle autoclave usage counting
+
                                 if selected_equipment in ['Autoclave 1 (Drain the water every 5 times after using)',
+
                                                           'Autoclave 2 (Drain the water every 5 times after using)']:
+
+                                    autoclaves_count = load_data(AUTOCLAVES_PATH)
+
                                     current_count = len(
                                         autoclaves_count[autoclaves_count['Counts'] == selected_equipment])
+
                                     new_count = current_count + 1
+
                                     if new_count >= 5:
+
                                         st.info(
                                             "You are the fifth user of this autoclave. Please remember to drain the water after using it.")
+
                                         autoclaves_count = autoclaves_count.drop(
                                             autoclaves_count[autoclaves_count['Counts'] == selected_equipment].index)
-                                        conn.update(worksheet="Counts", data=autoclaves_count)
+
+                                        save_data(autoclaves_count, AUTOCLAVES_PATH)
 
                                     else:
+
                                         st.info(f"You are the {new_count} user of this autoclave.")
 
                                         counts = {'Counts': selected_equipment}
-                                        counts = pd.DataFrame([counts])
-                                        autoclaves_count_buffer = pd.concat([autoclaves_count, counts],
+
+                                        counts_df = pd.DataFrame([counts])
+
+                                        autoclaves_count_buffer = pd.concat([autoclaves_count, counts_df],
                                                                             ignore_index=True)
-                                        conn.update(worksheet="Counts", data=autoclaves_count_buffer)
+
+                                        save_data(autoclaves_count_buffer, AUTOCLAVES_PATH)
+
+                                log_action("Add Reservation", st.session_state["name"], new_reservation)
 
                                 st.success(
+
                                     f"Reservation successful for {selected_equipment} in {selected_room} from {start_datetime.strftime('%Y/%m/%d %H:%M:%S')} to {end_datetime.strftime('%Y/%m/%d %H:%M:%S')}")
 
+
+
         elif selected_tab == "Reservation Cancellation":
-            df_non_pcr = fetch_data('Non_PCR')
+
+            df_non_pcr = fetch_data(NON_PCR_FILE_PATH)
+
             df_non_pcr.dropna(inplace=True)
 
-            df_pcr = fetch_data('PCR')
+            df_pcr = fetch_data(PCR_FILE_PATH)
+
             df_pcr.dropna(inplace=True)
 
             # Combining both dataframes to get user-specific reservations
+
             user_reservations_pcr = df_pcr[df_pcr['Name'] == st.session_state["name"]]
+
             user_reservations_non_pcr = df_non_pcr[df_non_pcr['Name'] == st.session_state["name"]]
+
             user_reservations = pd.concat([user_reservations_pcr, user_reservations_non_pcr])
 
             # Current datetime
+
             current_datetime = datetime.datetime.now()
 
             # Current date and tomorrow's date for filtering
+
             today = datetime.date.today()
+
             max_date_60 = today + datetime.timedelta(days=60)
 
             user_reservations = user_reservations[
+
                 ((user_reservations['Start_Time'].dt.date == today) |
+
                  ((user_reservations['Start_Time'].dt.date > today) & (
                              user_reservations['Start_Time'] > current_datetime)))
+
                 & (user_reservations['Start_Time'].dt.date <= max_date_60)
+
                 ]
 
             if not user_reservations.empty:
+
                 # Display the reservations in a selectbox
+
                 selected_reservation_index = st.selectbox(
+
                     "## Your Reservations:",
+
                     options=range(len(user_reservations)),
+
                     format_func=lambda x: f"{user_reservations.iloc[x]['Equipments']} on " +
+
                                           (user_reservations.iloc[x]['Start_Time'].strftime(
                                               '%Y/%m/%d %H:%M:%S') + ' To ' + user_reservations.iloc[x][
                                                'End_Time'].strftime('%Y/%m/%d %H:%M:%S') if pd.notnull(
+
                                               user_reservations.iloc[x]['Start_Time']) else "Date not available")
+
                 )
 
                 # Cancel reservation button
+
                 if st.button("### Cancel Reservation"):
+
                     # Remove the selected reservation
+
                     reservation_to_cancel = user_reservations.iloc[selected_reservation_index]
+
                     if "PCR" in reservation_to_cancel['Equipments']:
+
                         df_pcr.drop(index=reservation_to_cancel.name, inplace=True)
+
                         df_pcr['Start_Time'] = df_pcr['Start_Time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+
                         df_pcr['End_Time'] = df_pcr['End_Time'].dt.strftime('%Y/%m/%d %H:%M:%S')
-                        conn.update(worksheet="PCR", data=df_pcr)  # Writing updated dataframe back
+
+                        log_action("Delete Reservation", st.session_state["name"], f"Details: {user_reservations.iloc[selected_reservation_index]}")
+
+                        save_data(df_pcr, PCR_FILE_PATH)  # Save updated dataframe back to CSV
+
                     else:
+
                         df_non_pcr.drop(index=reservation_to_cancel.name, inplace=True)
-                        df_non_pcr['Start_Time'] = df_non_pcr['Start_Time'].dt.strftime(
-                            '%Y/%m/%d %H:%M:%S')
-                        df_non_pcr['End_Time'] = df_non_pcr['End_Time'].dt.strftime(
-                            '%Y/%m/%d %H:%M:%S')
-                        conn.update(worksheet="Non_PCR", data=df_non_pcr)  # Writing updated dataframe back
+
+                        df_non_pcr['Start_Time'] = df_non_pcr['Start_Time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+
+                        df_non_pcr['End_Time'] = df_non_pcr['End_Time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+
+                        log_action("Delete Reservation", st.session_state["name"], f"Details: {user_reservations.iloc[selected_reservation_index]}")
+
+                        save_data(df_non_pcr, NON_PCR_FILE_PATH)  # Save updated dataframe back to CSV
 
                     st.success("Reservation canceled successfully.")
 
             else:
+
                 st.write("## You have no reservations.")
 
+
+
         elif selected_tab == 'Announcement':
+
+            announcement_text = read_announcement()
+
             # Check if the user is authorized (either an admin or a lecturer) and allow them to post an announcement
+
             if role in ["Admins", "Lecturer"]:
+
                 st.write("Admin and Lecturer Controls")
-                announcement_text = st.text_area("Enter announcement:")
+
+                new_announcement_text = st.text_area("Enter announcement:", value=announcement_text)
+
                 if st.button("Update Announcement"):
-                    st.session_state['announcement'] = announcement_text
-                    st.session_state['show_announcement'] = True
+                    update_announcement(new_announcement_text)
 
-            # Always check if there's an announcement to display
-            if 'show_announcement' in st.session_state and st.session_state['show_announcement']:
-                # Using st.markdown to insert HTML for a moving text effect
-                st.markdown(
-                    f"<marquee style='width: 100%; color: red; font-size: 20px;'>{st.session_state['announcement']}</marquee>",
-                    unsafe_allow_html=True
-                )
+                    st.session_state['announcement'] = new_announcement_text
+                    
+    elif st.session_state["authentication_status"] is False:
+        st.error('Name/password is incorrect')
 
+    elif st.session_state["authentication_status"] is None:
+        st.warning('Please enter your username and password')
 
 else:
 
@@ -679,28 +891,6 @@ else:
         unsafe_allow_html=True
     )
 
-
-    # Equipments details handling
-    def load_json(file_path):
-        with open(file_path, 'r') as file:
-            return json.load(file)
-
-    def save_equipment_details(details, json_file_path='equipment_details.json'):
-        with open(json_file_path, 'w') as file:
-            json.dump(details, file, indent=4)
-
-    # Image handling
-    def image_exists(image_path):
-        return os.path.exists(image_path)
-
-    def safe_display_image(image_path, width=100, offset=0):
-        if image_exists(image_path):
-            cols = st.columns([offset, 1])
-            with cols[1]:
-                st.image(image_path, width=width)
-        else:
-            st.error("Image not available.")
-
     # Custom CSS
     css = '''
     <style>
@@ -739,44 +929,6 @@ else:
     '''
     st.markdown(css, unsafe_allow_html=True)
 
-    def fetch_data(worksheet_name):
-        # Read data from Google Sheets
-        df = conn.read(worksheet=worksheet_name, usecols=list(range(5)), ttl=180)
-        df['Start_Time'] = pd.to_datetime(df['Start_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
-        df['End_Time'] = pd.to_datetime(df['End_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
-        return df
-
-    def convert_df_to_csv(df):
-        """Converts a DataFrame to a CSV string."""
-        output = StringIO()
-        df.to_csv(output, index=False)
-        return output.getvalue().encode('utf-8')
-
-    def download_non_pcr():
-        df_non_pcr = fetch_data('Non_PCR')
-        return df_non_pcr
-
-    def download_pcr():
-        df_pcr = fetch_data('PCR')
-        return df_pcr
-
-    def generate_time_slots():
-        slots = [{
-            "label": f"Slot {i + 1}: {datetime.time(hour=h).strftime('%H:%M')}-{datetime.time(hour=h + 3).strftime('%H:%M')}",
-            "start": datetime.time(hour=h), "end": datetime.time(hour=h + 3)}
-            for i, h in enumerate(range(8, 20, 3))]
-        return slots
-
-
-    slots = generate_time_slots()
-
-    def load_equipment_details():
-        if 'equipment_details' not in st.session_state:
-            st.session_state.equipment_details = load_json('equipment_details.json')
-
-    # Load equipment details once
-    load_equipment_details()
-
     if st.session_state["authentication_status"]:
         role = credentials['usernames'][st.session_state['username'].lower()]['role']
 
@@ -795,26 +947,20 @@ else:
                 st.sidebar.success(f"{'Disabled' if current_status else 'Enabled'} {selected_equipment_admin}")
                 save_equipment_details(st.session_state.equipment_details)
 
-            # Button to clear all reservation data
-            if st.sidebar.button("Clear All Reservations"):
-                conn.clear(worksheet="PCR")
-                conn.clear(worksheet="Non_PCR")
-                st.sidebar.success("All reservation data has been cleared.")
-
         # Check if the user is authorized (either an admin or a lecturer) and allow them to post an announcement
         if role in ["Admins", "Lecturer"]:
             with st.sidebar:
                 st.write("Admin and Lecturer Controls")
-                announcement_text = st.text_area("Enter announcement:")
+                new_announcement_text = st.text_area("### Enter announcement:", value=announcement_text)
                 if st.button("Update Announcement"):
-                    st.session_state['announcement'] = announcement_text
-                    st.session_state['show_announcement'] = True
+                    update_announcement(new_announcement_text)
+                    st.session_state['announcement'] = new_announcement_text
 
         # Always check if there's an announcement to display
-        if 'show_announcement' in st.session_state and st.session_state['show_announcement']:
+        if announcement_text:
             # Using st.markdown to insert HTML for a moving text effect
             st.markdown(
-                f"<marquee style='width: 100%; color: red; font-size: 24px;'>{st.session_state['announcement']}</marquee>",
+                f"<marquee style='width: 100%; color: red; font-size: 24px;'>{announcement_text}</marquee>",
                 unsafe_allow_html=True
             )
 
@@ -822,7 +968,10 @@ else:
         st.session_state['authenticator'].logout(location='sidebar')
         message = f"### Welcome <span class='welcome-message'>{st.session_state['name']}</span>"
         st.markdown(message, unsafe_allow_html=True)
-        tab1, tab2, tab3, tab4 = st.tabs(["Reservation Tables", "Reservation Forms", "Reservation Cancellation", "Contact Us"])
+        if role == "Admins":
+            tab1, tab2, tab3, tab5 = st.tabs(["Reservation Tables", "Reservation Forms", "Reservation Cancellation", "Admins Interface"])
+        else:
+            tab1, tab2, tab3, tab4 = st.tabs(["Reservation Tables", "Reservation Forms", "Reservation Cancellation", "Contact Us"])
 
         st.sidebar.download_button(
             label="Download General Reservations as CSV",
@@ -851,18 +1000,12 @@ else:
             pcr_start = datetime.datetime.combine(selected_date, datetime.time(8, 0))
             pcr_end = datetime.datetime.combine(selected_date, datetime.time(20, 0))
 
-            # Read reservation data from Google Sheets
-            df_non_pcr = fetch_data('Non_PCR')
+            # Read reservation data from CSV files
+            df_non_pcr = fetch_data(NON_PCR_FILE_PATH)
             df_non_pcr.dropna(inplace=True)
 
-            df_pcr = fetch_data('PCR')
+            df_pcr = fetch_data(PCR_FILE_PATH)
             df_pcr.dropna(inplace=True)
-
-            autoclaves_count = conn.read(worksheet="Counts", usecols=list(range(1)), ttl=10)
-
-            autoclaves_count.dropna(inplace=True)
-            df_pcr.dropna(inplace=True)
-            df_non_pcr.dropna(inplace=True)
 
             # Filter DataFrames for the selected day
             df_pcr_filtered = df_pcr[(df_pcr['Room'] == room_selection) & (df_pcr['Start_Time'].dt.date == selected_date)]
@@ -986,7 +1129,6 @@ else:
                 st.plotly_chart(fig_non_pcr)
 
         with tab2:
-
             # Room selection
             selected_room = st.selectbox("### Select a Room", list(st.session_state.equipment_details.keys()))
 
@@ -1026,7 +1168,7 @@ else:
                     st.error("No available slots for the selected day.")
 
                 if st.button('### Submit PCR Reservation'):
-                    df_pcr = fetch_data('PCR')
+                    df_pcr = fetch_data(PCR_FILE_PATH)
                     df_pcr.dropna(inplace=True)
 
                     start_datetime = datetime.datetime.combine(reservation_date, selected_slot['start'])
@@ -1078,103 +1220,155 @@ else:
                         df_pcr_buffer['Start_Time'] = df_pcr_buffer['Start_Time'].dt.strftime('%Y/%m/%d %H:%M:%S')
                         df_pcr_buffer['End_Time'] = df_pcr_buffer['End_Time'].dt.strftime('%Y/%m/%d %H:%M:%S')
 
-                        # Update the Google Sheet with the new buffer DataFrame
-                        conn.update(worksheet="PCR", data=df_pcr_buffer)
+                        # Save the updated DataFrame back to the CSV file
+                        save_data(df_pcr_buffer, PCR_FILE_PATH)
+
+                        log_action("Add Reservation", st.session_state["name"], new_reservation)
 
                         st.success(
                             f"Reservation successful for {selected_equipment} from {start_datetime.strftime('%Y/%m/%d %H:%M:%S')} to {end_datetime.strftime('%Y/%m/%d %H:%M:%S')}")
+
+
 
             else:
 
                 st.subheader(f"Reserve {selected_equipment}")
 
                 # Non-PCR Equipment reservation logic
+
                 max_days_advance = 60 if role in ["Admins", "Lecturer"] else 30
+
                 if "Autoclave" in selected_equipment:
                     max_days_advance = min(max_days_advance, 1)
 
                 max_date = datetime.date.today() + datetime.timedelta(days=max_days_advance)
 
                 start_date = st.date_input("## Start Date", min_value=datetime.date.today(), max_value=max_date)
+
                 current_time = datetime.datetime.now()
+
                 min_time = current_time.time() if start_date == datetime.date.today() else datetime.time(0, 0)
 
                 start_time = st.time_input("## Start Time", value=None)
+
                 end_time = st.time_input("## End Time", value=None)
 
                 if start_time and end_time:
+
                     start_datetime = datetime.datetime.combine(start_date, start_time)
+
                     end_datetime = datetime.datetime.combine(start_date, end_time)
 
                     if st.button("### Submit Reservation"):
-                        df_non_pcr = fetch_data('Non_PCR')
+
+                        df_non_pcr = fetch_data(NON_PCR_FILE_PATH)
+
                         df_non_pcr.dropna(inplace=True)
-                        autoclaves_count = conn.read(worksheet="Counts", usecols=list(range(1)), ttl=10)
-                        autoclaves_count.dropna(inplace=True)
 
                         if start_datetime < current_time:
+
                             st.error("Cannot book a reservation in the past. Please select a future time.")
+
                         elif start_datetime >= end_datetime:
+
                             st.error("The start time must be before the end time. Please adjust your selection.")
+
                         else:
+
                             # Check for overlapping reservations
+
                             overlapping_reservations = df_non_pcr[
+
                                 (df_non_pcr['Room'] == selected_room) &
+
                                 (df_non_pcr['Equipments'] == selected_equipment) &
+
                                 ((df_non_pcr['Start_Time'] < end_datetime) & (df_non_pcr['End_Time'] > start_datetime))
+
                                 ]
 
                             if not overlapping_reservations.empty:
+
                                 st.error("This time slot is already reserved. Please choose another time.")
+
                             else:
+
                                 new_reservation = {
+
                                     'Name': st.session_state["name"],
+
                                     'Room': selected_room,
+
                                     'Equipments': selected_equipment,
+
                                     'Start_Time': start_datetime,
+
                                     'End_Time': end_datetime
+
                                 }
 
                                 new_reservation_df = pd.DataFrame([new_reservation])
+
                                 df_non_pcr_buffer = pd.concat([df_non_pcr, new_reservation_df], ignore_index=True)
 
                                 df_non_pcr_buffer.reset_index(drop=True, inplace=True)
+
                                 df_non_pcr_buffer['Start_Time'] = df_non_pcr_buffer['Start_Time'].dt.strftime(
                                     '%Y/%m/%d %H:%M:%S')
+
                                 df_non_pcr_buffer['End_Time'] = df_non_pcr_buffer['End_Time'].dt.strftime(
                                     '%Y/%m/%d %H:%M:%S')
 
-                                conn.update(worksheet="Non_PCR", data=df_non_pcr_buffer)
+                                # Save the updated DataFrame back to the CSV file
+
+                                save_data(df_non_pcr_buffer, NON_PCR_FILE_PATH)
 
                                 # Handle autoclave usage counting
+
                                 if selected_equipment in ['Autoclave 1 (Drain the water every 5 times after using)',
+
                                                           'Autoclave 2 (Drain the water every 5 times after using)']:
-                                    current_count = len(autoclaves_count[autoclaves_count['Counts'] == selected_equipment])
+
+                                    autoclaves_count = load_data(AUTOCLAVES_PATH)
+
+                                    current_count = len(
+                                        autoclaves_count[autoclaves_count['Counts'] == selected_equipment])
+
                                     new_count = current_count + 1
+
                                     if new_count >= 5:
-                                        st.info("You are the fifth user of this autoclave. Please remember to drain the water after using it.")
-                                        autoclaves_count = autoclaves_count.drop(autoclaves_count[autoclaves_count['Counts'] == selected_equipment].index)
-                                        conn.update(worksheet="Counts", data=autoclaves_count)
+
+                                        st.info(
+                                            "You are the fifth user of this autoclave. Please remember to drain the water after using it.")
+
+                                        autoclaves_count = autoclaves_count.drop(
+                                            autoclaves_count[autoclaves_count['Counts'] == selected_equipment].index)
+
+                                        save_data(autoclaves_count, AUTOCLAVES_PATH)
 
                                     else:
+
                                         st.info(f"You are the {new_count} user of this autoclave.")
 
                                         counts = {'Counts': selected_equipment}
-                                        counts = pd.DataFrame([counts])
-                                        autoclaves_count_buffer = pd.concat([autoclaves_count, counts], ignore_index=True)
-                                        conn.update(worksheet="Counts", data=autoclaves_count_buffer)
 
+                                        counts_df = pd.DataFrame([counts])
+
+                                        autoclaves_count_buffer = pd.concat([autoclaves_count, counts_df],
+                                                                            ignore_index=True)
+
+                                        save_data(autoclaves_count_buffer, AUTOCLAVES_PATH)
+
+                                log_action("Add Reservation", st.session_state["name"],new_reservation)
                                 st.success(
+
                                     f"Reservation successful for {selected_equipment} in {selected_room} from {start_datetime.strftime('%Y/%m/%d %H:%M:%S')} to {end_datetime.strftime('%Y/%m/%d %H:%M:%S')}")
 
-
-
         with tab3:
-
-            df_non_pcr = fetch_data('Non_PCR')
+            df_non_pcr = fetch_data(NON_PCR_FILE_PATH)
             df_non_pcr.dropna(inplace=True)
 
-            df_pcr = fetch_data('PCR')
+            df_pcr = fetch_data(PCR_FILE_PATH)
             df_pcr.dropna(inplace=True)
 
             # Combining both dataframes to get user-specific reservations
@@ -1191,7 +1385,8 @@ else:
 
             user_reservations = user_reservations[
                 ((user_reservations['Start_Time'].dt.date == today) |
-                 ((user_reservations['Start_Time'].dt.date > today) & (user_reservations['Start_Time'] > current_datetime)))
+                 ((user_reservations['Start_Time'].dt.date > today) & (
+                             user_reservations['Start_Time'] > current_datetime)))
                 & (user_reservations['Start_Time'].dt.date <= max_date_60)
                 ]
 
@@ -1201,7 +1396,9 @@ else:
                     "## Your Reservations:",
                     options=range(len(user_reservations)),
                     format_func=lambda x: f"{user_reservations.iloc[x]['Equipments']} on " +
-                                          (user_reservations.iloc[x]['Start_Time'].strftime('%Y/%m/%d %H:%M:%S') + ' To ' + user_reservations.iloc[x]['End_Time'].strftime('%Y/%m/%d %H:%M:%S') if pd.notnull(
+                                          (user_reservations.iloc[x]['Start_Time'].strftime(
+                                              '%Y/%m/%d %H:%M:%S') + ' To ' + user_reservations.iloc[x][
+                                               'End_Time'].strftime('%Y/%m/%d %H:%M:%S') if pd.notnull(
                                               user_reservations.iloc[x]['Start_Time']) else "Date not available")
                 )
 
@@ -1213,35 +1410,190 @@ else:
                         df_pcr.drop(index=reservation_to_cancel.name, inplace=True)
                         df_pcr['Start_Time'] = df_pcr['Start_Time'].dt.strftime('%Y/%m/%d %H:%M:%S')
                         df_pcr['End_Time'] = df_pcr['End_Time'].dt.strftime('%Y/%m/%d %H:%M:%S')
-                        conn.update(worksheet="PCR", data=df_pcr)  # Writing updated dataframe back
+                        log_action("Delete Reservation", st.session_state["name"], f"Details: {user_reservations.iloc[selected_reservation_index]}")
+                        save_data(df_pcr, PCR_FILE_PATH)  # Save updated dataframe back to CSV
                     else:
                         df_non_pcr.drop(index=reservation_to_cancel.name, inplace=True)
-                        df_non_pcr['Start_Time'] = df_non_pcr['Start_Time'].dt.strftime(
-                            '%Y/%m/%d %H:%M:%S')
-                        df_non_pcr['End_Time'] = df_non_pcr['End_Time'].dt.strftime(
-                            '%Y/%m/%d %H:%M:%S')
-                        conn.update(worksheet="Non_PCR", data=df_non_pcr)  # Writing updated dataframe back
+                        df_non_pcr['Start_Time'] = df_non_pcr['Start_Time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+                        df_non_pcr['End_Time'] = df_non_pcr['End_Time'].dt.strftime('%Y/%m/%d %H:%M:%S')
+                        log_action("Delete Reservation", st.session_state["name"], f"Details: {user_reservations.iloc[selected_reservation_index]}")
+                        save_data(df_non_pcr, NON_PCR_FILE_PATH)  # Save updated dataframe back to CSV
 
                     st.success("Reservation canceled successfully.")
-
             else:
                 st.write("## You have no reservations.")
 
-        with tab4:
-            st.subheader("Error reports or Inconvenient issues")
+        if role != 'Admins':
+            with tab4:
+                st.subheader("Error reports or Inconvenient issues")
 
-            contact_form = """
-            <form action="https://formsubmit.co/geneticsku.services@gmail.com" method="POST">
-                 <input type="hidden" name="_captcha" value="false">
-                 <input type="text" name="name" placeholder="Your name" required>
-                 <input type="email" name="email" placeholder="Your email" required>
-                 <textarea name="message" placeholder="Your message here"></textarea>
-                 <button type="submit">Send</button>
-            </form>
-            """
+                contact_form = """
+                <form action="https://formsubmit.co/geneticsku.services@gmail.com" method="POST">
+                     <input type="hidden" name="_captcha" value="false">
+                     <input type="text" name="name" placeholder="Your name" required>
+                     <input type="email" name="email" placeholder="Your email" required>
+                     <textarea name="message" placeholder="Your message here"></textarea>
+                     <button type="submit">Send</button>
+                </form>
+                """
 
-            st.markdown(contact_form, unsafe_allow_html=True)
+                st.markdown(contact_form, unsafe_allow_html=True)
 
+        if role == "Admins":
+            def admin_interface():
+                st.write("### PCR Data")
+                df_pcr = load_data(PCR_FILE_PATH)
+                st.dataframe(df_pcr)
+
+                st.write("### Non-PCR Data")
+                df_non_pcr = load_data(NON_PCR_FILE_PATH)
+                st.dataframe(df_non_pcr)
+
+                st.write("### Autoclaves Counts")
+                autoclaves_count = load_data(AUTOCLAVES_PATH)
+                st.dataframe(autoclaves_count)
+
+                st.write("### Logs")
+                logs = load_data(log_file_path)
+                st.dataframe(logs)
+
+                st.write("### Manage Data")
+
+                # Add new reservation
+                st.write("#### Add New Reservation")
+                name = st.text_input("Name")
+
+                selected_room = st.selectbox("Room", list(st.session_state.equipment_details.keys()))
+                enabled_equipments = {eq: info for eq, info in st.session_state.equipment_details[selected_room].items()
+                                      if info.get('enabled', False)}
+                selected_equipment = st.selectbox("Equipment", list(enabled_equipments.keys()))
+
+                if "PCR" in selected_equipment:
+                    st.subheader("Book Your PCR Slot")
+                    reservation_date = st.date_input("## Reservation Date")
+                    start_time = st.time_input("## Start Time")
+                    end_time = st.time_input("## End Time")
+
+                    start_datetime = datetime.datetime.combine(reservation_date, start_time)
+                    end_datetime = datetime.datetime.combine(reservation_date, end_time)
+
+                else:
+                    st.subheader(f"Reserve {selected_equipment}")
+                    start_date = st.date_input("## Start Date")
+                    start_time = st.time_input("## Start Time")
+                    end_time = st.time_input("## End Time")
+
+                    start_datetime = datetime.datetime.combine(start_date, start_time)
+                    end_datetime = datetime.datetime.combine(start_date, end_time)
+
+                if st.button("Add Reservation"):
+                    try:
+                        new_reservation = pd.DataFrame([{
+                            "Name": name,
+                            "Room": selected_room,
+                            "Equipments": selected_equipment,
+                            "Start_Time": start_datetime,
+                            "End_Time": end_datetime
+                        }])
+                        if "PCR" in selected_equipment:
+                            df_pcr = pd.concat([df_pcr, new_reservation], ignore_index=True)
+                            save_data(df_pcr, PCR_FILE_PATH)
+                        else:
+                            df_non_pcr = pd.concat([df_non_pcr, new_reservation], ignore_index=True)
+                            save_data(df_non_pcr, NON_PCR_FILE_PATH)
+                        st.success("Reservation added successfully.")
+                        df_pcr = load_data(PCR_FILE_PATH)
+                        df_non_pcr = load_data(NON_PCR_FILE_PATH)
+
+                    except Exception as e:
+                        st.error(f"Error adding reservation: {e}")
+
+                # Delete a reservation
+                st.write("#### Delete Reservation")
+                delete_id = st.text_input("Reservation ID to Delete")
+                delete_from_pcr = st.checkbox("Delete from PCR Data", value=True)
+
+                if st.button("Delete Reservation"):
+                    try:
+                        if delete_from_pcr:
+                            df_pcr = df_pcr.drop(index=int(delete_id))
+                            save_data(df_pcr, PCR_FILE_PATH)
+                        else:
+                            df_non_pcr = df_non_pcr.drop(index=int(delete_id))
+                            save_data(df_non_pcr, NON_PCR_FILE_PATH)
+                        st.success("Reservation deleted successfully.")
+                        df_pcr = load_data(PCR_FILE_PATH)
+                        df_non_pcr = load_data(NON_PCR_FILE_PATH)
+
+                    except Exception as e:
+                        st.error(f"Error deleting reservation: {e}")
+
+                # Update a reservation
+                st.write("#### Update Reservation")
+                update_id = st.text_input("Reservation ID to Update")
+                update_field = st.selectbox("Field to Update", ["Name", "Room", "Equipments", "Start_Time", "End_Time"])
+                new_value = st.text_input("New Value")
+                update_in_pcr = st.checkbox("Update in PCR Data", value=True)
+
+                if st.button("Update Reservation"):
+                    try:
+                        if update_in_pcr:
+                            if update_field in ["Start_Time", "End_Time"]:
+                                df_pcr.at[int(update_id), update_field] = pd.to_datetime(new_value)
+                            else:
+                                df_pcr.at[int(update_id), update_field] = new_value
+                            save_data(df_pcr, PCR_FILE_PATH)
+                        else:
+                            if update_field in ["Start_Time", "End_Time"]:
+                                df_non_pcr.at[int(update_id), update_field] = pd.to_datetime(new_value)
+                            else:
+                                df_non_pcr.at[int(update_id), update_field] = new_value
+                            save_data(df_non_pcr, NON_PCR_FILE_PATH)
+                        st.success("Reservation updated successfully.")
+                    except Exception as e:
+                        st.error(f"Error updating reservation: {e}")
+
+                # Update autoclaves count
+                st.write("#### Update Autoclaves Count")
+                autoclave_options = ["Autoclave 1 (Drain the water every 5 times after using)",
+                                     "Autoclave 2 (Drain the water every 5 times after using)"]
+                selected_autoclave = st.selectbox("Select Autoclave", autoclave_options)
+                new_count = st.number_input("New Count", min_value=0, step=1)
+
+                if st.button("Update Autoclave Count"):
+                    try:
+                        autoclaves_count = load_data(AUTOCLAVES_PATH)
+                        autoclaves_count = autoclaves_count[autoclaves_count['Counts'] != selected_autoclave]
+                        new_entries = pd.DataFrame([{'Counts': selected_autoclave}] * new_count)
+                        autoclaves_count = pd.concat([autoclaves_count, new_entries], ignore_index=True)
+                        save_data(autoclaves_count, AUTOCLAVES_PATH)
+                        st.success(f"{selected_autoclave} count updated successfully.")
+                    except Exception as e:
+                        st.error(f"Error updating autoclave count: {e}")
+
+                # File upload to update data
+                st.write("#### Upload CSV to Update Data")
+                uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
+                update_pcr = st.checkbox("Update PCR Data", value=True)
+
+                if uploaded_file is not None:
+                    if st.button("Update Data"):
+                        try:
+                            uploaded_df = pd.read_csv(uploaded_file)
+                            if update_pcr:
+                                save_data(uploaded_df, PCR_FILE_PATH)
+                                st.success("PCR data updated successfully.")
+                            else:
+                                save_data(uploaded_df, NON_PCR_FILE_PATH)
+                                st.success("Non-PCR data updated successfully.")
+                        except Exception as e:
+                            st.error(f"Error updating data: {e}")
+
+
+            with tab5:
+                st.write("## Admins Interface")
+                st.write("You can view and manipulate the data frames here.")
+                admin_interface()
 
             # Use Local CSS File
             def local_css(file_name):
