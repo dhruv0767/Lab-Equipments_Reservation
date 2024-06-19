@@ -411,7 +411,7 @@
         "PCR 8 (Contact Before Use:Lab 4612)": {
             "image": "PCR_8.jpg",
             "details": "T100 Thermal Cycler BIO RAD",
-            "enabled": true
+            "enabled": false
         },
         "PCR 8.1 Out of service": {
             "image": "PCR_8_1.jpg",
