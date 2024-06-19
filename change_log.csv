@@ -1,0 +1,36 @@
+timestamp,action,user,details
+2024-06-18 15:33:45,Delete Reservation,Yanawat_4511,"Details: Name                 Yanawat_4511
+Room                        BSL-2
+Equipments                  BSC-1
+Start_Time    2024-06-18 17:30:00
+End_Time      2024-06-18 20:30:00
+Name: 366, dtype: object"
+2024-06-18 15:34:39,Delete Reservation,Yanawat_4511,"Details: Name                 Yanawat_4511
+Room                        BSL-2
+Equipments                  BSC-1
+Start_Time    2024-06-18 17:30:00
+End_Time      2024-06-18 20:30:00
+Name: 366, dtype: object"
+2024-06-18 15:34:42,Add Reservation,Yanawat_4511,"{'Name': 'Yanawat_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 6, 18, 17, 30), 'End_Time': datetime.datetime(2024, 6, 18, 20, 30)}"
+2024-06-18 15:37:01,Delete Reservation,Yanawat_4511,"Details: Name                 Yanawat_4511
+Room                        BSL-2
+Equipments                  BSC-1
+Start_Time    2024-06-18 17:30:00
+End_Time      2024-06-18 20:30:00
+Name: 366, dtype: object"
+2024-06-18 15:37:04,Add Reservation,Yanawat_4511,<built-in method values of dict object at 0x16f418a80>
+2024-06-18 15:38:42,Delete Reservation,Yanawat_4511,"Details: Name                 Yanawat_4511
+Room                        BSL-2
+Equipments                  BSC-1
+Start_Time    2024-06-18 17:30:00
+End_Time      2024-06-18 20:30:00
+Name: 366, dtype: object"
+2024-06-18 15:38:44,Add Reservation,Yanawat_4511,"dict_values(['Yanawat_4511', 'BSL-2', 'BSC-1', datetime.datetime(2024, 6, 18, 17, 30), datetime.datetime(2024, 6, 18, 20, 30)])"
+2024-06-18 15:45:14,Add Reservation,Yanawat_4511,"{'Name': 'Yanawat_4511', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 2 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 6, 18, 17, 30), 'End_Time': datetime.datetime(2024, 6, 18, 20, 30)}"
+2024-06-18 15:55:18,Add Reservation,Yanawat_4511,"{'Name': 'Yanawat_4511', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Refrigerated Incubator Shaker', 'Start_Time': datetime.datetime(2024, 6, 18, 16, 15), 'End_Time': datetime.datetime(2024, 6, 18, 17, 0)}"
+2024-06-18 15:55:39,Delete Reservation,Yanawat_4511,"Details: Name                           Yanawat_4511
+Room                 Central Lab, 5th floor
+Equipments    Refrigerated Incubator Shaker
+Start_Time              2024-06-18 16:15:00
+End_Time                2024-06-18 17:00:00
+Name: 366, dtype: object"
