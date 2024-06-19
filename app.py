@@ -50,6 +50,7 @@ def update_announcement(text):
         f.write(text)
 
 # Function to load data from CSV
+@st.cache_data
 def load_data(file_path):
     if os.path.exists(file_path):
         return pd.read_csv(file_path)
@@ -57,6 +58,7 @@ def load_data(file_path):
         return pd.DataFrame(columns=['Equipments', 'Start_Time', 'End_Time', 'Name'])
 
 # Function to save data to CSV
+@st.cache_data
 def save_data(df, file_path):
     df.to_csv(file_path, index=False)
 
