@@ -70,3 +70,9 @@ Equipments                  BSC-1
 Start_Time    2024-06-21 10:00:00
 End_Time      2024-06-21 13:00:00
 Name: 377, dtype: object"
+2024-06-21 00:21:17,Delete Reservation,Supanida_4511,"Details: Name                   Supanida_4511
+Room          Central Lab, 6th floor
+Equipments              Laminar flow
+Start_Time       2024-06-21 08:30:00
+End_Time         2024-06-21 10:00:00
+Name: 382, dtype: object"
