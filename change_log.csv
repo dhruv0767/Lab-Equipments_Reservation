@@ -45,3 +45,4 @@ Name: 373, dtype: object"
 0  Khemrutai_4511  PCR Machines  ... 2024-06-20 11:00:00 2024-06-20 14:00:00
 
 [1 rows x 5 columns]"
+2024-06-20 08:07:17,Add Reservation,Kongtawan_4511,"{'Name': 'Kongtawan_4511', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 4 For Waste (Drain the water everytime after using)', 'Start_Time': datetime.datetime(2024, 6, 20, 8, 30), 'End_Time': datetime.datetime(2024, 6, 20, 10, 30)}"
