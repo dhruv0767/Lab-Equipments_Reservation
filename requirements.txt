@@ -1,6 +1,6 @@
-streamlit
-pandas
-streamlit_authenticator
-plotly
-pytz
-git+https://github.com/streamlit/gsheets-connection
+streamlit==1.35.0
+pandas==1.5.3
+numpy==1.26.4
+streamlit-authenticator==0.3.2
+plotly==5.22.0
+pytz==2024.1
