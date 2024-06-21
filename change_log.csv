@@ -83,3 +83,9 @@ Equipments                  BSC-2
 Start_Time    2024-06-21 08:30:00
 End_Time      2024-06-21 14:30:00
 Name: 372, dtype: object"
+2024-06-21 08:35:08,Delete Reservation,Supanida_4511,"Details: Name                Supanida_4511
+Room                        BSL-2
+Equipments                  BSC-1
+Start_Time    2024-06-21 10:00:00
+End_Time      2024-06-21 13:00:00
+Name: 381, dtype: object"
