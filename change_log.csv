@@ -109,3 +109,9 @@ Equipments                  PCR 1
 Start_Time    2024-06-21 08:00:00
 End_Time      2024-06-21 11:00:00
 Name: 187, dtype: object"
+2024-06-21 10:58:47,Delete Reservation,Yanawat_4511,"Details: Name                                               Yanawat_4511
+Room                                         Hallway, 6th floor
+Equipments    Autoclave 1 (Drain the water every 5 times aft...
+Start_Time                                  2024-06-21 13:00:00
+End_Time                                    2024-06-21 14:00:00
+Name: 384, dtype: object"
