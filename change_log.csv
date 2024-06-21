@@ -115,3 +115,4 @@ Equipments    Autoclave 1 (Drain the water every 5 times aft...
 Start_Time                                  2024-06-21 13:00:00
 End_Time                                    2024-06-21 14:00:00
 Name: 384, dtype: object"
+2024-06-21 13:37:30,Add Reservation,Janejira_4612,"{'Name': 'Janejira_4612', 'Room': 'Microscope Room, 5th floor', 'Equipments': 'Fluorescence Microscope (Contact before use)', 'Start_Time': datetime.datetime(2024, 6, 21, 14, 0), 'End_Time': datetime.datetime(2024, 6, 21, 16, 0)}"
