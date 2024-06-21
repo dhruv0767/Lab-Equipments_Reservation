@@ -97,3 +97,9 @@ Name: 381, dtype: object"
 
 [1 rows x 5 columns]"
 2024-06-21 10:56:35,Add Reservation,Yanawat_4511,"{'Name': 'Yanawat_4511', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 1 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 6, 21, 13, 0), 'End_Time': datetime.datetime(2024, 6, 21, 14, 0)}"
+2024-06-21 10:58:30,Delete Reservation,Yanawat_4511,"Details: Name                 Yanawat_4511
+Room                 PCR Machines
+Equipments                  PCR 6
+Start_Time    2024-06-21 11:00:00
+End_Time      2024-06-21 14:00:00
+Name: 186, dtype: object"
