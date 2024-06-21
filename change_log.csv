@@ -103,3 +103,9 @@ Equipments                  PCR 6
 Start_Time    2024-06-21 11:00:00
 End_Time      2024-06-21 14:00:00
 Name: 186, dtype: object"
+2024-06-21 10:58:41,Delete Reservation,Yanawat_4511,"Details: Name                 Yanawat_4511
+Room                 PCR Machines
+Equipments                  PCR 1
+Start_Time    2024-06-21 08:00:00
+End_Time      2024-06-21 11:00:00
+Name: 187, dtype: object"
