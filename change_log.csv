@@ -148,3 +148,7 @@ Name: 384, dtype: object"
 2024-06-23 23:44:59,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 7, 12, 0, 0), 'End_Time': datetime.datetime(2024, 7, 12, 23, 45)}"
 2024-06-24 00:20:14,Add Reservation,Pitchnaree_4612,"{'Name': 'Pitchnaree_4612', 'Room': 'Microscope Room, 5th floor', 'Equipments': 'Stereo Microscope', 'Start_Time': datetime.datetime(2024, 6, 24, 9, 0), 'End_Time': datetime.datetime(2024, 6, 24, 10, 30)}"
 2024-06-24 06:53:40,Add Reservation,Pawaree_4612,"{'Name': 'Pawaree_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 2', 'Start_Time': datetime.datetime(2024, 6, 24, 10, 0), 'End_Time': datetime.datetime(2024, 6, 24, 15, 0)}"
+2024-06-24 06:59:34,Add Reservation,Yanawat_4511,"           Name          Room  ...          Start_Time            End_Time
+0  Yanawat_4511  PCR Machines  ... 2024-06-24 11:00:00 2024-06-24 14:00:00
+
+[1 rows x 5 columns]"
