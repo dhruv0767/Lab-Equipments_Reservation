@@ -183,3 +183,4 @@ Equipments              Laminar flow
 Start_Time       2024-06-25 11:30:00
 End_Time         2024-06-25 13:00:00
 Name: 432, dtype: object"
+2024-06-25 11:52:58,Add Reservation,Kongtawan_4511,"{'Name': 'Kongtawan_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 6, 27, 13, 30), 'End_Time': datetime.datetime(2024, 6, 27, 16, 30)}"
