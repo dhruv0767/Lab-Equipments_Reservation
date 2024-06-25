@@ -203,3 +203,9 @@ Name: 432, dtype: object"
 2024-06-25 14:56:28,Add Reservation,Janejira_4612,"{'Name': 'Janejira_4612', 'Room': 'Microscope Room, 5th floor', 'Equipments': 'Fluorescence Microscope (Contact before use)', 'Start_Time': datetime.datetime(2024, 6, 27, 9, 0), 'End_Time': datetime.datetime(2024, 6, 27, 12, 0)}"
 2024-06-25 14:56:55,Add Reservation,Janejira_4612,"{'Name': 'Janejira_4612', 'Room': 'Microscope Room, 5th floor', 'Equipments': 'Fluorescence Microscope (Contact before use)', 'Start_Time': datetime.datetime(2024, 6, 28, 9, 0), 'End_Time': datetime.datetime(2024, 6, 28, 12, 0)}"
 2024-06-25 20:31:14,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 6, 26, 9, 30), 'End_Time': datetime.datetime(2024, 6, 26, 13, 0)}"
+2024-06-26 06:43:30,Delete Reservation,Kongtawan_4511,"Details: Name               Kongtawan_4511
+Room                        BSL-2
+Equipments                  BSC-2
+Start_Time    2024-06-26 08:30:00
+End_Time      2024-06-26 13:00:00
+Name: 428, dtype: object"
