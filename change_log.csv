@@ -251,3 +251,4 @@ Name: 438, dtype: object"
 0  Kongtawan_4511  PCR Machines  ... 2024-06-27 08:00:00 2024-06-27 11:00:00
 
 [1 rows x 5 columns]"
+2024-06-26 20:22:00,Add Reservation,Kongtawan_4511,"{'Name': 'Kongtawan_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 6, 28, 8, 30), 'End_Time': datetime.datetime(2024, 6, 28, 12, 30)}"
