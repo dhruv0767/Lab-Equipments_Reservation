@@ -211,3 +211,9 @@ End_Time      2024-06-26 13:00:00
 Name: 428, dtype: object"
 2024-06-26 06:43:57,Add Reservation,Kongtawan_4511,"{'Name': 'Kongtawan_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 6, 26, 8, 30), 'End_Time': datetime.datetime(2024, 6, 26, 11, 30)}"
 2024-06-26 06:59:44,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Microscope Room, 5th floor', 'Equipments': 'Stereo Microscope', 'Start_Time': datetime.datetime(2024, 6, 26, 8, 0), 'End_Time': datetime.datetime(2024, 6, 26, 10, 0)}"
+2024-06-26 07:27:17,Delete Reservation,Dechaphon_4612,"Details: Name                  Dechaphon_4612
+Room          Central Lab, 5th floor
+Equipments        Incubator Shaker 1
+Start_Time       2024-06-26 00:00:00
+End_Time         2024-06-26 23:45:00
+Name: 399, dtype: object"
