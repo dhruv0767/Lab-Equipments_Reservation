@@ -217,3 +217,9 @@ Equipments        Incubator Shaker 1
 Start_Time       2024-06-26 00:00:00
 End_Time         2024-06-26 23:45:00
 Name: 399, dtype: object"
+2024-06-26 07:27:31,Delete Reservation,Dechaphon_4612,"Details: Name                      Dechaphon_4612
+Room          Microscope Room, 5th floor
+Equipments             Stereo Microscope
+Start_Time           2024-06-26 08:00:00
+End_Time             2024-06-26 10:00:00
+Name: 441, dtype: object"
