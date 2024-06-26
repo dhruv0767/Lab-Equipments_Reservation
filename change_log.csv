@@ -229,3 +229,4 @@ Equipments        Incubator Shaker 1
 Start_Time       2024-06-27 00:00:00
 End_Time         2024-06-27 23:45:00
 Name: 399, dtype: object"
+2024-06-26 07:28:21,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 6, 26, 8, 15), 'End_Time': datetime.datetime(2024, 6, 26, 23, 45)}"
