@@ -238,3 +238,4 @@ Start_Time    2024-06-26 09:30:00
 End_Time      2024-06-26 13:00:00
 Name: 438, dtype: object"
 2024-06-26 09:25:08,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 6, 26, 10, 30), 'End_Time': datetime.datetime(2024, 6, 26, 13, 30)}"
+2024-06-26 09:49:56,Add Reservation,Khemrutai_4511,"{'Name': 'Khemrutai_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Incubator Shaker', 'Start_Time': datetime.datetime(2024, 6, 26, 10, 0), 'End_Time': datetime.datetime(2024, 6, 26, 12, 0)}"
