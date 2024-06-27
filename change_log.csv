@@ -308,3 +308,7 @@ Name: 452, dtype: object"
 2024-06-27 15:04:30,Add Reservation,Sirithorn_4606,"{'Name': 'Sirithorn_4606', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Digital Dry Bath 2', 'Start_Time': datetime.datetime(2024, 7, 1, 13, 0), 'End_Time': datetime.datetime(2024, 7, 1, 15, 30)}"
 2024-06-27 15:04:50,Add Reservation,Sirithorn_4606,"{'Name': 'Sirithorn_4606', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Digital Dry Bath 2', 'Start_Time': datetime.datetime(2024, 7, 4, 13, 0), 'End_Time': datetime.datetime(2024, 7, 4, 15, 30)}"
 2024-06-27 15:05:11,Add Reservation,Sirithorn_4606,"{'Name': 'Sirithorn_4606', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Digital Dry Bath 2', 'Start_Time': datetime.datetime(2024, 7, 5, 13, 0), 'End_Time': datetime.datetime(2024, 7, 5, 15, 30)}"
+2024-06-27 15:08:25,Add Reservation,Supanida_4511,"            Name          Room  ...          Start_Time            End_Time
+0  Supanida_4511  PCR Machines  ... 2024-06-28 08:00:00 2024-06-28 11:00:00
+
+[1 rows x 5 columns]"
