@@ -299,3 +299,7 @@ Name: 452, dtype: object"
 0  Chiratchaya_4511  PCR Machines  ... 2024-06-27 14:00:00 2024-06-27 17:00:00
 
 [1 rows x 5 columns]"
+2024-06-27 11:09:32,Add Reservation,Chiratchaya_4511,"               Name          Room  ...          Start_Time            End_Time
+0  Chiratchaya_4511  PCR Machines  ... 2024-06-27 14:00:00 2024-06-27 17:00:00
+
+[1 rows x 5 columns]"
