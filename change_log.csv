@@ -341,3 +341,9 @@ Name: 452, dtype: object"
 0  Khemrutai_4511  PCR Machines  ... 2024-06-29 11:00:00 2024-06-29 14:00:00
 
 [1 rows x 5 columns]"
+2024-06-29 10:36:35,Delete Reservation,Sirithorn_4606,"Details: Name                  Sirithorn_4606
+Room          Central Lab, 6th floor
+Equipments        Digital Dry Bath 2
+Start_Time       2024-07-04 13:00:00
+End_Time         2024-07-04 15:30:00
+Name: 460, dtype: object"
