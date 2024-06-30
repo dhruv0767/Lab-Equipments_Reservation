@@ -98,7 +98,7 @@ def backup_to_github(file_path, commit_message="Update data"):
         token = st.secrets["github"]["token"]
 
         # Set up the remote URL with the token for authentication
-        repo_url = f"https://{username}:{token}@github.com/{username}/Lab_reserved_TESTING.git"
+        repo_url = f"https://{username}:{token}@github.com/{username}/Lab-Equipments_Reservation.git"
 
         # Set the remote URL
         subprocess.run(["git", "remote", "set-url", "origin", repo_url], check=True)
@@ -314,10 +314,14 @@ def apply_web_style():
 
 # Function to authenticate users
 def authenticate(username, password):
-    user = st.secrets["credentials"]["usernames"].get(username)
-    if user and user["password"] == password:
-        return True, user["name"]
+    try:
+        user = st.secrets["credentials"]["usernames"][username]
+        if user["password"] == password:
+            return True, user["name"]
+    except KeyError:
+        pass
     return False, None
+
 
 # Device type selection in sidebar
 mobile = st.toggle('Mobile Version')
