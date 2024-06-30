@@ -22,26 +22,22 @@ AUTOCLAVES_PATH = 'autoclaves_count.csv'
 LOG_FILE_PATH = "change_log.csv"
 EQUIPMENT_DETAILS_FILE_PATH = 'equipment_details.json'
 
-
 # Initialize files if they don't exist
 def init_file(file_path, columns=None):
     if not os.path.exists(file_path):
         df = pd.DataFrame(columns=columns) if columns else pd.DataFrame()
         df.to_csv(file_path, index=False)
 
-
 def init_announcement_file():
     if not os.path.exists(ANNOUNCEMENT_FILE_PATH):
         with open(ANNOUNCEMENT_FILE_PATH, 'w') as f:
             f.write('')
-
 
 # Call initialization functions
 init_file(PCR_FILE_PATH, ['Name', 'Room', 'Equipments', 'Start_Time', 'End_Time'])
 init_file(NON_PCR_FILE_PATH, ['Name', 'Room', 'Equipments', 'Start_Time', 'End_Time'])
 init_file(AUTOCLAVES_PATH, ['Counts'])
 init_announcement_file()
-
 
 # Read the announcement from the text file
 def read_announcement():
@@ -50,7 +46,6 @@ def read_announcement():
             announcement = f.read().strip()
         return announcement
     return ''
-
 
 # Update the announcement in the text file
 def update_announcement(text, file_path=ANNOUNCEMENT_FILE_PATH):
@@ -61,18 +56,15 @@ def update_announcement(text, file_path=ANNOUNCEMENT_FILE_PATH):
     except Exception as e:
         st.error(f"Error saving announcement: {e}")
 
-
 # Load data from CSV
 def load_data(file_path):
     try:
         if os.path.exists(file_path):
             return pd.read_csv(file_path)
-        return pd.DataFrame(columns=['Equipments', 'Start_Time', 'End_Time',
-                                     'Name'])  # Return an empty DataFrame if the file does not exist
+        return pd.DataFrame(columns=['Equipments', 'Start_Time', 'End_Time', 'Name'])  # Return an empty DataFrame if the file does not exist
     except Exception as e:
         st.error(f"Error reading data from file {file_path}: {e}")
         return pd.DataFrame()
-
 
 # Save data to CSV
 def save_data(df, file_path):
@@ -82,13 +74,11 @@ def save_data(df, file_path):
     except Exception as e:
         st.error(f"Error saving data: {e}")
 
-
 def fetch_data(file_path):
     df = load_data(file_path)
     df['Start_Time'] = pd.to_datetime(df['Start_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
     df['End_Time'] = pd.to_datetime(df['End_Time'], format='%Y/%m/%d %H:%M:%S', errors='coerce')
     return df
-
 
 # Configure Git
 def configure_git():
@@ -100,7 +90,6 @@ def configure_git():
     except subprocess.CalledProcessError as e:
         st.error(f"An error occurred while configuring Git: {e}")
 
-
 # Backup to GitHub
 def backup_to_github(file_path, commit_message="Update data"):
     try:
@@ -109,7 +98,7 @@ def backup_to_github(file_path, commit_message="Update data"):
         token = st.secrets["github"]["token"]
 
         # Set up the remote URL with the token for authentication
-        repo_url = f"https://{username}:{token}@github.com/{username}/Lab-Equipments_Reservation.git"
+        repo_url = f"https://{username}:{token}@github.com/{username}/Lab_reserved_TESTING.git"
 
         # Set the remote URL
         subprocess.run(["git", "remote", "set-url", "origin", repo_url], check=True)
@@ -127,12 +116,10 @@ def backup_to_github(file_path, commit_message="Update data"):
     except subprocess.CalledProcessError as e:
         st.error(f"An error occurred while backing up to GitHub: {e}")
 
-
 # Load equipment details from JSON
 def load_json(file_path):
     with open(file_path, 'r') as file:
         return json.load(file)
-
 
 # Save equipment details to JSON
 def save_equipment_details(details, json_file_path=EQUIPMENT_DETAILS_FILE_PATH):
@@ -143,11 +130,9 @@ def save_equipment_details(details, json_file_path=EQUIPMENT_DETAILS_FILE_PATH):
     except Exception as e:
         st.error(f"Error saving equipment details: {e}")
 
-
 # Check if image exists
 def image_exists(image_path):
     return os.path.exists(image_path)
-
 
 # Safely display image
 def safe_display_image(image_path, width=100, offset=0):
@@ -158,25 +143,21 @@ def safe_display_image(image_path, width=100, offset=0):
     else:
         st.error("Image not available.")
 
-
 # Convert DataFrame to CSV string
 def convert_df_to_csv(df):
     output = StringIO()
     df.to_csv(output, index=False)
     return output.getvalue().encode('utf-8')
 
-
 # Download non-PCR data
 def download_non_pcr():
     df_non_pcr = fetch_data(NON_PCR_FILE_PATH)
     return df_non_pcr
 
-
 # Download PCR data
 def download_pcr():
     df_pcr = fetch_data(PCR_FILE_PATH)
     return df_pcr
-
 
 # Generate time slots
 def generate_time_slots():
@@ -186,18 +167,14 @@ def generate_time_slots():
         for i, h in enumerate(range(8, 20, 3))]
     return slots
 
-
 slots = generate_time_slots()
-
 
 # Load equipment details once
 def load_equipment_details():
     if 'equipment_details' not in st.session_state:
         st.session_state.equipment_details = load_json(EQUIPMENT_DETAILS_FILE_PATH)
 
-
 load_equipment_details()
-
 
 # Log actions
 def log_action(action, user, details):
@@ -219,7 +196,6 @@ def log_action(action, user, details):
         save_data(log_df, LOG_FILE_PATH)
     except Exception as e:
         st.error(f"Error logging action: {e}")
-
 
 def apply_mobile_style():
     # Mobile style
@@ -336,6 +312,12 @@ def apply_web_style():
     '''
     st.markdown(css, unsafe_allow_html=True)
 
+# Function to authenticate users
+def authenticate(username, password):
+    user = st.secrets["credentials"]["usernames"][username]
+    if user and user["password"] == password:
+        return True, user["name"]
+    return False, None
 
 # Device type selection in sidebar
 mobile = st.toggle('Mobile Version')
@@ -357,24 +339,33 @@ if mobile:
         }
     }
 
+    # Check if the user is logged in
     if 'authentication_status' not in st.session_state:
-        st.session_state['authentication_status'] = None
+        st.session_state['authentication_status'] = False
+        st.session_state['username'] = None
 
-    if st.session_state["authentication_status"] != True:
-        # Initialize the authenticator
-        if 'authenticator' not in st.session_state:
-            st.session_state['authenticator'] = stauth.Authenticate(
-                credentials,
-                "my_cookie_name",  # Define a specific cookie name for your app
-                "my_signature_key",  # This should be a long random string to secure the cookie
-                cookie_expiry_days=30,
-                pre_authorized=None
-            )
-        st.session_state['authenticator'].login()
+    if not st.session_state['authentication_status']:
+        st.title("Login")
+        username = st.text_input("Username")
+        password = st.text_input("Password", type="password")
 
-    if st.session_state["authentication_status"]:
+        if st.button("Login"):
+            is_authenticated, name = authenticate(username, password)
+            if is_authenticated:
+                st.session_state['authentication_status'] = True
+                st.session_state['username'] = username
+                st.session_state['name'] = name
+                st.rerun()
+            else:
+                st.error("Invalid username or password")
+
+    else:
         role = credentials['usernames'][st.session_state['username'].lower()]['role']
-        st.session_state['authenticator'].logout(location='main')
+        if st.button("Logout"):
+            st.session_state['authentication_status'] = False
+            st.session_state['username'] = None
+            st.session_state['name'] = None
+            st.rerun()  # Rerun the app to refresh the state
 
         # Always check if there's an announcement to display
         if announcement_text:
@@ -394,9 +385,7 @@ if mobile:
 
         if role in ["Admins", "Lecturer"]:
 
-            selected_tab = st.selectbox("### Select Actions",
-                                        ["Reservation Tables", "Reservation Forms", "Reservation Cancellation",
-                                         "Announcement"])
+            selected_tab = st.selectbox("### Select Actions", ["Reservation Tables", "Reservation Forms", "Reservation Cancellation", "Announcement"])
 
             if selected_tab == 'Announcement':
 
@@ -412,8 +401,8 @@ if mobile:
                     st.session_state['announcement'] = new_announcement_text
 
         else:
-            selected_tab = st.selectbox("### Select Actions",
-                                        ["Reservation Tables", "Reservation Forms", "Reservation Cancellation"])
+            selected_tab = st.selectbox("### Select Actions", ["Reservation Tables", "Reservation Forms", "Reservation Cancellation"])
+
 
         if selected_tab == "Reservation Tables":
             room_selection = st.selectbox("### Select a Room", list(st.session_state.equipment_details.keys()),
@@ -886,7 +875,7 @@ if mobile:
                 ((user_reservations['Start_Time'].dt.date == today) |
 
                  ((user_reservations['Start_Time'].dt.date > today) & (
-                         user_reservations['Start_Time'] > current_datetime)))
+                             user_reservations['Start_Time'] > current_datetime)))
 
                 & (user_reservations['Start_Time'].dt.date <= max_date_60)
 
@@ -928,8 +917,7 @@ if mobile:
 
                         df_pcr['End_Time'] = df_pcr['End_Time'].dt.strftime('%Y/%m/%d %H:%M:%S')
 
-                        log_action("Delete Reservation", st.session_state["name"],
-                                   f"Details: {user_reservations.iloc[selected_reservation_index]}")
+                        log_action("Delete Reservation", st.session_state["name"], f"Details: {user_reservations.iloc[selected_reservation_index]}")
 
                         save_data(df_pcr, PCR_FILE_PATH)  # Save updated dataframe back to CSV
 
@@ -941,8 +929,7 @@ if mobile:
 
                         df_non_pcr['End_Time'] = df_non_pcr['End_Time'].dt.strftime('%Y/%m/%d %H:%M:%S')
 
-                        log_action("Delete Reservation", st.session_state["name"],
-                                   f"Details: {user_reservations.iloc[selected_reservation_index]}")
+                        log_action("Delete Reservation", st.session_state["name"], f"Details: {user_reservations.iloc[selected_reservation_index]}")
 
                         save_data(df_non_pcr, NON_PCR_FILE_PATH)  # Save updated dataframe back to CSV
 
@@ -951,12 +938,6 @@ if mobile:
             else:
 
                 st.write("## You have no reservations.")
-
-    elif st.session_state["authentication_status"] is False:
-        st.error('Name/password is incorrect')
-
-    elif st.session_state["authentication_status"] is None:
-        st.warning('Please enter your username and password')
 
 else:
     apply_web_style()
@@ -974,22 +955,27 @@ else:
         }
     }
 
+    # Check if the user is logged in
     if 'authentication_status' not in st.session_state:
-        st.session_state['authentication_status'] = None
+        st.session_state['authentication_status'] = False
+        st.session_state['username'] = None
 
-    if st.session_state["authentication_status"] != True:
-        # Initialize the authenticator
-        if 'authenticator' not in st.session_state:
-            st.session_state['authenticator'] = stauth.Authenticate(
-                credentials,
-                "my_cookie_name",  # Define a specific cookie name for your app
-                "my_signature_key",  # This should be a long random string to secure the cookie
-                cookie_expiry_days=30,
-                pre_authorized=None
-            )
-        st.session_state['authenticator'].login()
+    if not st.session_state['authentication_status']:
+        st.title("Login")
+        username = st.text_input("Username")
+        password = st.text_input("Password", type="password")
 
-    if st.session_state["authentication_status"]:
+        if st.button("Login"):
+            is_authenticated, name = authenticate(username, password)
+            if is_authenticated:
+                st.session_state['authentication_status'] = True
+                st.session_state['username'] = username
+                st.session_state['name'] = name
+                st.rerun()
+            else:
+                st.error("Invalid username or password")
+
+    else:
         role = credentials['usernames'][st.session_state['username'].lower()]['role']
 
         # Check if the user is authorized (either an admin or a lecturer) and allow them to post an announcement
@@ -998,7 +984,7 @@ else:
                 st.write("Admin and Lecturer Controls")
                 new_announcement_text = st.text_area("### Enter announcement:", value=announcement_text)
                 if st.button("Update Announcement"):
-                    update_announcement(new_announcement_text, ANNOUNCEMENT_FILE_PATH)
+                    update_announcement(new_announcement_text,ANNOUNCEMENT_FILE_PATH)
                     st.session_state['announcement'] = new_announcement_text
 
         # Always check if there's an announcement to display
@@ -1009,16 +995,18 @@ else:
                 unsafe_allow_html=True
             )
 
-        # Usual app interface
-        st.session_state['authenticator'].logout(location='sidebar')
         message = f"### Welcome <span class='welcome-message'>{st.session_state['name']}</span>"
         st.markdown(message, unsafe_allow_html=True)
+        if st.sidebar.button("Logout"):
+            st.session_state['authentication_status'] = False
+            st.session_state['username'] = None
+            st.session_state['name'] = None
+            st.rerun()  # Rerun the app to refresh the state
+
         if role == "Admins":
-            tab1, tab2, tab3, tab5 = st.tabs(
-                ["Reservation Tables", "Reservation Forms", "Reservation Cancellation", "Admins Interface"])
+            tab1, tab2, tab3, tab5 = st.tabs(["Reservation Tables", "Reservation Forms", "Reservation Cancellation", "Admins Interface"])
         else:
-            tab1, tab2, tab3, tab4 = st.tabs(
-                ["Reservation Tables", "Reservation Forms", "Reservation Cancellation", "Contact Us"])
+            tab1, tab2, tab3, tab4 = st.tabs(["Reservation Tables", "Reservation Forms", "Reservation Cancellation", "Contact Us"])
 
         st.sidebar.download_button(
             label="Download General Reservations as CSV",
@@ -1035,8 +1023,7 @@ else:
         )
 
         with tab1:
-            room_selection = st.selectbox("### Select a Room", list(st.session_state.equipment_details.keys()),
-                                          key='tab1 select room')
+            room_selection = st.selectbox("### Select a Room", list(st.session_state.equipment_details.keys()), key='tab1 select room')
 
             # Generate a list of dates for the next week
             dates = [(datetime.date.today() + datetime.timedelta(days=i)).strftime('%Y-%m-%d') for i in range(60)]
@@ -1056,8 +1043,7 @@ else:
             df_pcr.dropna(inplace=True)
 
             # Filter DataFrames for the selected day
-            df_pcr_filtered = df_pcr[
-                (df_pcr['Room'] == room_selection) & (df_pcr['Start_Time'].dt.date == selected_date)]
+            df_pcr_filtered = df_pcr[(df_pcr['Room'] == room_selection) & (df_pcr['Start_Time'].dt.date == selected_date)]
             df_non_pcr_filtered = df_non_pcr[
                 (df_non_pcr['Room'] == room_selection) & (df_non_pcr['Start_Time'].dt.date == selected_date)]
 
@@ -1408,7 +1394,7 @@ else:
 
                                         save_data(autoclaves_count_buffer, AUTOCLAVES_PATH)
 
-                                log_action("Add Reservation", st.session_state["name"], new_reservation)
+                                log_action("Add Reservation", st.session_state["name"],new_reservation)
                                 st.success(
 
                                     f"Reservation successful for {selected_equipment} in {selected_room} from {start_datetime.strftime('%Y/%m/%d %H:%M:%S')} to {end_datetime.strftime('%Y/%m/%d %H:%M:%S')}")
@@ -1435,7 +1421,7 @@ else:
             user_reservations = user_reservations[
                 ((user_reservations['Start_Time'].dt.date == today) |
                  ((user_reservations['Start_Time'].dt.date > today) & (
-                         user_reservations['Start_Time'] > current_datetime)))
+                             user_reservations['Start_Time'] > current_datetime)))
                 & (user_reservations['Start_Time'].dt.date <= max_date_60)
                 ]
 
@@ -1459,15 +1445,13 @@ else:
                         df_pcr.drop(index=reservation_to_cancel.name, inplace=True)
                         df_pcr['Start_Time'] = df_pcr['Start_Time'].dt.strftime('%Y/%m/%d %H:%M:%S')
                         df_pcr['End_Time'] = df_pcr['End_Time'].dt.strftime('%Y/%m/%d %H:%M:%S')
-                        log_action("Delete Reservation", st.session_state["name"],
-                                   f"Details: {user_reservations.iloc[selected_reservation_index]}")
+                        log_action("Delete Reservation", st.session_state["name"], f"Details: {user_reservations.iloc[selected_reservation_index]}")
                         save_data(df_pcr, PCR_FILE_PATH)  # Save updated dataframe back to CSV
                     else:
                         df_non_pcr.drop(index=reservation_to_cancel.name, inplace=True)
                         df_non_pcr['Start_Time'] = df_non_pcr['Start_Time'].dt.strftime('%Y/%m/%d %H:%M:%S')
                         df_non_pcr['End_Time'] = df_non_pcr['End_Time'].dt.strftime('%Y/%m/%d %H:%M:%S')
-                        log_action("Delete Reservation", st.session_state["name"],
-                                   f"Details: {user_reservations.iloc[selected_reservation_index]}")
+                        log_action("Delete Reservation", st.session_state["name"], f"Details: {user_reservations.iloc[selected_reservation_index]}")
                         save_data(df_non_pcr, NON_PCR_FILE_PATH)  # Save updated dataframe back to CSV
 
                     st.success("Reservation canceled successfully.")
@@ -1625,10 +1609,10 @@ else:
                 # Equipment Availability
                 st.write("### Equipment Availability")
                 selected_room_admin = st.selectbox("Select a room to manage equipment:",
-                                                   list(st.session_state.equipment_details.keys()))
+                                                           list(st.session_state.equipment_details.keys()))
                 equipment_list = list(st.session_state.equipment_details[selected_room_admin].keys())
                 selected_equipment_admin = st.selectbox("Select equipment to toggle availability:",
-                                                        equipment_list)
+                                                                equipment_list)
 
                 if st.button("Toggle Availability"):
                     # Toggle equipment availability status
@@ -1664,7 +1648,6 @@ else:
                 st.write("You can view and manipulate the data frames here.")
                 admin_interface()
 
-
             # Use Local CSS File
             def local_css(file_name):
                 with open(file_name) as f:
@@ -1672,10 +1655,3 @@ else:
 
 
             local_css("style.css")
-
-
-    elif st.session_state["authentication_status"] is False:
-        st.error('Name/password is incorrect')
-
-    elif st.session_state["authentication_status"] is None:
-        st.warning('Please enter your username and password')
