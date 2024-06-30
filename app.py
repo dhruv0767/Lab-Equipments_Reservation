@@ -314,7 +314,7 @@ def apply_web_style():
 
 # Function to authenticate users
 def authenticate(username, password):
-    user = st.secrets["credentials"]["usernames"][username]
+    user = st.secrets["credentials"]["usernames"].get(username)
     if user and user["password"] == password:
         return True, user["name"]
     return False, None
