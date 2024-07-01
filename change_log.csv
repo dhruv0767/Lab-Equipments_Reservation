@@ -389,3 +389,4 @@ Equipments    PCR 13 (Former PCR 10)
 Start_Time       2024-07-01 14:00:00
 End_Time         2024-07-01 17:00:00
 Name: 214, dtype: object"
+2024-07-01 20:34:15,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 7, 2, 9, 0), 'End_Time': datetime.datetime(2024, 7, 2, 12, 30)}"
