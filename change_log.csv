@@ -365,3 +365,9 @@ Equipments    Autoclave 1 (Drain the water every 5 times aft...
 Start_Time                                  2024-07-01 13:00:00
 End_Time                                    2024-07-01 14:30:00
 Name: 482, dtype: object"
+2024-07-01 09:56:28,Delete Reservation,Wilasinee_4612,"Details: Name                                             Wilasinee_4612
+Room                                         Hallway, 6th floor
+Equipments    Autoclave 1 (Drain the water every 5 times aft...
+Start_Time                                  2024-07-01 12:00:00
+End_Time                                    2024-07-01 13:00:00
+Name: 482, dtype: object"
