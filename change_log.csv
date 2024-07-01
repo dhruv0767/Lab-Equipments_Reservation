@@ -359,3 +359,9 @@ Name: 460, dtype: object"
 2024-07-01 06:33:27,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 5', 'Start_Time': datetime.datetime(2024, 7, 1, 10, 30), 'End_Time': datetime.datetime(2024, 7, 1, 11, 0)}"
 2024-07-01 06:33:49,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'TissueLyser II', 'Start_Time': datetime.datetime(2024, 7, 1, 10, 30), 'End_Time': datetime.datetime(2024, 7, 1, 11, 0)}"
 2024-07-01 06:35:29,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Microscope Room, 5th floor', 'Equipments': 'Stereo Microscope', 'Start_Time': datetime.datetime(2024, 7, 1, 9, 0), 'End_Time': datetime.datetime(2024, 7, 1, 10, 0)}"
+2024-07-01 09:55:27,Delete Reservation,Wilasinee_4612,"Details: Name                                             Wilasinee_4612
+Room                                         Hallway, 6th floor
+Equipments    Autoclave 1 (Drain the water every 5 times aft...
+Start_Time                                  2024-07-01 13:00:00
+End_Time                                    2024-07-01 14:30:00
+Name: 482, dtype: object"
