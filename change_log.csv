@@ -454,3 +454,9 @@ Name: 219, dtype: object"
 0  Supanida_4511  PCR Machines  ... 2024-07-03 11:00:00 2024-07-03 14:00:00
 
 [1 rows x 5 columns]"
+2024-07-02 15:09:17,Delete Reservation,Dechaphon_4612,"Details: Name                  Dechaphon_4612
+Room          Central Lab, 5th floor
+Equipments        Incubator Shaker 1
+Start_Time       2024-07-03 00:00:00
+End_Time         2024-07-03 23:45:00
+Name: 404, dtype: object"
