@@ -490,3 +490,9 @@ Equipments        Incubator Shaker 1
 Start_Time       2024-07-07 00:00:00
 End_Time         2024-07-07 23:45:00
 Name: 403, dtype: object"
+2024-07-02 15:09:57,Delete Reservation,Dechaphon_4612,"Details: Name                  Dechaphon_4612
+Room          Central Lab, 5th floor
+Equipments        Incubator Shaker 1
+Start_Time       2024-07-08 00:00:00
+End_Time         2024-07-08 23:45:00
+Name: 403, dtype: object"
