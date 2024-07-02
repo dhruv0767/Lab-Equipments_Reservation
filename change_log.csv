@@ -423,3 +423,9 @@ Name: 486, dtype: object"
 2024-07-02 10:29:26,Add Reservation,Pitchnaree_4612,"{'Name': 'Pitchnaree_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 4', 'Start_Time': datetime.datetime(2024, 7, 2, 11, 30), 'End_Time': datetime.datetime(2024, 7, 2, 12, 30)}"
 2024-07-02 10:30:00,Add Reservation,Pitchnaree_4612,"{'Name': 'Pitchnaree_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 1', 'Start_Time': datetime.datetime(2024, 7, 2, 11, 30), 'End_Time': datetime.datetime(2024, 7, 2, 15, 0)}"
 2024-07-02 10:30:28,Add Reservation,Pitchnaree_4612,"{'Name': 'Pitchnaree_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'TissueLyser II', 'Start_Time': datetime.datetime(2024, 7, 2, 12, 0), 'End_Time': datetime.datetime(2024, 7, 2, 13, 0)}"
+2024-07-02 12:41:25,Delete Reservation,Yada_4507,"Details: Name                    Yada_4507
+Room                 PCR Machines
+Equipments                  PCR 2
+Start_Time    2024-07-02 11:00:00
+End_Time      2024-07-02 14:00:00
+Name: 216, dtype: object"
