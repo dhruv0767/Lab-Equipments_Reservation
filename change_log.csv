@@ -401,3 +401,4 @@ End_Time      2024-07-02 12:30:00
 Name: 486, dtype: object"
 2024-07-02 07:44:04,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 7, 2, 15, 30), 'End_Time': datetime.datetime(2024, 7, 2, 16, 30)}"
 2024-07-02 08:21:41,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Laminar flow', 'Start_Time': datetime.datetime(2024, 7, 2, 10, 0), 'End_Time': datetime.datetime(2024, 7, 2, 12, 0)}"
+2024-07-02 08:38:15,Add Reservation,Sirithorn_4606,"{'Name': 'Sirithorn_4606', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Digital Dry Bath 2', 'Start_Time': datetime.datetime(2024, 7, 2, 12, 30), 'End_Time': datetime.datetime(2024, 7, 2, 15, 0)}"
