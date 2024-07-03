@@ -557,3 +557,9 @@ Name: 501, dtype: object"
 0  Yada_4507  PCR Machines      PCR 3 2024-07-03 14:00:00 2024-07-03 17:00:00"
 2024-07-03 13:18:51,Add Reservation,Yada_4507,"{'Name': 'Yada_4507', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Speed Vacuum Concentrator', 'Start_Time': datetime.datetime(2024, 7, 3, 14, 0), 'End_Time': datetime.datetime(2024, 7, 3, 18, 0)}"
 2024-07-03 14:24:19,Add Reservation,Phitchayatida_4511,"{'Name': 'Phitchayatida_4511', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 3 For Waste (Drain the water everytime after using)', 'Start_Time': datetime.datetime(2024, 7, 3, 14, 30), 'End_Time': datetime.datetime(2024, 7, 3, 16, 30)}"
+2024-07-03 14:28:45,Delete Reservation,Phitchayatida_4511,"Details: Name                                         Phitchayatida_4511
+Room                                         Hallway, 6th floor
+Equipments    Autoclave 3 For Waste (Drain the water everyti...
+Start_Time                                  2024-07-03 14:30:00
+End_Time                                    2024-07-03 16:30:00
+Name: 505, dtype: object"
