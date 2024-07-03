@@ -563,3 +563,4 @@ Equipments    Autoclave 3 For Waste (Drain the water everyti...
 Start_Time                                  2024-07-03 14:30:00
 End_Time                                    2024-07-03 16:30:00
 Name: 505, dtype: object"
+2024-07-03 14:51:08,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 7, 4, 9, 30), 'End_Time': datetime.datetime(2024, 7, 4, 12, 0)}"
