@@ -550,3 +550,4 @@ Equipments    Autoclave 1 (Drain the water every 5 times aft...
 Start_Time                                  2024-07-03 14:00:00
 End_Time                                    2024-07-03 15:30:00
 Name: 501, dtype: object"
+2024-07-03 12:06:22,Add Reservation,Chiratchaya_4511,"{'Name': 'Chiratchaya_4511', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 4 For Waste (Drain the water everytime after using)', 'Start_Time': datetime.datetime(2024, 7, 3, 13, 30), 'End_Time': datetime.datetime(2024, 7, 3, 15, 30)}"
