@@ -544,3 +544,9 @@ Name: 403, dtype: object"
 2024-07-03 10:11:08,Add Reservation,Wilasinee_4612,"{'Name': 'Wilasinee_4612', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 1 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 7, 3, 14, 0), 'End_Time': datetime.datetime(2024, 7, 3, 15, 30)}"
 2024-07-03 10:35:17,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 7, 3, 14, 0), 'End_Time': datetime.datetime(2024, 7, 3, 16, 0)}"
 2024-07-03 11:18:41,Add Reservation,Wilasinee_4612,"{'Name': 'Wilasinee_4612', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 2 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 7, 3, 12, 30), 'End_Time': datetime.datetime(2024, 7, 3, 14, 0)}"
+2024-07-03 11:18:58,Delete Reservation,Wilasinee_4612,"Details: Name                                             Wilasinee_4612
+Room                                         Hallway, 6th floor
+Equipments    Autoclave 1 (Drain the water every 5 times aft...
+Start_Time                                  2024-07-03 14:00:00
+End_Time                                    2024-07-03 15:30:00
+Name: 501, dtype: object"
