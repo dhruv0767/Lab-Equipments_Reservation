@@ -577,3 +577,4 @@ Name: 505, dtype: object"
 
 [1 rows x 5 columns]"
 2024-07-04 09:50:47,Add Reservation,Supanut_4612,"{'Name': 'Supanut_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 7, 4, 15, 0), 'End_Time': datetime.datetime(2024, 7, 4, 23, 45)}"
+2024-07-04 09:51:38,Add Reservation,Supanut_4612,"{'Name': 'Supanut_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Incubator 2', 'Start_Time': datetime.datetime(2024, 7, 5, 10, 0), 'End_Time': datetime.datetime(2024, 7, 5, 23, 45)}"
