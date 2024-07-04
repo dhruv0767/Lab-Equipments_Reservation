@@ -604,3 +604,7 @@ Equipments                 PCR 12
 Start_Time    2024-07-04 14:00:00
 End_Time      2024-07-04 17:00:00
 Name: 223, dtype: object"
+2024-07-04 12:31:41,Add Reservation,Kongtawan_4511,"             Name          Room  ...          Start_Time            End_Time
+0  Kongtawan_4511  PCR Machines  ... 2024-07-04 14:00:00 2024-07-04 17:00:00
+
+[1 rows x 5 columns]"
