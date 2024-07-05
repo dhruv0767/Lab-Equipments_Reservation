@@ -627,3 +627,9 @@ Name: 227, dtype: object"
 2024-07-05 10:37:04,Add Reservation,Janejira_4612,"{'Name': 'Janejira_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Digital Dry Bath 3', 'Start_Time': datetime.datetime(2024, 7, 5, 12, 0), 'End_Time': datetime.datetime(2024, 7, 5, 13, 0)}"
 2024-07-05 11:12:02,Add Reservation,Pitchnaree_4612,"{'Name': 'Pitchnaree_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 2', 'Start_Time': datetime.datetime(2024, 7, 5, 12, 30), 'End_Time': datetime.datetime(2024, 7, 5, 14, 0)}"
 2024-07-05 11:14:27,Add Reservation,Pitchnaree_4612,"{'Name': 'Pitchnaree_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 7, 5, 14, 0), 'End_Time': datetime.datetime(2024, 7, 5, 14, 30)}"
+2024-07-05 11:14:44,Delete Reservation,Pitchnaree_4612,"Details: Name                 Pitchnaree_4612
+Room          Central Lab, 6th floor
+Equipments                 Fume Hood
+Start_Time       2024-07-05 14:00:00
+End_Time         2024-07-05 14:30:00
+Name: 530, dtype: object"
