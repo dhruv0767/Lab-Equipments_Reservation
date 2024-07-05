@@ -649,3 +649,4 @@ Name: 530, dtype: object"
 0  Issariya_4612  PCR Machines  ... 2024-07-05 11:00:00 2024-07-05 14:00:00
 
 [1 rows x 5 columns]"
+2024-07-05 14:14:15,Add Reservation,Pitchnaree_4612,"{'Name': 'Pitchnaree_4612', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 7, 8, 12, 30), 'End_Time': datetime.datetime(2024, 7, 8, 13, 30)}"
