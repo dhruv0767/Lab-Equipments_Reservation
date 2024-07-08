@@ -689,3 +689,4 @@ Name: 229, dtype: object"
 0  Pawaree_4612  PCR Machines  ... 2024-07-08 11:00:00 2024-07-08 14:00:00
 
 [1 rows x 5 columns]"
+2024-07-08 10:11:44,Add Reservation,Janejira_4612,"{'Name': 'Janejira_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Gene Pulser Xcell Electroporation', 'Start_Time': datetime.datetime(2024, 7, 8, 11, 0), 'End_Time': datetime.datetime(2024, 7, 8, 12, 0)}"
