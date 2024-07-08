@@ -704,3 +704,4 @@ End_Time      2024-07-11 15:00:00
 Name: 542, dtype: object"
 2024-07-08 11:32:34,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 7, 11, 9, 0), 'End_Time': datetime.datetime(2024, 7, 11, 12, 0)}"
 2024-07-08 11:33:11,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 7, 12, 13, 0), 'End_Time': datetime.datetime(2024, 7, 12, 15, 0)}"
+2024-07-08 11:38:43,Add Reservation,Sirithorn_4606,"{'Name': 'Sirithorn_4606', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Digital Dry Bath 2', 'Start_Time': datetime.datetime(2024, 7, 11, 13, 30), 'End_Time': datetime.datetime(2024, 7, 11, 16, 30)}"
