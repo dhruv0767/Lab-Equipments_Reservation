@@ -712,3 +712,4 @@ Equipments                  BSC-2
 Start_Time    2024-07-08 12:30:00
 End_Time      2024-07-08 13:30:00
 Name: 530, dtype: object"
+2024-07-08 12:25:38,Add Reservation,Pitchnaree_4612,"{'Name': 'Pitchnaree_4612', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 7, 8, 13, 0), 'End_Time': datetime.datetime(2024, 7, 8, 16, 0)}"
