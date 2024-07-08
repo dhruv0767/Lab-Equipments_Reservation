@@ -762,3 +762,9 @@ Name: 548, dtype: object"
 0  Kongtawan_4511  PCR Machines  ... 2024-07-09 14:00:00 2024-07-09 17:00:00
 
 [1 rows x 5 columns]"
+2024-07-08 20:06:43,Delete Reservation,Kongtawan_4511,"Details: Name               Kongtawan_4511
+Room                 PCR Machines
+Equipments                  PCR 6
+Start_Time    2024-07-09 14:00:00
+End_Time      2024-07-09 17:00:00
+Name: 242, dtype: object"
