@@ -853,3 +853,4 @@ Equipments                  BSC-1
 Start_Time    2024-07-09 10:30:00
 End_Time      2024-07-09 12:00:00
 Name: 533, dtype: object"
+2024-07-09 08:39:32,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 7, 9, 9, 0), 'End_Time': datetime.datetime(2024, 7, 9, 12, 0)}"
