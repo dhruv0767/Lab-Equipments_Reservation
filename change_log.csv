@@ -915,3 +915,4 @@ Name: 245, dtype: object"
 0  Pawaree_4612  PCR Machines  ... 2024-07-09 11:00:00 2024-07-09 14:00:00
 
 [1 rows x 5 columns]"
+2024-07-10 06:45:46,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Microscope Room, 5th floor', 'Equipments': 'Stereo Microscope', 'Start_Time': datetime.datetime(2024, 7, 10, 10, 0), 'End_Time': datetime.datetime(2024, 7, 10, 12, 0)}"
