@@ -815,3 +815,4 @@ End_Time         2024-07-11 23:45:00
 Name: 493, dtype: object"
 2024-07-09 08:14:38,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 7, 9, 12, 0), 'End_Time': datetime.datetime(2024, 7, 9, 16, 30)}"
 2024-07-09 08:15:04,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'TissueLyser II', 'Start_Time': datetime.datetime(2024, 7, 9, 12, 0), 'End_Time': datetime.datetime(2024, 7, 9, 13, 0)}"
+2024-07-09 08:15:24,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 5', 'Start_Time': datetime.datetime(2024, 7, 9, 12, 30), 'End_Time': datetime.datetime(2024, 7, 9, 13, 0)}"
