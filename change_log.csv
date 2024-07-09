@@ -846,3 +846,4 @@ Equipments    Refrigerated Centrifuge 5
 Start_Time          2024-07-09 09:00:00
 End_Time            2024-07-09 10:00:00
 Name: 544, dtype: object"
+2024-07-09 08:19:55,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 2', 'Start_Time': datetime.datetime(2024, 7, 9, 12, 30), 'End_Time': datetime.datetime(2024, 7, 9, 16, 30)}"
