@@ -891,3 +891,9 @@ Equipments                 PCR 12
 Start_Time    2024-07-10 08:00:00
 End_Time      2024-07-10 11:00:00
 Name: 247, dtype: object"
+2024-07-09 12:35:42,Delete Reservation,Pawaree_4612,"Details: Name                    Pawaree_4612
+Room                    PCR Machines
+Equipments    PCR 13 (Former PCR 10)
+Start_Time       2024-07-09 11:00:00
+End_Time         2024-07-09 14:00:00
+Name: 238, dtype: object"
