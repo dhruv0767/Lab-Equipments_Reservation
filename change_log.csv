@@ -916,3 +916,4 @@ Name: 245, dtype: object"
 
 [1 rows x 5 columns]"
 2024-07-10 06:45:46,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Microscope Room, 5th floor', 'Equipments': 'Stereo Microscope', 'Start_Time': datetime.datetime(2024, 7, 10, 10, 0), 'End_Time': datetime.datetime(2024, 7, 10, 12, 0)}"
+2024-07-10 06:46:30,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 7, 10, 10, 0), 'End_Time': datetime.datetime(2024, 7, 10, 15, 0)}"
