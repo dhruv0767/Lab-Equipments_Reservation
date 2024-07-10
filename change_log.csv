@@ -920,3 +920,9 @@ Name: 245, dtype: object"
 2024-07-10 06:47:19,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'TissueLyser II', 'Start_Time': datetime.datetime(2024, 7, 10, 11, 0), 'End_Time': datetime.datetime(2024, 7, 10, 12, 0)}"
 2024-07-10 06:47:43,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 5', 'Start_Time': datetime.datetime(2024, 7, 10, 11, 0), 'End_Time': datetime.datetime(2024, 7, 10, 11, 30)}"
 2024-07-10 06:48:22,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 2', 'Start_Time': datetime.datetime(2024, 7, 10, 11, 0), 'End_Time': datetime.datetime(2024, 7, 10, 15, 0)}"
+2024-07-10 07:23:49,Delete Reservation,Supanida_4511,"Details: Name                Supanida_4511
+Room                        BSL-2
+Equipments                  BSC-2
+Start_Time    2024-07-10 09:30:00
+End_Time      2024-07-10 12:00:00
+Name: 533, dtype: object"
