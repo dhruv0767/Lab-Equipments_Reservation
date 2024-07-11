@@ -1014,3 +1014,9 @@ Name: 566, dtype: object"
 [1 rows x 5 columns]"
 2024-07-11 13:43:13,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 7, 12, 9, 0), 'End_Time': datetime.datetime(2024, 7, 12, 11, 0)}"
 2024-07-11 14:06:16,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 7, 12, 8, 30), 'End_Time': datetime.datetime(2024, 7, 12, 9, 30)}"
+2024-07-11 14:07:57,Delete Reservation,Supanida_4511,"Details: Name                Supanida_4511
+Room                        BSL-2
+Equipments                  BSC-2
+Start_Time    2024-07-12 13:00:00
+End_Time      2024-07-12 15:00:00
+Name: 533, dtype: object"
