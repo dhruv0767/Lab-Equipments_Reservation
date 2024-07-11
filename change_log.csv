@@ -971,3 +971,7 @@ Name: 533, dtype: object"
 2024-07-10 17:51:24,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 2 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 7, 11, 11, 0), 'End_Time': datetime.datetime(2024, 7, 11, 13, 30)}"
 2024-07-10 18:18:39,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'pH Meter 2', 'Start_Time': datetime.datetime(2024, 7, 11, 9, 0), 'End_Time': datetime.datetime(2024, 7, 11, 9, 30)}"
 2024-07-11 07:23:00,Add Reservation,Pawaree_4612,"{'Name': 'Pawaree_4612', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 1 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 7, 11, 13, 0), 'End_Time': datetime.datetime(2024, 7, 11, 15, 0)}"
+2024-07-11 09:00:09,Add Reservation,Dechaphon_4612,"             Name          Room  ...          Start_Time            End_Time
+0  Dechaphon_4612  PCR Machines  ... 2024-07-11 11:00:00 2024-07-11 14:00:00
+
+[1 rows x 5 columns]"
