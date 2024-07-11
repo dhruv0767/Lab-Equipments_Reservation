@@ -975,3 +975,9 @@ Name: 533, dtype: object"
 0  Dechaphon_4612  PCR Machines  ... 2024-07-11 11:00:00 2024-07-11 14:00:00
 
 [1 rows x 5 columns]"
+2024-07-11 09:20:12,Delete Reservation,Pawaree_4612,"Details: Name                                               Pawaree_4612
+Room                                         Hallway, 6th floor
+Equipments    Autoclave 1 (Drain the water every 5 times aft...
+Start_Time                                  2024-07-11 13:00:00
+End_Time                                    2024-07-11 15:00:00
+Name: 573, dtype: object"
