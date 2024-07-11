@@ -993,3 +993,4 @@ Name: 566, dtype: object"
 0  Phitchayatida_4511  PCR Machines  ... 2024-07-11 11:00:00 2024-07-11 14:00:00
 
 [1 rows x 5 columns]"
+2024-07-11 09:56:41,Add Reservation,Narumon_4511,"{'Name': 'Narumon_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Speed Vacuum Concentrator', 'Start_Time': datetime.datetime(2024, 7, 11, 9, 57), 'End_Time': datetime.datetime(2024, 7, 11, 10, 15)}"
