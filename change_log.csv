@@ -1002,3 +1002,7 @@ Name: 566, dtype: object"
 0  Yada_4507  PCR Machines      PCR 3 2024-07-11 11:00:00 2024-07-11 14:00:00"
 2024-07-11 11:44:16,Add Reservation,Chanikarn_4511,"{'Name': 'Chanikarn_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 2', 'Start_Time': datetime.datetime(2024, 7, 11, 11, 45), 'End_Time': datetime.datetime(2024, 7, 11, 14, 30)}"
 2024-07-11 11:48:19,Add Reservation,Kongtawan_4511,"{'Name': 'Kongtawan_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 7, 11, 14, 0), 'End_Time': datetime.datetime(2024, 7, 11, 15, 0)}"
+2024-07-11 11:49:19,Add Reservation,Chanikarn_4511,"             Name          Room  ...          Start_Time            End_Time
+0  Chanikarn_4511  PCR Machines  ... 2024-07-11 14:00:00 2024-07-11 17:00:00
+
+[1 rows x 5 columns]"
