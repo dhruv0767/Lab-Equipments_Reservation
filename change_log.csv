@@ -1000,3 +1000,4 @@ Name: 566, dtype: object"
 0  Yada_4507  PCR Machines      PCR 2 2024-07-11 11:00:00 2024-07-11 14:00:00"
 2024-07-11 10:55:21,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
 0  Yada_4507  PCR Machines      PCR 3 2024-07-11 11:00:00 2024-07-11 14:00:00"
+2024-07-11 11:44:16,Add Reservation,Chanikarn_4511,"{'Name': 'Chanikarn_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 2', 'Start_Time': datetime.datetime(2024, 7, 11, 11, 45), 'End_Time': datetime.datetime(2024, 7, 11, 14, 30)}"
