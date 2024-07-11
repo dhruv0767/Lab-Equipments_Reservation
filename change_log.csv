@@ -982,3 +982,9 @@ Start_Time                                  2024-07-11 13:00:00
 End_Time                                    2024-07-11 15:00:00
 Name: 573, dtype: object"
 2024-07-11 09:21:04,Add Reservation,Pawaree_4612,"{'Name': 'Pawaree_4612', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 2 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 7, 11, 9, 30), 'End_Time': datetime.datetime(2024, 7, 11, 11, 0)}"
+2024-07-11 09:29:26,Delete Reservation,Dechaphon_4612,"Details: Name               Dechaphon_4612
+Room                        BSL-2
+Equipments                  BSC-1
+Start_Time    2024-07-11 13:00:00
+End_Time      2024-07-11 15:00:00
+Name: 566, dtype: object"
