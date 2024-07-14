@@ -1060,3 +1060,4 @@ Name: 533, dtype: object"
 0  Pawaree_4612  PCR Machines  ... 2024-07-15 11:00:00 2024-07-15 14:00:00
 
 [1 rows x 5 columns]"
+2024-07-14 20:06:07,Add Reservation,Pawaree_4612,"{'Name': 'Pawaree_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Incubator Shaker', 'Start_Time': datetime.datetime(2024, 7, 15, 15, 30), 'End_Time': datetime.datetime(2024, 7, 15, 23, 45)}"
