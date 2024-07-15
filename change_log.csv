@@ -1077,3 +1077,9 @@ Name: 533, dtype: object"
 0  Chanikarn_4511  PCR Machines  ... 2024-07-15 14:00:00 2024-07-15 17:00:00
 
 [1 rows x 5 columns]"
+2024-07-15 12:07:03,Delete Reservation,Pitchnaree_4612,"Details: Name              Pitchnaree_4612
+Room                        BSL-2
+Equipments                  BSC-2
+Start_Time    2024-07-15 12:00:00
+End_Time      2024-07-15 16:00:00
+Name: 596, dtype: object"
