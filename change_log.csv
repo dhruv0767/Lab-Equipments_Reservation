@@ -1103,3 +1103,9 @@ Name: 596, dtype: object"
 [1 rows x 5 columns]"
 2024-07-15 15:34:49,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 7, 16, 8, 0), 'End_Time': datetime.datetime(2024, 7, 16, 9, 0)}"
 2024-07-15 15:39:57,Add Reservation,Phasanat_4615,"{'Name': 'Phasanat_4615', 'Room': 'Microscope Room, 5th floor', 'Equipments': 'Stereo Microscope', 'Start_Time': datetime.datetime(2024, 7, 17, 9, 0), 'End_Time': datetime.datetime(2024, 7, 17, 16, 30)}"
+2024-07-15 17:36:33,Delete Reservation,Supanida_4511,"Details: Name                Supanida_4511
+Room                        BSL-2
+Equipments                  BSC-2
+Start_Time    2024-07-16 08:00:00
+End_Time      2024-07-16 09:00:00
+Name: 604, dtype: object"
