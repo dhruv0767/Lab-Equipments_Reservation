@@ -1084,3 +1084,7 @@ Start_Time    2024-07-15 12:00:00
 End_Time      2024-07-15 16:00:00
 Name: 596, dtype: object"
 2024-07-15 12:07:29,Add Reservation,Pitchnaree_4612,"{'Name': 'Pitchnaree_4612', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 7, 15, 13, 0), 'End_Time': datetime.datetime(2024, 7, 15, 16, 0)}"
+2024-07-15 12:49:33,Add Reservation,Narumon_4511,"           Name          Room  ...          Start_Time            End_Time
+0  Narumon_4511  PCR Machines  ... 2024-07-16 11:00:00 2024-07-16 14:00:00
+
+[1 rows x 5 columns]"
