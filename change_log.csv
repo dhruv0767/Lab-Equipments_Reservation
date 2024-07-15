@@ -1088,3 +1088,7 @@ Name: 596, dtype: object"
 0  Narumon_4511  PCR Machines  ... 2024-07-16 11:00:00 2024-07-16 14:00:00
 
 [1 rows x 5 columns]"
+2024-07-15 12:50:00,Add Reservation,Narumon_4511,"           Name          Room  ...          Start_Time            End_Time
+0  Narumon_4511  PCR Machines  ... 2024-07-16 11:00:00 2024-07-16 14:00:00
+
+[1 rows x 5 columns]"
