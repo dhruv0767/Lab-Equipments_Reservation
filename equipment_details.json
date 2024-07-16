@@ -468,14 +468,29 @@
             "details": "T100 Thermal Cycler BIO RAD",
             "enabled": true
         },
-        "PCR 13 (Former PCR 10)": {
+        "PCR 13": {
             "image": "PCR_13.jpg",
             "details": "T100 Thermal Cycler BIO RAD",
             "enabled": true
         },
-        "Real Time PCR": {
-            "image": "Real_Time_PCR.jpg",
+        "PCR 14": {
+            "image": "PCR_14.jpg",
+            "details": "T100 Thermal Cycler BIO RAD",
+            "enabled": true
+        },
+        "PCR 15": {
+            "image": "PCR_15.jpg",
+            "details": "T100 Thermal Cycler BIO RAD",
+            "enabled": true
+        },
+        "Real Time PCR 1": {
+            "image": "RT_PCR_1.jpg",
             "details": "CFX Connect Real Time System BIO RAD",
+            "enabled": true
+        },
+        "Real Time PCR 2": {
+            "image": "RT_PCR_2.jpg",
+            "details": "CFX Duet Real Time System BIO RAD",
             "enabled": true
         }
     },
