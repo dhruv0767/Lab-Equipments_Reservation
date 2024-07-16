@@ -1144,3 +1144,7 @@ Name: 274, dtype: object"
 2024-07-16 11:50:42,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 7, 16, 13, 0), 'End_Time': datetime.datetime(2024, 7, 16, 15, 0)}"
 2024-07-16 13:28:59,Add Reservation,Pawaree_4612,"{'Name': 'Pawaree_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Incubator Shaker', 'Start_Time': datetime.datetime(2024, 7, 17, 0, 0), 'End_Time': datetime.datetime(2024, 7, 17, 11, 0)}"
 2024-07-16 13:29:24,Add Reservation,Pawaree_4612,"{'Name': 'Pawaree_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Incubator Shaker', 'Start_Time': datetime.datetime(2024, 7, 16, 15, 0), 'End_Time': datetime.datetime(2024, 7, 16, 23, 45)}"
+2024-07-16 20:30:44,Add Reservation,Narumon_4511,"           Name          Room  ...          Start_Time            End_Time
+0  Narumon_4511  PCR Machines  ... 2024-07-17 11:00:00 2024-07-17 14:00:00
+
+[1 rows x 5 columns]"
