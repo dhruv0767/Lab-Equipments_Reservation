@@ -1110,3 +1110,4 @@ Start_Time    2024-07-16 08:00:00
 End_Time      2024-07-16 09:00:00
 Name: 604, dtype: object"
 2024-07-15 21:58:47,Add Reservation,Janejira_4612,"{'Name': 'Janejira_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Centrifuge 3', 'Start_Time': datetime.datetime(2024, 7, 16, 11, 0), 'End_Time': datetime.datetime(2024, 7, 16, 15, 0)}"
+2024-07-16 08:47:43,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 7, 16, 9, 0), 'End_Time': datetime.datetime(2024, 7, 16, 10, 0)}"
