@@ -1127,3 +1127,7 @@ Equipments          Real Time PCR
 Start_Time    2024-07-16 08:00:00
 End_Time      2024-07-16 11:00:00
 Name: 274, dtype: object"
+2024-07-16 09:05:14,Add Reservation,Phitchayatida_4511,"                 Name          Room  ...          Start_Time            End_Time
+0  Phitchayatida_4511  PCR Machines  ... 2024-07-16 11:00:00 2024-07-16 14:00:00
+
+[1 rows x 5 columns]"
