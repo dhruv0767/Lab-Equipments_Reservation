@@ -1170,3 +1170,5 @@ Name: 274, dtype: object"
 0  Viroj_4511  PCR Machines    PCR 9.3 2024-07-18 08:00:00 2024-07-18 11:00:00"
 2024-07-17 14:04:14,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
 0  Yada_4507  PCR Machines      PCR 2 2024-07-17 14:00:00 2024-07-17 17:00:00"
+2024-07-17 14:04:30,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
+0  Yada_4507  PCR Machines      PCR 3 2024-07-17 14:00:00 2024-07-17 17:00:00"
