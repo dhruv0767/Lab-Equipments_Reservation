@@ -1174,3 +1174,7 @@ Name: 274, dtype: object"
 0  Yada_4507  PCR Machines      PCR 3 2024-07-17 14:00:00 2024-07-17 17:00:00"
 2024-07-17 14:19:21,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 7, 17, 15, 0), 'End_Time': datetime.datetime(2024, 7, 17, 16, 0)}"
 2024-07-17 23:29:14,Add Reservation,Phasanat_4615,"{'Name': 'Phasanat_4615', 'Room': 'Microscope Room, 5th floor', 'Equipments': 'Stereo Microscope', 'Start_Time': datetime.datetime(2024, 7, 18, 9, 0), 'End_Time': datetime.datetime(2024, 7, 18, 10, 30)}"
+2024-07-18 08:12:23,Add Reservation,Supanida_4511,"            Name          Room  ...          Start_Time            End_Time
+0  Supanida_4511  PCR Machines  ... 2024-07-18 11:00:00 2024-07-18 14:00:00
+
+[1 rows x 5 columns]"
