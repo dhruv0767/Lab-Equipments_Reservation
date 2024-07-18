@@ -1202,3 +1202,7 @@ Name: 288, dtype: object"
 2024-07-18 12:39:28,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
 0  Yada_4507  PCR Machines     PCR 10 2024-07-18 14:00:00 2024-07-18 17:00:00"
 2024-07-18 12:54:35,Add Reservation,Pitchnaree_4612,"{'Name': 'Pitchnaree_4612', 'Room': 'Microscope Room, 5th floor', 'Equipments': 'Stereo Microscope', 'Start_Time': datetime.datetime(2024, 7, 18, 13, 30), 'End_Time': datetime.datetime(2024, 7, 18, 14, 0)}"
+2024-07-18 13:33:21,Add Reservation,Narumon_4511,"           Name          Room  ...          Start_Time            End_Time
+0  Narumon_4511  PCR Machines  ... 2024-07-18 14:00:00 2024-07-18 17:00:00
+
+[1 rows x 5 columns]"
