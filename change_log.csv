@@ -1239,3 +1239,5 @@ Name: 283, dtype: object"
 
 [1 rows x 5 columns]"
 2024-07-19 09:47:09,Add Reservation,Phitchayatida_4511,"{'Name': 'Phitchayatida_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Digital Dry Bath 3', 'Start_Time': datetime.datetime(2024, 7, 19, 10, 0), 'End_Time': datetime.datetime(2024, 7, 19, 11, 30)}"
+2024-07-19 10:16:03,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
+0  Yada_4507  PCR Machines      PCR 2 2024-07-19 11:00:00 2024-07-19 14:00:00"
