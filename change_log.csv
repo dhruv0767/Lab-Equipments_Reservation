@@ -1284,3 +1284,4 @@ Name: 283, dtype: object"
 0  Dechaphon_4612  PCR Machines  ... 2024-07-22 08:00:00 2024-07-22 11:00:00
 
 [1 rows x 5 columns]"
+2024-07-21 18:27:59,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 7, 22, 8, 0), 'End_Time': datetime.datetime(2024, 7, 22, 12, 0)}"
