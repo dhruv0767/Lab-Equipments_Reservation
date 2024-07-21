@@ -1268,3 +1268,7 @@ Name: 283, dtype: object"
 0  Phitchayatida_4511  PCR Machines  ... 2024-07-20 14:00:00 2024-07-20 17:00:00
 
 [1 rows x 5 columns]"
+2024-07-21 08:09:36,Add Reservation,Chanikarn_4511,"             Name          Room  ...          Start_Time            End_Time
+0  Chanikarn_4511  PCR Machines  ... 2024-07-21 11:00:00 2024-07-21 14:00:00
+
+[1 rows x 5 columns]"
