@@ -1295,3 +1295,4 @@ Name: 283, dtype: object"
 0  Narumon_4511  PCR Machines  ... 2024-07-23 11:00:00 2024-07-23 14:00:00
 
 [1 rows x 5 columns]"
+2024-07-22 15:25:47,Add Reservation,Siriphattrarat_4511,"{'Name': 'Siriphattrarat_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 7, 23, 8, 30), 'End_Time': datetime.datetime(2024, 7, 23, 14, 0)}"
