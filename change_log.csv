@@ -1368,3 +1368,4 @@ Name: 308, dtype: object"
 0  Supanida_4511  PCR Machines  ... 2024-07-24 11:00:00 2024-07-24 14:00:00
 
 [1 rows x 5 columns]"
+2024-07-23 14:22:02,Add Reservation,Wuthichai_4505,"{'Name': 'Wuthichai_4505', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Incubator Shaker', 'Start_Time': datetime.datetime(2024, 7, 23, 14, 30), 'End_Time': datetime.datetime(2024, 7, 23, 23, 45)}"
