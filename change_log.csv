@@ -1332,3 +1332,5 @@ Equipments        Real Time PCR 1
 Start_Time    2024-07-23 14:00:00
 End_Time      2024-07-23 17:00:00
 Name: 313, dtype: object"
+2024-07-23 11:39:29,Add Reservation,Viroj_4511,"         Name          Room Equipments          Start_Time            End_Time
+0  Viroj_4511  PCR Machines    PCR 9.3 2024-07-24 08:00:00 2024-07-24 11:00:00"
