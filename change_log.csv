@@ -1313,3 +1313,4 @@ Name: 283, dtype: object"
 
 [1 rows x 5 columns]"
 2024-07-23 08:36:58,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 2', 'Start_Time': datetime.datetime(2024, 7, 23, 9, 30), 'End_Time': datetime.datetime(2024, 7, 23, 14, 0)}"
+2024-07-23 08:37:19,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 5', 'Start_Time': datetime.datetime(2024, 7, 23, 9, 30), 'End_Time': datetime.datetime(2024, 7, 23, 10, 0)}"
