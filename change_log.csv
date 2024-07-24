@@ -1402,3 +1402,7 @@ Name: 308, dtype: object"
 [1 rows x 5 columns]"
 2024-07-24 15:21:00,Add Reservation,Viroj_4511,"         Name          Room Equipments          Start_Time            End_Time
 0  Viroj_4511  PCR Machines    PCR 9.3 2024-07-25 08:00:00 2024-07-25 11:00:00"
+2024-07-24 18:28:44,Add Reservation,Chanikarn_4511,"             Name          Room  ...          Start_Time            End_Time
+0  Chanikarn_4511  PCR Machines  ... 2024-07-25 08:00:00 2024-07-25 11:00:00
+
+[1 rows x 5 columns]"
