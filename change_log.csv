@@ -1392,3 +1392,7 @@ Name: 308, dtype: object"
 0  Pitchnaree_4612  PCR Machines  ... 2024-07-24 11:00:00 2024-07-24 14:00:00
 
 [1 rows x 5 columns]"
+2024-07-24 15:18:11,Add Reservation,Supanida_4511,"            Name          Room  ...          Start_Time            End_Time
+0  Supanida_4511  PCR Machines  ... 2024-07-25 11:00:00 2024-07-25 14:00:00
+
+[1 rows x 5 columns]"
