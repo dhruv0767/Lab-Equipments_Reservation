@@ -1432,3 +1432,4 @@ Name: 308, dtype: object"
 2024-07-25 11:41:48,Add Reservation,Sirintip_4511,"{'Name': 'Sirintip_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 3', 'Start_Time': datetime.datetime(2024, 7, 25, 11, 45), 'End_Time': datetime.datetime(2024, 7, 25, 13, 0)}"
 2024-07-25 13:26:59,Add Reservation,Viroj_4511,"         Name          Room Equipments          Start_Time            End_Time
 0  Viroj_4511  PCR Machines    PCR 9.3 2024-07-26 08:00:00 2024-07-26 11:00:00"
+2024-07-25 14:58:02,Add Reservation,Leela_4606,"{'Name': 'Leela_4606', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Digital Dry Bath 2', 'Start_Time': datetime.datetime(2024, 7, 26, 9, 0), 'End_Time': datetime.datetime(2024, 7, 26, 12, 30)}"
