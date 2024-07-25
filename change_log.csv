@@ -1438,3 +1438,7 @@ Name: 308, dtype: object"
 
 [1 rows x 5 columns]"
 2024-07-26 01:07:38,Add Reservation,Janejira_4612,"{'Name': 'Janejira_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 7, 26, 10, 0), 'End_Time': datetime.datetime(2024, 7, 26, 15, 0)}"
+2024-07-26 01:19:09,Add Reservation,Narumon_4511,"           Name          Room  ...          Start_Time            End_Time
+0  Narumon_4511  PCR Machines  ... 2024-07-26 11:00:00 2024-07-26 14:00:00
+
+[1 rows x 5 columns]"
