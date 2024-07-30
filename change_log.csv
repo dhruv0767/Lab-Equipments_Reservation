@@ -1589,3 +1589,9 @@ Equipments    Fluorescence Microscope (Contact before use)
 Start_Time                             2024-08-02 10:00:00
 End_Time                               2024-08-02 12:00:00
 Name: 678, dtype: object"
+2024-07-30 18:53:19,Delete Reservation,Janejira_4612,"Details: Name                Janejira_4612
+Room                 PCR Machines
+Equipments                 PCR 10
+Start_Time    2024-07-31 11:00:00
+End_Time      2024-07-31 14:00:00
+Name: 352, dtype: object"
