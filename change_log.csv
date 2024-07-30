@@ -1614,3 +1614,9 @@ Name: 352, dtype: object"
 [1 rows x 5 columns]"
 2024-07-31 06:05:55,Add Reservation,Viroj_4511,"         Name          Room Equipments          Start_Time            End_Time
 0  Viroj_4511  PCR Machines    PCR 9.3 2024-07-31 08:00:00 2024-07-31 11:00:00"
+2024-07-31 06:35:54,Delete Reservation,Viroj_4511,"Details: Name                   Viroj_4511
+Room                 PCR Machines
+Equipments                PCR 9.3
+Start_Time    2024-07-31 08:00:00
+End_Time      2024-07-31 11:00:00
+Name: 363, dtype: object"
