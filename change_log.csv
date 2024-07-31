@@ -1689,3 +1689,7 @@ Name: 353, dtype: object"
 2024-07-31 15:13:26,Add Reservation,Khemrutai_4511,"{'Name': 'Khemrutai_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Incubator Shaker', 'Start_Time': datetime.datetime(2024, 8, 1, 10, 30), 'End_Time': datetime.datetime(2024, 8, 1, 23, 59)}"
 2024-07-31 15:13:53,Add Reservation,Khemrutai_4511,"{'Name': 'Khemrutai_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Incubator Shaker', 'Start_Time': datetime.datetime(2024, 8, 2, 0, 0), 'End_Time': datetime.datetime(2024, 8, 2, 10, 30)}"
 2024-07-31 21:43:33,Add Reservation,Khemrutai_4511,"{'Name': 'Khemrutai_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 8, 2, 10, 0), 'End_Time': datetime.datetime(2024, 8, 2, 13, 0)}"
+2024-07-31 22:46:36,Add Reservation,Chiratchaya_4511,"               Name          Room  ...          Start_Time            End_Time
+0  Chiratchaya_4511  PCR Machines  ... 2024-08-01 11:00:00 2024-08-01 14:00:00
+
+[1 rows x 5 columns]"
