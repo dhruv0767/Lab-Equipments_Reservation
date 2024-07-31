@@ -1635,3 +1635,9 @@ Name: 363, dtype: object"
 0  Phitchayatida_4511  PCR Machines  ... 2024-08-01 11:00:00 2024-08-01 14:00:00
 
 [1 rows x 5 columns]"
+2024-07-31 09:51:55,Delete Reservation,Dechaphon_4612,"Details: Name                                             Dechaphon_4612
+Room                                         Hallway, 6th floor
+Equipments    Autoclave 2 (Drain the water every 5 times aft...
+Start_Time                                  2024-07-31 10:00:00
+End_Time                                    2024-07-31 12:30:00
+Name: 691, dtype: object"
