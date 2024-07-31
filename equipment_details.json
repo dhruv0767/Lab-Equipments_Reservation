@@ -491,7 +491,7 @@
         "Real Time PCR 2": {
             "image": "RT_PCR_2.jpg",
             "details": "CFX Duet Real Time System BIO RAD",
-            "enabled": false
+            "enabled": true
         }
     },
     "BSL-2": {
