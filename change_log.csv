@@ -1646,3 +1646,4 @@ Name: 691, dtype: object"
 0  Phasanat_4615  PCR Machines  ... 2024-07-31 11:00:00 2024-07-31 14:00:00
 
 [1 rows x 5 columns]"
+2024-07-31 09:59:25,Add Reservation,Wilasinee_4612,"{'Name': 'Wilasinee_4612', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 1 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 7, 31, 14, 0), 'End_Time': datetime.datetime(2024, 7, 31, 15, 30)}"
