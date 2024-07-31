@@ -1680,3 +1680,4 @@ Equipments                 PCR 11
 Start_Time    2024-07-31 14:00:00
 End_Time      2024-07-31 17:00:00
 Name: 353, dtype: object"
+2024-07-31 14:24:26,Add Reservation,Sirintip_4511,"{'Name': 'Sirintip_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 4', 'Start_Time': datetime.datetime(2024, 7, 31, 14, 45), 'End_Time': datetime.datetime(2024, 7, 31, 15, 45)}"
