@@ -1664,3 +1664,9 @@ Name: 691, dtype: object"
 0  Siriphattrarat_4511  PCR Machines  ... 2024-08-01 08:00:00 2024-08-01 11:00:00
 
 [1 rows x 5 columns]"
+2024-07-31 11:40:19,Delete Reservation,Siriphattrarat_4511,"Details: Name          Siriphattrarat_4511
+Room                 PCR Machines
+Equipments        Real Time PCR 1
+Start_Time    2024-08-01 08:00:00
+End_Time      2024-08-01 11:00:00
+Name: 369, dtype: object"
