@@ -1656,3 +1656,7 @@ Name: 691, dtype: object"
 0  Supanida_4511  PCR Machines  ... 2024-08-01 14:00:00 2024-08-01 17:00:00
 
 [1 rows x 5 columns]"
+2024-07-31 10:23:59,Add Reservation,Supanida_4511,"            Name          Room  ...          Start_Time            End_Time
+0  Supanida_4511  PCR Machines  ... 2024-07-31 11:00:00 2024-07-31 14:00:00
+
+[1 rows x 5 columns]"
