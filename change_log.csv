@@ -1685,3 +1685,4 @@ Name: 353, dtype: object"
 0  Anongpat_4612  PCR Machines  ... 2024-07-31 14:00:00 2024-07-31 17:00:00
 
 [1 rows x 5 columns]"
+2024-07-31 15:12:16,Add Reservation,Khemrutai_4511,"{'Name': 'Khemrutai_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 8, 1, 9, 30), 'End_Time': datetime.datetime(2024, 8, 1, 10, 30)}"
