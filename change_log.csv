@@ -1737,3 +1737,7 @@ Equipments                 PCR 13
 Start_Time    2024-08-01 14:00:00
 End_Time      2024-08-01 17:00:00
 Name: 365, dtype: object"
+2024-08-01 16:19:50,Add Reservation,Supanida_4511,"            Name          Room  ...          Start_Time            End_Time
+0  Supanida_4511  PCR Machines  ... 2024-08-02 08:00:00 2024-08-02 11:00:00
+
+[1 rows x 5 columns]"
