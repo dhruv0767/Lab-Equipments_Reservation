@@ -1721,3 +1721,7 @@ Name: 353, dtype: object"
 2024-08-01 11:50:49,Add Reservation,chomphoonut_4511,"{'Name': 'chomphoonut_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'pH Meter 2', 'Start_Time': datetime.datetime(2024, 8, 1, 12, 0), 'End_Time': datetime.datetime(2024, 8, 1, 12, 15)}"
 2024-08-01 12:35:13,Add Reservation,Leela_4606,"{'Name': 'Leela_4606', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Digital Dry Bath 2', 'Start_Time': datetime.datetime(2024, 8, 1, 13, 0), 'End_Time': datetime.datetime(2024, 8, 1, 23, 45)}"
 2024-08-01 12:36:32,Add Reservation,Leela_4606,"{'Name': 'Leela_4606', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Digital Dry Bath 2', 'Start_Time': datetime.datetime(2024, 8, 2, 9, 0), 'End_Time': datetime.datetime(2024, 8, 2, 12, 0)}"
+2024-08-01 13:04:23,Add Reservation,Supanida_4511,"            Name          Room  ...          Start_Time            End_Time
+0  Supanida_4511  PCR Machines  ... 2024-08-01 14:00:00 2024-08-01 17:00:00
+
+[1 rows x 5 columns]"
