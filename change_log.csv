@@ -1784,3 +1784,9 @@ Name: 717, dtype: object"
 0  Phitchayatida_4511  PCR Machines  ... 2024-08-03 17:00:00 2024-08-03 20:00:00
 
 [1 rows x 5 columns]"
+2024-08-03 06:00:50,Delete Reservation,Phitchayatida_4511,"Details: Name           Phitchayatida_4511
+Room                 PCR Machines
+Equipments        Real Time PCR 1
+Start_Time    2024-08-03 17:00:00
+End_Time      2024-08-03 20:00:00
+Name: 380, dtype: object"
