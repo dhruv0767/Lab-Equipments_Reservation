@@ -1764,3 +1764,4 @@ Start_Time    2024-08-02 11:00:00
 End_Time      2024-08-02 14:00:00
 Name: 377, dtype: object"
 2024-08-02 13:18:39,Add Reservation,Janejira_4612,"{'Name': 'Janejira_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 8, 9, 10, 0), 'End_Time': datetime.datetime(2024, 8, 9, 15, 0)}"
+2024-08-02 14:11:10,Add Reservation,Yada_4507,"{'Name': 'Yada_4507', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Speed Vacuum Concentrator', 'Start_Time': datetime.datetime(2024, 8, 2, 14, 30), 'End_Time': datetime.datetime(2024, 8, 2, 17, 0)}"
