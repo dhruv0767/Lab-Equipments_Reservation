@@ -1852,3 +1852,7 @@ Name: 380, dtype: object"
 
 [1 rows x 5 columns]"
 2024-08-06 14:51:09,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 8, 6, 15, 0), 'End_Time': datetime.datetime(2024, 8, 6, 16, 0)}"
+2024-08-06 15:13:17,Add Reservation,Narumon_4511,"           Name          Room  ...          Start_Time            End_Time
+0  Narumon_4511  PCR Machines  ... 2024-08-07 11:00:00 2024-08-07 14:00:00
+
+[1 rows x 5 columns]"
