@@ -1938,3 +1938,7 @@ Name: 392, dtype: object"
 [1 rows x 5 columns]"
 2024-08-07 14:30:18,Add Reservation,Nicharee_4606,"{'Name': 'Nicharee_4606', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 2 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 8, 7, 15, 30), 'End_Time': datetime.datetime(2024, 8, 7, 17, 30)}"
 2024-08-07 15:03:37,Add Reservation,Warunya_4503,"{'Name': 'Warunya_4503', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 1 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 8, 8, 11, 0), 'End_Time': datetime.datetime(2024, 8, 8, 13, 0)}"
+2024-08-07 15:52:14,Add Reservation,Phasanat_4615,"            Name          Room  ...          Start_Time            End_Time
+0  Phasanat_4615  PCR Machines  ... 2024-08-08 11:00:00 2024-08-08 14:00:00
+
+[1 rows x 5 columns]"
