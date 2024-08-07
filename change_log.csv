@@ -1942,3 +1942,4 @@ Name: 392, dtype: object"
 0  Phasanat_4615  PCR Machines  ... 2024-08-08 11:00:00 2024-08-08 14:00:00
 
 [1 rows x 5 columns]"
+2024-08-07 15:59:06,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 8, 8, 9, 0), 'End_Time': datetime.datetime(2024, 8, 8, 10, 0)}"
