@@ -1871,3 +1871,4 @@ Name: 736, dtype: object"
 0  Supanida_4511  PCR Machines  ... 2024-08-08 08:00:00 2024-08-08 11:00:00
 
 [1 rows x 5 columns]"
+2024-08-07 08:20:18,Add Reservation,Nicharee_4606,"{'Name': 'Nicharee_4606', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 2 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 8, 7, 8, 30), 'End_Time': datetime.datetime(2024, 8, 7, 10, 0)}"
