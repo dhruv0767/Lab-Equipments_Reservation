@@ -1959,3 +1959,9 @@ Name: 754, dtype: object"
 
 [1 rows x 5 columns]"
 2024-08-08 06:51:57,Add Reservation,Khemrutai_4511,"{'Name': 'Khemrutai_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 8, 8, 9, 0), 'End_Time': datetime.datetime(2024, 8, 8, 10, 0)}"
+2024-08-08 07:58:39,Delete Reservation,Supanida_4511,"Details: Name                Supanida_4511
+Room                 PCR Machines
+Equipments                  PCR 6
+Start_Time    2024-08-08 08:00:00
+End_Time      2024-08-08 11:00:00
+Name: 392, dtype: object"
