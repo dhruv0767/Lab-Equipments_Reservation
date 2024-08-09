@@ -2024,3 +2024,5 @@ Name: 739, dtype: object"
 2024-08-08 17:11:02,Add Reservation,Supanut_4612,"{'Name': 'Supanut_4612', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 4 For Waste (Drain the water everytime after using)', 'Start_Time': datetime.datetime(2024, 8, 9, 9, 30), 'End_Time': datetime.datetime(2024, 8, 9, 11, 30)}"
 2024-08-09 08:27:58,Add Reservation,Khemrutai_4511,"{'Name': 'Khemrutai_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 8, 9, 10, 30), 'End_Time': datetime.datetime(2024, 8, 9, 13, 0)}"
 2024-08-09 10:47:35,Add Reservation,Jantanipa_4607,"{'Name': 'Jantanipa_4607', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 2 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 8, 9, 13, 0), 'End_Time': datetime.datetime(2024, 8, 9, 15, 0)}"
+2024-08-09 11:47:43,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
+0  Yada_4507  PCR Machines      PCR 2 2024-08-09 11:00:00 2024-08-09 14:00:00"
