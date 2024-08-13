@@ -2116,3 +2116,5 @@ End_Time      2024-08-13 17:00:00
 Name: 415, dtype: object"
 2024-08-13 13:45:10,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
 0  Yada_4507  PCR Machines      PCR 2 2024-08-13 14:00:00 2024-08-13 17:00:00"
+2024-08-13 13:45:19,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
+0  Yada_4507  PCR Machines      PCR 3 2024-08-13 14:00:00 2024-08-13 17:00:00"
