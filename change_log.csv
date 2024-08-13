@@ -2102,3 +2102,9 @@ Name: 409, dtype: object"
 2024-08-13 08:59:07,Add Reservation,Khemrutai_4511,"{'Name': 'Khemrutai_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Incubator Shaker', 'Start_Time': datetime.datetime(2024, 8, 14, 0, 0), 'End_Time': datetime.datetime(2024, 8, 14, 10, 0)}"
 2024-08-13 09:06:53,Add Reservation,Akkharadet_Piyasaengthong,"{'Name': 'Akkharadet_Piyasaengthong', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 8, 13, 10, 0), 'End_Time': datetime.datetime(2024, 8, 13, 11, 30)}"
 2024-08-13 09:16:52,Add Reservation,Yanawat_4511,"{'Name': 'Yanawat_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 8, 14, 10, 30), 'End_Time': datetime.datetime(2024, 8, 14, 13, 0)}"
+2024-08-13 13:22:59,Delete Reservation,Pawaree_4612,"Details: Name                 Pawaree_4612
+Room                 PCR Machines
+Equipments                 PCR 13
+Start_Time    2024-08-13 14:00:00
+End_Time      2024-08-13 17:00:00
+Name: 415, dtype: object"
