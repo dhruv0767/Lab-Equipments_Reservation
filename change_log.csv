@@ -2164,3 +2164,9 @@ Equipments    Autoclave 1 (Drain the water every 5 times aft...
 Start_Time                                  2024-08-15 10:30:00
 End_Time                                    2024-08-15 12:30:00
 Name: 791, dtype: object"
+2024-08-15 10:22:14,Delete Reservation,Dechaphon_4612,"Details: Name                  Dechaphon_4612
+Room          Central Lab, 5th floor
+Equipments        Incubator Shaker 1
+Start_Time       2024-08-15 00:00:00
+End_Time         2024-08-15 23:45:00
+Name: 743, dtype: object"
