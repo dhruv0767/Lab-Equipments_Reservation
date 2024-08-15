@@ -2177,3 +2177,4 @@ Start_Time       2024-08-15 10:15:00
 End_Time         2024-08-15 11:00:00
 Name: 786, dtype: object"
 2024-08-15 10:31:48,Add Reservation,Warunya_4503,"{'Name': 'Warunya_4503', 'Room': 'Central Lab, 6th floor', 'Equipments': 'BioSpectrometer', 'Start_Time': datetime.datetime(2024, 8, 15, 10, 45), 'End_Time': datetime.datetime(2024, 8, 15, 11, 0)}"
+2024-08-15 10:32:02,Add Reservation,Warunya_4503,"{'Name': 'Warunya_4503', 'Room': 'Central Lab, 6th floor', 'Equipments': 'BioSpectrometer', 'Start_Time': datetime.datetime(2024, 8, 15, 11, 0), 'End_Time': datetime.datetime(2024, 8, 15, 11, 15)}"
