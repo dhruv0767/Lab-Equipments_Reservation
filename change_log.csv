@@ -2205,3 +2205,9 @@ Name: 426, dtype: object"
 2024-08-16 10:14:38,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 8, 16, 12, 0), 'End_Time': datetime.datetime(2024, 8, 16, 14, 0)}"
 2024-08-16 10:45:11,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 8, 16, 11, 0), 'End_Time': datetime.datetime(2024, 8, 16, 13, 45)}"
 2024-08-16 10:46:09,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 2 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 8, 16, 11, 0), 'End_Time': datetime.datetime(2024, 8, 16, 13, 0)}"
+2024-08-16 11:32:17,Delete Reservation,Dechaphon_4612,"Details: Name                                             Dechaphon_4612
+Room                                         Hallway, 6th floor
+Equipments    Autoclave 2 (Drain the water every 5 times aft...
+Start_Time                                  2024-08-16 11:00:00
+End_Time                                    2024-08-16 13:00:00
+Name: 799, dtype: object"
