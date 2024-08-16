@@ -2219,3 +2219,4 @@ Equipments                  BSC-2
 Start_Time    2024-08-16 11:00:00
 End_Time      2024-08-16 13:45:00
 Name: 798, dtype: object"
+2024-08-16 13:45:12,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 8, 16, 15, 0), 'End_Time': datetime.datetime(2024, 8, 16, 17, 0)}"
