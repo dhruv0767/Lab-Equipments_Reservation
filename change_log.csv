@@ -2211,3 +2211,4 @@ Equipments    Autoclave 2 (Drain the water every 5 times aft...
 Start_Time                                  2024-08-16 11:00:00
 End_Time                                    2024-08-16 13:00:00
 Name: 799, dtype: object"
+2024-08-16 11:32:50,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 1 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 8, 16, 11, 45), 'End_Time': datetime.datetime(2024, 8, 16, 13, 45)}"
