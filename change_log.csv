@@ -2287,3 +2287,9 @@ End_Time                                    2024-08-19 16:30:00
 Name: 806, dtype: object"
 2024-08-19 12:46:11,Add Reservation,Wilasinee_4612,"{'Name': 'Wilasinee_4612', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 1 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 8, 19, 13, 30), 'End_Time': datetime.datetime(2024, 8, 19, 15, 0)}"
 2024-08-19 13:27:12,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Laminar flow', 'Start_Time': datetime.datetime(2024, 8, 19, 13, 45), 'End_Time': datetime.datetime(2024, 8, 19, 15, 0)}"
+2024-08-19 14:32:58,Delete Reservation,Chanikarn_4511,"Details: Name               Chanikarn_4511
+Room                 PCR Machines
+Equipments        Real Time PCR 1
+Start_Time    2024-08-19 14:00:00
+End_Time      2024-08-19 17:00:00
+Name: 431, dtype: object"
