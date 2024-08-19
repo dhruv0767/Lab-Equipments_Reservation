@@ -2279,3 +2279,9 @@ Name: 806, dtype: object"
 0  Phitchayatida_4511  PCR Machines  ... 2024-08-19 14:00:00 2024-08-19 17:00:00
 
 [1 rows x 5 columns]"
+2024-08-19 12:45:38,Delete Reservation,Wilasinee_4612,"Details: Name                                             Wilasinee_4612
+Room                                         Hallway, 6th floor
+Equipments    Autoclave 1 (Drain the water every 5 times aft...
+Start_Time                                  2024-08-19 15:00:00
+End_Time                                    2024-08-19 16:30:00
+Name: 806, dtype: object"
