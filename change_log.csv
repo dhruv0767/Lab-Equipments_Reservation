@@ -2294,3 +2294,7 @@ Start_Time    2024-08-19 14:00:00
 End_Time      2024-08-19 17:00:00
 Name: 431, dtype: object"
 2024-08-19 17:54:23,Add Reservation,Siriphattrarat_4511,"{'Name': 'Siriphattrarat_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 8, 20, 9, 30), 'End_Time': datetime.datetime(2024, 8, 20, 16, 30)}"
+2024-08-19 17:54:44,Add Reservation,Siriphattrarat_4511,"                  Name          Room  ...          Start_Time            End_Time
+0  Siriphattrarat_4511  PCR Machines  ... 2024-08-20 14:00:00 2024-08-20 17:00:00
+
+[1 rows x 5 columns]"
