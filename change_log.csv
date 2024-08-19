@@ -2234,3 +2234,9 @@ Name: 783, dtype: object"
 2024-08-17 11:59:00,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 8, 18, 10, 30), 'End_Time': datetime.datetime(2024, 8, 18, 13, 30)}"
 2024-08-17 12:31:46,Add Reservation,Narumon_4511,"{'Name': 'Narumon_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 1', 'Start_Time': datetime.datetime(2024, 8, 18, 9, 30), 'End_Time': datetime.datetime(2024, 8, 18, 10, 30)}"
 2024-08-19 06:56:16,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 8, 19, 8, 0), 'End_Time': datetime.datetime(2024, 8, 19, 12, 0)}"
+2024-08-19 07:00:53,Delete Reservation,Supanida_4511,"Details: Name                Supanida_4511
+Room                        BSL-2
+Equipments                  BSC-1
+Start_Time    2024-08-19 08:00:00
+End_Time      2024-08-19 12:00:00
+Name: 803, dtype: object"
