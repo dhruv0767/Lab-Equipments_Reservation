@@ -2285,3 +2285,4 @@ Equipments    Autoclave 1 (Drain the water every 5 times aft...
 Start_Time                                  2024-08-19 15:00:00
 End_Time                                    2024-08-19 16:30:00
 Name: 806, dtype: object"
+2024-08-19 12:46:11,Add Reservation,Wilasinee_4612,"{'Name': 'Wilasinee_4612', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 1 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 8, 19, 13, 30), 'End_Time': datetime.datetime(2024, 8, 19, 15, 0)}"
