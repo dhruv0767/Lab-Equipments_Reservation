@@ -2338,3 +2338,9 @@ Start_Time                                  2024-08-20 11:00:00
 End_Time                                    2024-08-20 13:00:00
 Name: 815, dtype: object"
 2024-08-20 14:10:28,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 8, 21, 8, 30), 'End_Time': datetime.datetime(2024, 8, 21, 11, 0)}"
+2024-08-20 14:26:58,Delete Reservation,Siriphattrarat_4511,"Details: Name          Siriphattrarat_4511
+Room                 PCR Machines
+Equipments                 PCR 12
+Start_Time    2024-08-20 14:00:00
+End_Time      2024-08-20 17:00:00
+Name: 432, dtype: object"
