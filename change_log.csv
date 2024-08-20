@@ -2308,3 +2308,7 @@ End_Time                                    2024-08-20 13:00:00
 Name: 816, dtype: object"
 2024-08-19 20:06:59,Add Reservation,Thanathip_4505,"{'Name': 'Thanathip_4505', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 3 For Waste (Drain the water everytime after using)', 'Start_Time': datetime.datetime(2024, 8, 20, 13, 0), 'End_Time': datetime.datetime(2024, 8, 20, 15, 0)}"
 2024-08-20 06:30:38,Add Reservation,Akkharadet_Piyasaengthong,"{'Name': 'Akkharadet_Piyasaengthong', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 8, 20, 13, 30), 'End_Time': datetime.datetime(2024, 8, 20, 16, 30)}"
+2024-08-20 07:11:09,Add Reservation,Chanikarn_4511,"             Name          Room  ...          Start_Time            End_Time
+0  Chanikarn_4511  PCR Machines  ... 2024-08-20 11:00:00 2024-08-20 14:00:00
+
+[1 rows x 5 columns]"
