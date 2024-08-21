@@ -2345,3 +2345,7 @@ Start_Time    2024-08-20 14:00:00
 End_Time      2024-08-20 17:00:00
 Name: 432, dtype: object"
 2024-08-20 17:41:54,Add Reservation,Janejira_4612,"{'Name': 'Janejira_4612', 'Room': 'Microscope Room, 5th floor', 'Equipments': 'Fluorescence Microscope (Contact before use)', 'Start_Time': datetime.datetime(2024, 8, 21, 9, 0), 'End_Time': datetime.datetime(2024, 8, 21, 12, 0)}"
+2024-08-21 13:33:43,Add Reservation,Chanikarn_4511,"             Name          Room  ...          Start_Time            End_Time
+0  Chanikarn_4511  PCR Machines  ... 2024-08-21 14:00:00 2024-08-21 17:00:00
+
+[1 rows x 5 columns]"
