@@ -46,22 +46,22 @@
     "Hallway, 6th floor": {
         "Autoclave 1 (Drain the water every 5 times after using)": {
             "image": "Autoclave_1.jpg",
-            "details": "SX-700E TOMY",
+            "details": "HICLAVE HV-85II",
             "enabled": true
         },
         "Autoclave 2 (Drain the water every 5 times after using)": {
             "image": "Autoclave_2.jpg",
-            "details": "SS-325 TOMY",
+            "details": "HICLAVE HV-85II",
             "enabled": true
         },
-        "Autoclave 3 For Waste (Drain the water everytime after using)": {
+        "Autoclave 3 (Drain the water every 5 times after using)": {
             "image": "Autoclave_3.jpg",
-            "details": "SX-700 TOMY",
+            "details": "SX-700E TOMY",
             "enabled": true
         },
-        "Autoclave 4 For Waste (Drain the water everytime after using)": {
+        "Autoclave For Waste (Drain the water everytime after using)": {
             "image": "Autoclave_4.jpg",
-            "details": "SS-325 TOMY",
+            "details": "SX-700 TOMY",
             "enabled": true
         },
         "Isotemp Oven": {
