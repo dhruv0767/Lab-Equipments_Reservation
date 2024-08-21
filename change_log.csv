@@ -2349,3 +2349,4 @@ Name: 432, dtype: object"
 0  Chanikarn_4511  PCR Machines  ... 2024-08-21 14:00:00 2024-08-21 17:00:00
 
 [1 rows x 5 columns]"
+2024-08-21 14:00:29,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 8, 22, 9, 15), 'End_Time': datetime.datetime(2024, 8, 22, 10, 0)}"
