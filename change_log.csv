@@ -2355,3 +2355,4 @@ Name: 432, dtype: object"
 0  Siriphattrarat_4511  PCR Machines  ... 2024-08-22 14:00:00 2024-08-22 17:00:00
 
 [1 rows x 5 columns]"
+2024-08-21 18:44:10,Add Reservation,Siriphattrarat_4511,"{'Name': 'Siriphattrarat_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 1', 'Start_Time': datetime.datetime(2024, 8, 22, 9, 0), 'End_Time': datetime.datetime(2024, 8, 22, 16, 0)}"
