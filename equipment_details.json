@@ -57,7 +57,7 @@
         "Autoclave 3 For Waste (Drain the water everytime after using)": {
             "image": "Autoclave_3.jpg",
             "details": "SX-700 TOMY",
-            "enabled": false
+            "enabled": true
         },
         "Autoclave 4 For Waste (Drain the water everytime after using)": {
             "image": "Autoclave_4.jpg",
