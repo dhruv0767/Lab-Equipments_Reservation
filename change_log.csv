@@ -2378,3 +2378,4 @@ Name: 438, dtype: object"
 
 [1 rows x 5 columns]"
 2024-08-22 12:07:18,Add Reservation,Sirintip_4511,"{'Name': 'Sirintip_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Ultrasonic Processors', 'Start_Time': datetime.datetime(2024, 8, 22, 12, 15), 'End_Time': datetime.datetime(2024, 8, 22, 13, 30)}"
+2024-08-22 12:08:11,Add Reservation,Sirintip_4511,"{'Name': 'Sirintip_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 3', 'Start_Time': datetime.datetime(2024, 8, 22, 12, 45), 'End_Time': datetime.datetime(2024, 8, 22, 13, 30)}"
