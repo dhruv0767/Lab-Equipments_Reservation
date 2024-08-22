@@ -2390,3 +2390,9 @@ Name: 438, dtype: object"
 0  Phitchayatida_4511  PCR Machines  ... 2024-08-22 14:00:00 2024-08-22 17:00:00
 
 [1 rows x 5 columns]"
+2024-08-22 18:42:36,Delete Reservation,Anongpat_4612,"Details: Name                                         Anongpat_4612
+Room                            Microscope Room, 5th floor
+Equipments    Fluorescence Microscope (Contact before use)
+Start_Time                             2024-08-23 08:00:00
+End_Time                               2024-08-23 13:00:00
+Name: 792, dtype: object"
