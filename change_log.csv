@@ -2396,3 +2396,7 @@ Equipments    Fluorescence Microscope (Contact before use)
 Start_Time                             2024-08-23 08:00:00
 End_Time                               2024-08-23 13:00:00
 Name: 792, dtype: object"
+2024-08-23 07:00:56,Add Reservation,Siriphattrarat_4511,"                  Name          Room  ...          Start_Time            End_Time
+0  Siriphattrarat_4511  PCR Machines  ... 2024-08-23 14:00:00 2024-08-23 17:00:00
+
+[1 rows x 5 columns]"
