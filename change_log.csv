@@ -2421,3 +2421,4 @@ Equipments                 PCR 13
 Start_Time    2024-08-24 08:00:00
 End_Time      2024-08-24 11:00:00
 Name: 443, dtype: object"
+2024-08-25 16:12:01,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 3 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 8, 25, 16, 15), 'End_Time': datetime.datetime(2024, 8, 25, 18, 15)}"
