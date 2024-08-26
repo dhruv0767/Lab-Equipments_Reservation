@@ -2430,3 +2430,4 @@ Name: 443, dtype: object"
 0  Pawaree_4612  PCR Machines  ... 2024-08-26 11:00:00 2024-08-26 14:00:00
 
 [1 rows x 5 columns]"
+2024-08-26 09:52:55,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 8, 26, 10, 0), 'End_Time': datetime.datetime(2024, 8, 26, 13, 0)}"
