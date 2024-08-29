@@ -2505,3 +2505,4 @@ Name: 874, dtype: object"
 0  Supanida_4511  PCR Machines  ... 2024-08-30 14:00:00 2024-08-30 17:00:00
 
 [1 rows x 5 columns]"
+2024-08-29 20:35:59,Add Reservation,Warunya_4503,"{'Name': 'Warunya_4503', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 1 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 8, 30, 13, 0), 'End_Time': datetime.datetime(2024, 8, 30, 15, 0)}"
