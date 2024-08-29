@@ -2494,3 +2494,4 @@ End_Time            2024-08-29 17:00:00
 Name: 874, dtype: object"
 2024-08-29 12:02:01,Add Reservation,Khemrutai_4511,"{'Name': 'Khemrutai_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 8, 29, 13, 1), 'End_Time': datetime.datetime(2024, 8, 29, 16, 0)}"
 2024-08-29 12:26:25,Add Reservation,Wuthichai_4505,"{'Name': 'Wuthichai_4505', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 4', 'Start_Time': datetime.datetime(2024, 8, 29, 13, 0), 'End_Time': datetime.datetime(2024, 8, 29, 15, 30)}"
+2024-08-29 12:43:12,Add Reservation,Wuthichai_4505,"{'Name': 'Wuthichai_4505', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Ultrasonic Processors', 'Start_Time': datetime.datetime(2024, 8, 29, 13, 0), 'End_Time': datetime.datetime(2024, 8, 29, 15, 30)}"
