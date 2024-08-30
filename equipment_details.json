@@ -391,7 +391,7 @@
         "PCR 6": {
             "image": "PCR_6.jpg",
             "details": "T100 Thermal Cycler BIO RAD",
-            "enabled": true
+            "enabled": false
         },
         "PCR 7 (Contact Before Use:Lab 4612) Out of service": {
             "image": "PCR_7.jpg",
