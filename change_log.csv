@@ -2522,3 +2522,4 @@ Name: 874, dtype: object"
 
 [1 rows x 5 columns]"
 2024-08-30 16:59:31,Add Reservation,Worrawit_4505,"{'Name': 'Worrawit_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 2', 'Start_Time': datetime.datetime(2024, 8, 30, 17, 0), 'End_Time': datetime.datetime(2024, 8, 30, 23, 45)}"
+2024-08-30 16:59:56,Add Reservation,Worrawit_4505,"{'Name': 'Worrawit_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 2', 'Start_Time': datetime.datetime(2024, 8, 31, 0, 0), 'End_Time': datetime.datetime(2024, 8, 31, 18, 0)}"
