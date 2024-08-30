@@ -2517,3 +2517,7 @@ Name: 874, dtype: object"
 0  Yada_4507  PCR Machines      PCR 2 2024-08-30 11:00:00 2024-08-30 14:00:00"
 2024-08-30 11:20:15,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
 0  Yada_4507  PCR Machines      PCR 3 2024-08-30 11:00:00 2024-08-30 14:00:00"
+2024-08-30 13:20:20,Add Reservation,Supanida_4511,"            Name          Room  ...          Start_Time            End_Time
+0  Supanida_4511  PCR Machines  ... 2024-08-30 14:00:00 2024-08-30 17:00:00
+
+[1 rows x 5 columns]"
