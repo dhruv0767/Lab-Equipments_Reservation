@@ -2525,3 +2525,7 @@ Name: 874, dtype: object"
 2024-08-30 16:59:56,Add Reservation,Worrawit_4505,"{'Name': 'Worrawit_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 2', 'Start_Time': datetime.datetime(2024, 8, 31, 0, 0), 'End_Time': datetime.datetime(2024, 8, 31, 18, 0)}"
 2024-08-30 18:48:31,Add Reservation,Janejira_4612,"{'Name': 'Janejira_4612', 'Room': 'Microscope Room, 5th floor', 'Equipments': 'Fluorescence Microscope (Contact before use)', 'Start_Time': datetime.datetime(2024, 9, 9, 13, 0), 'End_Time': datetime.datetime(2024, 9, 9, 16, 0)}"
 2024-08-30 18:48:43,Add Reservation,Janejira_4612,"{'Name': 'Janejira_4612', 'Room': 'Microscope Room, 5th floor', 'Equipments': 'Fluorescence Microscope (Contact before use)', 'Start_Time': datetime.datetime(2024, 9, 12, 13, 0), 'End_Time': datetime.datetime(2024, 9, 12, 16, 0)}"
+2024-08-30 19:13:26,Add Reservation,Chanikarn_4511,"             Name          Room  ...          Start_Time            End_Time
+0  Chanikarn_4511  PCR Machines  ... 2024-08-31 11:00:00 2024-08-31 14:00:00
+
+[1 rows x 5 columns]"
