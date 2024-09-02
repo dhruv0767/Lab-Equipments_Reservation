@@ -2553,3 +2553,5 @@ Name: 874, dtype: object"
 2024-09-02 08:14:38,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 9, 8, 0, 0), 'End_Time': datetime.datetime(2024, 9, 8, 23, 45)}"
 2024-09-02 09:49:15,Add Reservation,Janejira_4612,"{'Name': 'Janejira_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Centrifuge 2', 'Start_Time': datetime.datetime(2024, 9, 2, 10, 0), 'End_Time': datetime.datetime(2024, 9, 2, 16, 0)}"
 2024-09-02 09:59:15,Add Reservation,chomphoonut_4511,"{'Name': 'chomphoonut_4511', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 3 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 9, 2, 13, 0), 'End_Time': datetime.datetime(2024, 9, 2, 15, 30)}"
+2024-09-02 11:35:50,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
+0  Yada_4507  PCR Machines      PCR 2 2024-09-02 11:00:00 2024-09-02 14:00:00"
