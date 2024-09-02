@@ -2580,3 +2580,9 @@ Name: 455, dtype: object"
 0  Pee_4507  PCR Machines     PCR 13 2024-09-02 14:00:00 2024-09-02 17:00:00"
 2024-09-02 12:40:45,Add Reservation,chomphoonut_4511,"{'Name': 'chomphoonut_4511', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 3 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 9, 3, 10, 30), 'End_Time': datetime.datetime(2024, 9, 3, 12, 30)}"
 2024-09-02 12:59:12,Add Reservation,Wilasinee_4612,"{'Name': 'Wilasinee_4612', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 2 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 9, 2, 13, 30), 'End_Time': datetime.datetime(2024, 9, 2, 15, 30)}"
+2024-09-02 12:59:51,Delete Reservation,Wilasinee_4612,"Details: Name                                             Wilasinee_4612
+Room                                         Hallway, 6th floor
+Equipments    Autoclave 2 (Drain the water every 5 times aft...
+Start_Time                                  2024-09-02 13:30:00
+End_Time                                    2024-09-02 15:30:00
+Name: 919, dtype: object"
