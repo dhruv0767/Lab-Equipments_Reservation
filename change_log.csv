@@ -2697,3 +2697,9 @@ Name: 950, dtype: object"
 0  Chanikarn_4511  PCR Machines  ... 2024-09-07 08:00:00 2024-09-07 11:00:00
 
 [1 rows x 5 columns]"
+2024-09-06 23:02:04,Delete Reservation,Janejira_4612,"Details: Name                                         Janejira_4612
+Room                            Microscope Room, 5th floor
+Equipments    Fluorescence Microscope (Contact before use)
+Start_Time                             2024-09-09 13:00:00
+End_Time                               2024-09-09 16:00:00
+Name: 895, dtype: object"
