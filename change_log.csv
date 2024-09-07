@@ -2710,3 +2710,9 @@ Equipments    Fluorescence Microscope (Contact before use)
 Start_Time                             2024-09-12 13:00:00
 End_Time                               2024-09-12 16:00:00
 Name: 895, dtype: object"
+2024-09-07 16:19:45,Delete Reservation,Janejira_4612,"Details: Name                                         Janejira_4612
+Room                            Microscope Room, 5th floor
+Equipments    Fluorescence Microscope (Contact before use)
+Start_Time                             2024-09-09 10:00:00
+End_Time                               2024-09-09 14:00:00
+Name: 950, dtype: object"
