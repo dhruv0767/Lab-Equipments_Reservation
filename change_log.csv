@@ -2729,3 +2729,9 @@ End_Time      2024-09-08 17:00:00
 Name: 477, dtype: object"
 2024-09-08 14:06:15,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
 0  Yada_4507  PCR Machines     PCR 15 2024-09-08 14:00:00 2024-09-08 17:00:00"
+2024-09-08 15:06:30,Delete Reservation,Janejira_4612,"Details: Name                                         Janejira_4612
+Room                            Microscope Room, 5th floor
+Equipments    Fluorescence Microscope (Contact before use)
+Start_Time                             2024-09-09 12:00:00
+End_Time                               2024-09-09 16:00:00
+Name: 950, dtype: object"
