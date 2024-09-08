@@ -2727,3 +2727,5 @@ Equipments                 PCR 11
 Start_Time    2024-09-08 14:00:00
 End_Time      2024-09-08 17:00:00
 Name: 477, dtype: object"
+2024-09-08 14:06:15,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
+0  Yada_4507  PCR Machines     PCR 15 2024-09-08 14:00:00 2024-09-08 17:00:00"
