@@ -2782,3 +2782,4 @@ Name: 965, dtype: object"
 0  Supanida_4511  PCR Machines  ... 2024-09-10 11:00:00 2024-09-10 14:00:00
 
 [1 rows x 5 columns]"
+2024-09-09 14:54:57,Add Reservation,Khemrutai_4511,"{'Name': 'Khemrutai_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 9, 10, 10, 30), 'End_Time': datetime.datetime(2024, 9, 10, 14, 30)}"
