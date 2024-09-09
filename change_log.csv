@@ -2753,3 +2753,4 @@ Equipments                 PCR 10
 Start_Time    2024-09-09 11:00:00
 End_Time      2024-09-09 14:00:00
 Name: 479, dtype: object"
+2024-09-09 09:50:37,Add Reservation,Wilasinee_4612,"{'Name': 'Wilasinee_4612', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave For Waste (Drain the water everytime after using)', 'Start_Time': datetime.datetime(2024, 9, 9, 10, 0), 'End_Time': datetime.datetime(2024, 9, 9, 12, 0)}"
