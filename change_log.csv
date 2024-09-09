@@ -2778,3 +2778,7 @@ End_Time      2024-09-09 13:00:00
 Name: 965, dtype: object"
 2024-09-09 12:44:15,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 9, 9, 13, 0), 'End_Time': datetime.datetime(2024, 9, 9, 16, 0)}"
 2024-09-09 14:21:48,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 9, 10, 8, 30), 'End_Time': datetime.datetime(2024, 9, 10, 10, 0)}"
+2024-09-09 14:22:12,Add Reservation,Supanida_4511,"            Name          Room  ...          Start_Time            End_Time
+0  Supanida_4511  PCR Machines  ... 2024-09-10 11:00:00 2024-09-10 14:00:00
+
+[1 rows x 5 columns]"
