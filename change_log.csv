@@ -2852,3 +2852,4 @@ Name: 959, dtype: object"
 0  Narumon_4511  PCR Machines  ... 2024-09-11 11:00:00 2024-09-11 14:00:00
 
 [1 rows x 5 columns]"
+2024-09-11 05:58:32,Add Reservation,Akkharadet_Piyasaengthong,"{'Name': 'Akkharadet_Piyasaengthong', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 9, 11, 11, 0), 'End_Time': datetime.datetime(2024, 9, 11, 12, 0)}"
