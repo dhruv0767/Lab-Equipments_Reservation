@@ -2887,3 +2887,9 @@ End_Time      2024-09-11 14:00:00
 Name: 490, dtype: object"
 2024-09-11 10:59:00,Add Reservation,Pee_4507,"       Name          Room Equipments          Start_Time            End_Time
 0  Pee_4507  PCR Machines     PCR 14 2024-09-11 11:00:00 2024-09-11 14:00:00"
+2024-09-11 11:14:58,Delete Reservation,Akkharadet_Piyasaengthong,"Details: Name          Akkharadet_Piyasaengthong
+Room                              BSL-2
+Equipments                        BSC-1
+Start_Time          2024-09-11 11:00:00
+End_Time            2024-09-11 12:00:00
+Name: 972, dtype: object"
