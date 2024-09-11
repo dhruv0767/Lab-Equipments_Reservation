@@ -2913,3 +2913,4 @@ Equipments           BioSpectrometer
 Start_Time       2024-09-11 14:00:00
 End_Time         2024-09-11 16:00:00
 Name: 973, dtype: object"
+2024-09-11 13:54:21,Add Reservation,Warunya_4503,"{'Name': 'Warunya_4503', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave For Waste (Drain the water everytime after using)', 'Start_Time': datetime.datetime(2024, 9, 12, 9, 30), 'End_Time': datetime.datetime(2024, 9, 12, 14, 30)}"
