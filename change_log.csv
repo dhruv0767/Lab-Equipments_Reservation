@@ -2865,3 +2865,7 @@ Equipments                  BSC-1
 Start_Time    2024-09-11 08:30:00
 End_Time      2024-09-11 10:30:00
 Name: 969, dtype: object"
+2024-09-11 07:54:10,Add Reservation,Supanida_4511,"            Name          Room  ...          Start_Time            End_Time
+0  Supanida_4511  PCR Machines  ... 2024-09-11 11:00:00 2024-09-11 14:00:00
+
+[1 rows x 5 columns]"
