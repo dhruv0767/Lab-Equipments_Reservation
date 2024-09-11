@@ -2893,3 +2893,7 @@ Equipments                        BSC-1
 Start_Time          2024-09-11 11:00:00
 End_Time            2024-09-11 12:00:00
 Name: 972, dtype: object"
+2024-09-11 11:55:34,Add Reservation,Mayuree_4606,"           Name          Room  ...          Start_Time            End_Time
+0  Mayuree_4606  PCR Machines  ... 2024-09-11 14:00:00 2024-09-11 17:00:00
+
+[1 rows x 5 columns]"
