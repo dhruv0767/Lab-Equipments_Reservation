@@ -2935,3 +2935,7 @@ Name: 496, dtype: object"
 [1 rows x 5 columns]"
 2024-09-11 15:03:15,Add Reservation,chomphoonut_4511,"{'Name': 'chomphoonut_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'BioSpectrometer', 'Start_Time': datetime.datetime(2024, 9, 11, 15, 30), 'End_Time': datetime.datetime(2024, 9, 11, 16, 30)}"
 2024-09-11 15:51:40,Add Reservation,chomphoonut_4511,"{'Name': 'chomphoonut_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Centrifuge 2', 'Start_Time': datetime.datetime(2024, 9, 11, 16, 0), 'End_Time': datetime.datetime(2024, 9, 11, 16, 30)}"
+2024-09-12 00:01:15,Add Reservation,Narumon_4511,"           Name          Room  ...          Start_Time            End_Time
+0  Narumon_4511  PCR Machines  ... 2024-09-13 14:00:00 2024-09-13 17:00:00
+
+[1 rows x 5 columns]"
