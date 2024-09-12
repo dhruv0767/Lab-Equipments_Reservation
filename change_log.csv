@@ -2946,3 +2946,7 @@ Name: 496, dtype: object"
 0  Pee_4507  PCR Machines     PCR 14 2024-09-12 14:00:00 2024-09-12 17:00:00"
 2024-09-12 13:22:26,Add Reservation,Wilasinee_4612,"{'Name': 'Wilasinee_4612', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 1 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 9, 12, 13, 30), 'End_Time': datetime.datetime(2024, 9, 12, 15, 0)}"
 2024-09-12 15:03:58,Add Reservation,Khemrutai_4511,"{'Name': 'Khemrutai_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 9, 13, 10, 0), 'End_Time': datetime.datetime(2024, 9, 13, 13, 0)}"
+2024-09-12 15:27:39,Add Reservation,Chatuporn_4507,"             Name          Room  ...          Start_Time            End_Time
+0  Chatuporn_4507  PCR Machines  ... 2024-09-12 14:00:00 2024-09-12 17:00:00
+
+[1 rows x 5 columns]"
