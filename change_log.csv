@@ -2959,3 +2959,7 @@ End_Time      2024-09-13 09:30:00
 Name: 986, dtype: object"
 2024-09-13 08:39:09,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 9, 13, 9, 0), 'End_Time': datetime.datetime(2024, 9, 13, 10, 0)}"
 2024-09-13 10:04:56,Add Reservation,Worrawit_4505,"{'Name': 'Worrawit_4505', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave For Waste (Drain the water everytime after using)', 'Start_Time': datetime.datetime(2024, 9, 13, 10, 15), 'End_Time': datetime.datetime(2024, 9, 13, 14, 0)}"
+2024-09-13 10:32:02,Add Reservation,Mayuree_4606,"           Name          Room  ...          Start_Time            End_Time
+0  Mayuree_4606  PCR Machines  ... 2024-09-13 11:00:00 2024-09-13 14:00:00
+
+[1 rows x 5 columns]"
