@@ -2958,3 +2958,4 @@ Start_Time    2024-09-13 08:45:00
 End_Time      2024-09-13 09:30:00
 Name: 986, dtype: object"
 2024-09-13 08:39:09,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 9, 13, 9, 0), 'End_Time': datetime.datetime(2024, 9, 13, 10, 0)}"
+2024-09-13 10:04:56,Add Reservation,Worrawit_4505,"{'Name': 'Worrawit_4505', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave For Waste (Drain the water everytime after using)', 'Start_Time': datetime.datetime(2024, 9, 13, 10, 15), 'End_Time': datetime.datetime(2024, 9, 13, 14, 0)}"
