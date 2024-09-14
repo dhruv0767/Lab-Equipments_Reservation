@@ -2968,3 +2968,9 @@ Name: 986, dtype: object"
 2024-09-14 07:07:33,Add Reservation,Worrawit_4505,"{'Name': 'Worrawit_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 2', 'Start_Time': datetime.datetime(2024, 9, 14, 8, 0), 'End_Time': datetime.datetime(2024, 9, 14, 23, 45)}"
 2024-09-14 07:07:49,Add Reservation,Worrawit_4505,"{'Name': 'Worrawit_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 2', 'Start_Time': datetime.datetime(2024, 9, 15, 0, 0), 'End_Time': datetime.datetime(2024, 9, 15, 23, 45)}"
 2024-09-14 13:38:04,Add Reservation,Wilasinee_4612,"{'Name': 'Wilasinee_4612', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 1 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 9, 14, 13, 45), 'End_Time': datetime.datetime(2024, 9, 14, 15, 30)}"
+2024-09-14 13:38:19,Delete Reservation,Wilasinee_4612,"Details: Name                                             Wilasinee_4612
+Room                                         Hallway, 6th floor
+Equipments    Autoclave 1 (Drain the water every 5 times aft...
+Start_Time                                  2024-09-14 13:45:00
+End_Time                                    2024-09-14 15:30:00
+Name: 990, dtype: object"
