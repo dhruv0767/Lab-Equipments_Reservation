@@ -3021,3 +3021,9 @@ Equipments                 PCR 11
 Start_Time    2024-09-15 14:00:00
 End_Time      2024-09-15 17:00:00
 Name: 503, dtype: object"
+2024-09-15 13:57:23,Delete Reservation,Mayuree_4606,"Details: Name                 Mayuree_4606
+Room                 PCR Machines
+Equipments                 PCR 14
+Start_Time    2024-09-15 14:00:00
+End_Time      2024-09-15 17:00:00
+Name: 504, dtype: object"
