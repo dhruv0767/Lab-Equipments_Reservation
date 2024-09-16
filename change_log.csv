@@ -3046,3 +3046,5 @@ Name: 504, dtype: object"
 2024-09-15 20:53:41,Add Reservation,Janejira_4612,"{'Name': 'Janejira_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 1', 'Start_Time': datetime.datetime(2024, 9, 16, 9, 0), 'End_Time': datetime.datetime(2024, 9, 16, 15, 0)}"
 2024-09-15 20:54:25,Add Reservation,Janejira_4612,"{'Name': 'Janejira_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 9, 16, 9, 0), 'End_Time': datetime.datetime(2024, 9, 16, 15, 0)}"
 2024-09-16 08:13:56,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 9, 16, 8, 30), 'End_Time': datetime.datetime(2024, 9, 16, 9, 30)}"
+2024-09-16 10:03:37,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
+0  Yada_4507  PCR Machines     PCR 12 2024-09-16 11:00:00 2024-09-16 14:00:00"
