@@ -3048,3 +3048,5 @@ Name: 504, dtype: object"
 2024-09-16 08:13:56,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 9, 16, 8, 30), 'End_Time': datetime.datetime(2024, 9, 16, 9, 30)}"
 2024-09-16 10:03:37,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
 0  Yada_4507  PCR Machines     PCR 12 2024-09-16 11:00:00 2024-09-16 14:00:00"
+2024-09-16 10:04:07,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
+0  Yada_4507  PCR Machines     PCR 15 2024-09-16 11:00:00 2024-09-16 14:00:00"
