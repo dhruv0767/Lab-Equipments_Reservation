@@ -3099,3 +3099,9 @@ Equipments    Autoclave 4 (Drain the water every 5 times aft...
 Start_Time                                  2024-09-17 14:30:00
 End_Time                                    2024-09-17 16:30:00
 Name: 1020, dtype: object"
+2024-09-17 12:18:37,Delete Reservation,chomphoonut_4511,"Details: Name                                           chomphoonut_4511
+Room                                         Hallway, 6th floor
+Equipments    Autoclave For Waste (Drain the water everytime...
+Start_Time                                  2024-09-17 13:00:00
+End_Time                                    2024-09-17 15:00:00
+Name: 1018, dtype: object"
