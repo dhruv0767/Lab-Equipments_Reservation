@@ -3138,3 +3138,9 @@ Name: 1021, dtype: object"
 [1 rows x 5 columns]"
 2024-09-18 12:28:56,Add Reservation,Worrawit_4505,"{'Name': 'Worrawit_4505', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave For Waste (Drain the water everytime after using)', 'Start_Time': datetime.datetime(2024, 9, 18, 13, 0), 'End_Time': datetime.datetime(2024, 9, 18, 16, 0)}"
 2024-09-18 13:38:44,Add Reservation,Worrawit_4505,"{'Name': 'Worrawit_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 9, 18, 13, 45), 'End_Time': datetime.datetime(2024, 9, 18, 17, 0)}"
+2024-09-18 15:17:09,Delete Reservation,chomphoonut_4511,"Details: Name                                           chomphoonut_4511
+Room                                         Hallway, 6th floor
+Equipments    Autoclave 4 (Drain the water every 5 times aft...
+Start_Time                                  2024-09-19 13:00:00
+End_Time                                    2024-09-19 15:00:00
+Name: 1025, dtype: object"
