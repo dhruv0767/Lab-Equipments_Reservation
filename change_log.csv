@@ -3116,3 +3116,9 @@ Name: 1018, dtype: object"
 [1 rows x 5 columns]"
 2024-09-18 08:10:44,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 9, 18, 8, 30), 'End_Time': datetime.datetime(2024, 9, 18, 9, 30)}"
 2024-09-18 08:17:56,Add Reservation,Khemrutai_4511,"{'Name': 'Khemrutai_4511', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Refrigerated Incubator Shaker', 'Start_Time': datetime.datetime(2024, 9, 18, 10, 0), 'End_Time': datetime.datetime(2024, 9, 18, 13, 0)}"
+2024-09-18 08:18:41,Delete Reservation,Khemrutai_4511,"Details: Name                         Khemrutai_4511
+Room                 Central Lab, 5th floor
+Equipments    Refrigerated Incubator Shaker
+Start_Time              2024-09-18 10:00:00
+End_Time                2024-09-18 13:00:00
+Name: 1021, dtype: object"
