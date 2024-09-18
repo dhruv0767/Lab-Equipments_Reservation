@@ -3122,3 +3122,4 @@ Equipments    Refrigerated Incubator Shaker
 Start_Time              2024-09-18 10:00:00
 End_Time                2024-09-18 13:00:00
 Name: 1021, dtype: object"
+2024-09-18 08:19:08,Add Reservation,Khemrutai_4511,"{'Name': 'Khemrutai_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 9, 18, 10, 0), 'End_Time': datetime.datetime(2024, 9, 18, 13, 0)}"
