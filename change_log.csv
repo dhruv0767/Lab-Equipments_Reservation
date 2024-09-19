@@ -3165,3 +3165,5 @@ Name: 1025, dtype: object"
 0  Chatuporn_4507  PCR Machines  ... 2024-09-19 14:00:00 2024-09-19 17:00:00
 
 [1 rows x 5 columns]"
+2024-09-19 14:21:29,Add Reservation,Pee_4507,"       Name          Room Equipments          Start_Time            End_Time
+0  Pee_4507  PCR Machines     PCR 14 2024-09-19 14:00:00 2024-09-19 17:00:00"
