@@ -3240,3 +3240,7 @@ Name: 532, dtype: object"
 0  Narumon_4511  PCR Machines  ... 2024-09-23 11:00:00 2024-09-23 14:00:00
 
 [1 rows x 5 columns]"
+2024-09-23 08:14:13,Add Reservation,Janejira_4612,"            Name          Room  ...          Start_Time            End_Time
+0  Janejira_4612  PCR Machines  ... 2024-09-23 14:00:00 2024-09-23 17:00:00
+
+[1 rows x 5 columns]"
