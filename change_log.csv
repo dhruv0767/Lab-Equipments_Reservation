@@ -3266,3 +3266,9 @@ Equipments        Incubator Shaker 1
 Start_Time       2024-09-25 00:00:00
 End_Time         2024-09-25 23:45:00
 Name: 1048, dtype: object"
+2024-09-23 09:18:31,Delete Reservation,Thanathip_4505,"Details: Name                  Thanathip_4505
+Room          Central Lab, 5th floor
+Equipments        Incubator Shaker 1
+Start_Time       2024-09-26 00:00:00
+End_Time         2024-09-26 23:45:00
+Name: 1048, dtype: object"
