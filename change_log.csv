@@ -3283,3 +3283,7 @@ Name: 1048, dtype: object"
 2024-09-23 13:46:50,Add Reservation,Khemrutai_4511,"{'Name': 'Khemrutai_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 9, 24, 10, 0), 'End_Time': datetime.datetime(2024, 9, 24, 14, 0)}"
 2024-09-23 14:56:09,Add Reservation,chomphoonut_4511,"{'Name': 'chomphoonut_4511', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 3 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 9, 24, 10, 0), 'End_Time': datetime.datetime(2024, 9, 24, 12, 0)}"
 2024-09-23 14:58:31,Add Reservation,chomphoonut_4511,"{'Name': 'chomphoonut_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'pH Meter 2', 'Start_Time': datetime.datetime(2024, 9, 24, 8, 30), 'End_Time': datetime.datetime(2024, 9, 24, 9, 30)}"
+2024-09-23 17:57:56,Add Reservation,Phasanat_4615,"            Name          Room  ...          Start_Time            End_Time
+0  Phasanat_4615  PCR Machines  ... 2024-09-24 11:00:00 2024-09-24 14:00:00
+
+[1 rows x 5 columns]"
