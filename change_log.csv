@@ -3287,3 +3287,9 @@ Name: 1048, dtype: object"
 0  Phasanat_4615  PCR Machines  ... 2024-09-24 11:00:00 2024-09-24 14:00:00
 
 [1 rows x 5 columns]"
+2024-09-24 10:02:46,Delete Reservation,chomphoonut_4511,"Details: Name                chomphoonut_4511
+Room          Central Lab, 6th floor
+Equipments               Incubator 3
+Start_Time       2024-09-24 00:00:00
+End_Time         2024-09-24 23:45:00
+Name: 1042, dtype: object"
