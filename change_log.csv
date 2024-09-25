@@ -3337,3 +3337,4 @@ Start_Time          2024-10-01 09:00:00
 End_Time            2024-10-01 13:00:00
 Name: 1086, dtype: object"
 2024-09-25 11:00:06,Add Reservation,Akkharadet_Piyasaengthong,"{'Name': 'Akkharadet_Piyasaengthong', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 10, 1, 9, 0), 'End_Time': datetime.datetime(2024, 10, 1, 13, 0)}"
+2024-09-25 12:00:26,Add Reservation,Siriphattrarat_4511,"{'Name': 'Siriphattrarat_4511', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 4 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 9, 25, 12, 15), 'End_Time': datetime.datetime(2024, 9, 25, 14, 15)}"
