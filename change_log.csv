@@ -3450,3 +3450,7 @@ Name: 1105, dtype: object"
 2024-10-01 00:26:42,Add Reservation,Fah_4606,"{'Name': 'Fah_4606', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 4 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 10, 1, 14, 0), 'End_Time': datetime.datetime(2024, 10, 1, 16, 0)}"
 2024-10-01 00:39:57,Add Reservation,Siriphattrarat_4511,"{'Name': 'Siriphattrarat_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 10, 1, 9, 0), 'End_Time': datetime.datetime(2024, 10, 1, 16, 0)}"
 2024-10-01 00:40:28,Add Reservation,Siriphattrarat_4511,"{'Name': 'Siriphattrarat_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 1', 'Start_Time': datetime.datetime(2024, 10, 1, 9, 0), 'End_Time': datetime.datetime(2024, 10, 1, 16, 0)}"
+2024-10-01 00:41:04,Add Reservation,Siriphattrarat_4511,"                  Name          Room  ...          Start_Time            End_Time
+0  Siriphattrarat_4511  PCR Machines  ... 2024-10-01 14:00:00 2024-10-01 17:00:00
+
+[1 rows x 5 columns]"
