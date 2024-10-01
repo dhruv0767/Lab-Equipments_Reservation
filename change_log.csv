@@ -3485,3 +3485,4 @@ Name: 551, dtype: object"
 0  Supanut_4612  PCR Machines  ... 2024-10-02 11:00:00 2024-10-02 14:00:00
 
 [1 rows x 5 columns]"
+2024-10-01 12:11:55,Add Reservation,Yada_4507,"{'Name': 'Yada_4507', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Speed Vacuum Concentrator', 'Start_Time': datetime.datetime(2024, 10, 1, 13, 0), 'End_Time': datetime.datetime(2024, 10, 1, 17, 0)}"
