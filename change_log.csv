@@ -3481,3 +3481,7 @@ Equipments                 PCR 11
 Start_Time    2024-10-01 11:00:00
 End_Time      2024-10-01 14:00:00
 Name: 551, dtype: object"
+2024-10-01 11:14:46,Add Reservation,Supanut_4612,"           Name          Room  ...          Start_Time            End_Time
+0  Supanut_4612  PCR Machines  ... 2024-10-02 11:00:00 2024-10-02 14:00:00
+
+[1 rows x 5 columns]"
