@@ -3504,3 +3504,9 @@ Name: 551, dtype: object"
 2024-10-02 13:04:40,Add Reservation,Sirintip_4511,"{'Name': 'Sirintip_4511', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 2 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 10, 2, 13, 30), 'End_Time': datetime.datetime(2024, 10, 2, 15, 30)}"
 2024-10-02 13:38:26,Add Reservation,Sirintip_4511,"{'Name': 'Sirintip_4511', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 3 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 10, 2, 13, 45), 'End_Time': datetime.datetime(2024, 10, 2, 15, 45)}"
 2024-10-02 14:44:44,Add Reservation,Janejira_4612,"{'Name': 'Janejira_4612', 'Room': 'Microscope Room, 5th floor', 'Equipments': 'Fluorescence Microscope (Contact before use)', 'Start_Time': datetime.datetime(2024, 10, 2, 15, 0), 'End_Time': datetime.datetime(2024, 10, 2, 17, 0)}"
+2024-10-02 16:26:02,Delete Reservation,Thanathip_4505,"Details: Name                  Thanathip_4505
+Room          Central Lab, 5th floor
+Equipments        Incubator Shaker 2
+Start_Time       2024-10-02 00:00:00
+End_Time         2024-10-02 23:45:00
+Name: 1086, dtype: object"
