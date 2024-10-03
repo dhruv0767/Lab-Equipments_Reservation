@@ -3582,3 +3582,7 @@ Name: 1143, dtype: object"
 2024-10-03 18:04:08,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
 0  Yada_4507  PCR Machines     PCR 12 2024-10-03 17:00:00 2024-10-03 20:00:00"
 2024-10-03 18:06:00,Add Reservation,Yada_4507,"{'Name': 'Yada_4507', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Speed Vacuum Concentrator', 'Start_Time': datetime.datetime(2024, 10, 3, 18, 15), 'End_Time': datetime.datetime(2024, 10, 3, 21, 0)}"
+2024-10-03 21:54:47,Add Reservation,Siriphattrarat_4511,"                  Name          Room  ...          Start_Time            End_Time
+0  Siriphattrarat_4511  PCR Machines  ... 2024-10-04 08:00:00 2024-10-04 11:00:00
+
+[1 rows x 5 columns]"
