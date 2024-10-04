@@ -3587,3 +3587,4 @@ Name: 1143, dtype: object"
 
 [1 rows x 5 columns]"
 2024-10-04 09:47:48,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 10, 4, 10, 0), 'End_Time': datetime.datetime(2024, 10, 4, 12, 0)}"
+2024-10-04 10:07:22,Add Reservation,Janejira_4612,"{'Name': 'Janejira_4612', 'Room': 'Microscope Room, 5th floor', 'Equipments': 'Fluorescence Microscope (Contact before use)', 'Start_Time': datetime.datetime(2024, 10, 8, 9, 30), 'End_Time': datetime.datetime(2024, 10, 8, 10, 30)}"
