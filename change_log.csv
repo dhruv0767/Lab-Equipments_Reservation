@@ -3620,3 +3620,4 @@ Name: 1143, dtype: object"
 2024-10-07 08:27:58,Add Reservation,Viroj_4511,"{'Name': 'Viroj_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Incubator Shaker', 'Start_Time': datetime.datetime(2024, 10, 8, 0, 0), 'End_Time': datetime.datetime(2024, 10, 8, 9, 30)}"
 2024-10-07 08:42:58,Add Reservation,Viroj_4511,"         Name          Room Equipments          Start_Time            End_Time
 0  Viroj_4511  PCR Machines     PCR 15 2024-10-07 11:00:00 2024-10-07 14:00:00"
+2024-10-07 09:28:21,Add Reservation,Siriphattrarat_4511,"{'Name': 'Siriphattrarat_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 10, 7, 9, 30), 'End_Time': datetime.datetime(2024, 10, 7, 12, 0)}"
