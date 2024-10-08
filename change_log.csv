@@ -3704,3 +3704,9 @@ Equipments                 PCR 15
 Start_Time    2024-10-09 08:00:00
 End_Time      2024-10-09 11:00:00
 Name: 576, dtype: object"
+2024-10-09 06:39:35,Delete Reservation,Dechaphon_4612,"Details: Name                  Dechaphon_4612
+Room          Central Lab, 6th floor
+Equipments                 Fume Hood
+Start_Time       2024-10-09 09:30:00
+End_Time         2024-10-09 14:00:00
+Name: 1163, dtype: object"
