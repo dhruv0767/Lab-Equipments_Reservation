@@ -3692,3 +3692,9 @@ End_Time         2024-10-09 12:30:00
 Name: 1164, dtype: object"
 2024-10-09 06:36:23,Add Reservation,Viroj_4511,"         Name          Room Equipments          Start_Time            End_Time
 0  Viroj_4511  PCR Machines     PCR 15 2024-10-09 08:00:00 2024-10-09 11:00:00"
+2024-10-09 06:38:42,Delete Reservation,Viroj_4511,"Details: Name                   Viroj_4511
+Room                 PCR Machines
+Equipments                PCR 9.3
+Start_Time    2024-10-09 08:00:00
+End_Time      2024-10-09 11:00:00
+Name: 575, dtype: object"
