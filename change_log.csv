@@ -3710,3 +3710,9 @@ Equipments                 Fume Hood
 Start_Time       2024-10-09 09:30:00
 End_Time         2024-10-09 14:00:00
 Name: 1163, dtype: object"
+2024-10-09 06:39:38,Delete Reservation,Dechaphon_4612,"Details: Name                  Dechaphon_4612
+Room          Central Lab, 6th floor
+Equipments        Digital Dry Bath 2
+Start_Time       2024-10-09 11:00:00
+End_Time         2024-10-09 12:30:00
+Name: 1163, dtype: object"
