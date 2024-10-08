@@ -3671,3 +3671,9 @@ Equipments            TissueLyser II
 Start_Time       2024-10-09 10:00:00
 End_Time         2024-10-09 11:30:00
 Name: 1163, dtype: object"
+2024-10-09 06:33:07,Delete Reservation,Dechaphon_4612,"Details: Name                  Dechaphon_4612
+Room          Central Lab, 6th floor
+Equipments            TissueLyser II
+Start_Time       2024-10-09 10:00:00
+End_Time         2024-10-09 11:30:00
+Name: 1163, dtype: object"
