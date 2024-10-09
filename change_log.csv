@@ -3734,3 +3734,7 @@ End_Time         2024-10-11 23:45:00
 Name: 1124, dtype: object"
 2024-10-09 10:11:36,Add Reservation,Arisa_4505,"{'Name': 'Arisa_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 10, 16, 0, 0), 'End_Time': datetime.datetime(2024, 10, 16, 23, 45)}"
 2024-10-09 10:11:55,Add Reservation,Arisa_4505,"{'Name': 'Arisa_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 10, 18, 0, 0), 'End_Time': datetime.datetime(2024, 10, 18, 23, 45)}"
+2024-10-09 10:43:37,Add Reservation,Narumon_4511,"           Name          Room  ...          Start_Time            End_Time
+0  Narumon_4511  PCR Machines  ... 2024-10-09 11:00:00 2024-10-09 14:00:00
+
+[1 rows x 5 columns]"
