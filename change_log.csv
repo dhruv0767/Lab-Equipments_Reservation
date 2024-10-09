@@ -3732,3 +3732,4 @@ Equipments        Incubator Shaker 1
 Start_Time       2024-10-11 07:30:00
 End_Time         2024-10-11 23:45:00
 Name: 1124, dtype: object"
+2024-10-09 10:11:36,Add Reservation,Arisa_4505,"{'Name': 'Arisa_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 10, 16, 0, 0), 'End_Time': datetime.datetime(2024, 10, 16, 23, 45)}"
