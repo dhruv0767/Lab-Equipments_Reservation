@@ -3720,3 +3720,9 @@ Name: 1163, dtype: object"
 0  Viroj_4511  PCR Machines    PCR 9.3 2024-10-09 08:00:00 2024-10-09 11:00:00"
 2024-10-09 06:40:40,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 10, 9, 9, 30), 'End_Time': datetime.datetime(2024, 10, 9, 11, 0)}"
 2024-10-09 06:41:11,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Digital Dry Bath 2', 'Start_Time': datetime.datetime(2024, 10, 9, 10, 0), 'End_Time': datetime.datetime(2024, 10, 9, 12, 0)}"
+2024-10-09 10:10:27,Delete Reservation,Arisa_4505,"Details: Name                      Arisa_4505
+Room          Central Lab, 5th floor
+Equipments        Incubator Shaker 1
+Start_Time       2024-10-10 14:00:00
+End_Time         2024-10-10 23:45:00
+Name: 1124, dtype: object"
