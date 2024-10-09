@@ -3726,3 +3726,9 @@ Equipments        Incubator Shaker 1
 Start_Time       2024-10-10 14:00:00
 End_Time         2024-10-10 23:45:00
 Name: 1124, dtype: object"
+2024-10-09 10:10:34,Delete Reservation,Arisa_4505,"Details: Name                      Arisa_4505
+Room          Central Lab, 5th floor
+Equipments        Incubator Shaker 1
+Start_Time       2024-10-11 07:30:00
+End_Time         2024-10-11 23:45:00
+Name: 1124, dtype: object"
