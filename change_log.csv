@@ -3753,3 +3753,7 @@ Name: 1124, dtype: object"
 2024-10-09 12:43:33,Add Reservation,Thanathip_4505,"{'Name': 'Thanathip_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 2', 'Start_Time': datetime.datetime(2024, 10, 11, 0, 0), 'End_Time': datetime.datetime(2024, 10, 11, 23, 45)}"
 2024-10-09 12:43:55,Add Reservation,Thanathip_4505,"{'Name': 'Thanathip_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Refrigerated Incubator Shaker', 'Start_Time': datetime.datetime(2024, 10, 10, 0, 0), 'End_Time': datetime.datetime(2024, 10, 10, 23, 45)}"
 2024-10-09 12:44:01,Add Reservation,Thanathip_4505,"{'Name': 'Thanathip_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Refrigerated Incubator Shaker', 'Start_Time': datetime.datetime(2024, 10, 11, 0, 0), 'End_Time': datetime.datetime(2024, 10, 11, 23, 45)}"
+2024-10-09 13:09:48,Add Reservation,Pawaree_4612,"           Name          Room  ...          Start_Time            End_Time
+0  Pawaree_4612  PCR Machines  ... 2024-10-09 14:00:00 2024-10-09 17:00:00
+
+[1 rows x 5 columns]"
