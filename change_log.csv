@@ -3796,3 +3796,4 @@ Name: 582, dtype: object"
 
 [1 rows x 5 columns]"
 2024-10-11 01:23:58,Add Reservation,Janejira_4612,"{'Name': 'Janejira_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 10, 11, 10, 0), 'End_Time': datetime.datetime(2024, 10, 11, 15, 0)}"
+2024-10-11 06:25:42,Add Reservation,Khemrutai_4511,"{'Name': 'Khemrutai_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 10, 11, 7, 30), 'End_Time': datetime.datetime(2024, 10, 11, 11, 0)}"
