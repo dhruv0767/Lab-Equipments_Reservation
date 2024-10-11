@@ -3808,3 +3808,9 @@ Name: 582, dtype: object"
 2024-10-11 13:10:20,Add Reservation,Wuthichai_4505,"{'Name': 'Wuthichai_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 2', 'Start_Time': datetime.datetime(2024, 10, 14, 0, 0), 'End_Time': datetime.datetime(2024, 10, 14, 23, 45)}"
 2024-10-11 13:10:25,Add Reservation,Wuthichai_4505,"{'Name': 'Wuthichai_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 2', 'Start_Time': datetime.datetime(2024, 10, 15, 0, 0), 'End_Time': datetime.datetime(2024, 10, 15, 23, 45)}"
 2024-10-11 13:10:30,Add Reservation,Wuthichai_4505,"{'Name': 'Wuthichai_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 2', 'Start_Time': datetime.datetime(2024, 10, 16, 0, 0), 'End_Time': datetime.datetime(2024, 10, 16, 23, 45)}"
+2024-10-11 13:11:56,Delete Reservation,Wuthichai_4505,"Details: Name                  Wuthichai_4505
+Room          Central Lab, 5th floor
+Equipments        Incubator Shaker 2
+Start_Time       2024-10-12 00:00:00
+End_Time         2024-10-12 23:45:00
+Name: 1198, dtype: object"
