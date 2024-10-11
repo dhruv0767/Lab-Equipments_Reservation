@@ -3826,3 +3826,9 @@ Equipments        Incubator Shaker 2
 Start_Time       2024-10-14 00:00:00
 End_Time         2024-10-14 23:45:00
 Name: 1198, dtype: object"
+2024-10-11 13:12:36,Delete Reservation,Wuthichai_4505,"Details: Name                  Wuthichai_4505
+Room          Central Lab, 5th floor
+Equipments        Incubator Shaker 2
+Start_Time       2024-10-15 00:00:00
+End_Time         2024-10-15 23:45:00
+Name: 1198, dtype: object"
