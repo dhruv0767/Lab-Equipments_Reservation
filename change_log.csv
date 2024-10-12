@@ -3882,3 +3882,9 @@ Start_Time       2024-10-13 00:00:00
 End_Time         2024-10-13 23:45:00
 Name: 1205, dtype: object"
 2024-10-12 14:47:50,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 10, 17, 0, 0), 'End_Time': datetime.datetime(2024, 10, 17, 23, 45)}"
+2024-10-12 14:49:41,Delete Reservation,Dechaphon_4612,"Details: Name                  Dechaphon_4612
+Room          Central Lab, 5th floor
+Equipments        Incubator Shaker 1
+Start_Time       2024-10-17 00:00:00
+End_Time         2024-10-17 23:45:00
+Name: 1206, dtype: object"
