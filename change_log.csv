@@ -3932,3 +3932,4 @@ Name: 1206, dtype: object"
 2024-10-15 14:36:00,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
 0  Yada_4507  PCR Machines     PCR 12 2024-10-15 17:00:00 2024-10-15 20:00:00"
 2024-10-15 15:01:48,Add Reservation,Yada_4507,"{'Name': 'Yada_4507', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 3 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 10, 15, 17, 0), 'End_Time': datetime.datetime(2024, 10, 15, 19, 0)}"
+2024-10-15 16:33:41,Add Reservation,Arisa_4505,"{'Name': 'Arisa_4505', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 4', 'Start_Time': datetime.datetime(2024, 10, 16, 12, 0), 'End_Time': datetime.datetime(2024, 10, 16, 23, 45)}"
