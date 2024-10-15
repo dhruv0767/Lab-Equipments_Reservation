@@ -3950,3 +3950,4 @@ Name: 1222, dtype: object"
 0  Supanut_4612  PCR Machines  ... 2024-10-16 11:00:00 2024-10-16 14:00:00
 
 [1 rows x 5 columns]"
+2024-10-15 21:59:13,Add Reservation,Napassorn_4505,"{'Name': 'Napassorn_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 10, 19, 0, 0), 'End_Time': datetime.datetime(2024, 10, 19, 23, 45)}"
