@@ -3940,3 +3940,9 @@ Start_Time                                  2024-10-15 17:00:00
 End_Time                                    2024-10-15 19:00:00
 Name: 1221, dtype: object"
 2024-10-15 17:17:47,Add Reservation,Yada_4507,"{'Name': 'Yada_4507', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 3 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 10, 15, 18, 30), 'End_Time': datetime.datetime(2024, 10, 15, 20, 30)}"
+2024-10-15 19:45:45,Delete Reservation,Yada_4507,"Details: Name                                                  Yada_4507
+Room                                         Hallway, 6th floor
+Equipments    Autoclave 3 (Drain the water every 5 times aft...
+Start_Time                                  2024-10-15 18:30:00
+End_Time                                    2024-10-15 20:30:00
+Name: 1222, dtype: object"
