@@ -3955,3 +3955,5 @@ Name: 1222, dtype: object"
 2024-10-15 22:00:57,Add Reservation,Napassorn_4505,"{'Name': 'Napassorn_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 10, 21, 0, 0), 'End_Time': datetime.datetime(2024, 10, 21, 23, 45)}"
 2024-10-15 22:01:08,Add Reservation,Napassorn_4505,"{'Name': 'Napassorn_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 10, 22, 0, 0), 'End_Time': datetime.datetime(2024, 10, 22, 23, 45)}"
 2024-10-15 23:48:31,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 10, 16, 10, 0), 'End_Time': datetime.datetime(2024, 10, 16, 12, 30)}"
+2024-10-16 06:51:41,Add Reservation,Viroj_4511,"         Name          Room Equipments          Start_Time            End_Time
+0  Viroj_4511  PCR Machines    PCR 9.3 2024-10-16 08:00:00 2024-10-16 11:00:00"
