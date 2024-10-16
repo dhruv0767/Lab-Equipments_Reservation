@@ -3965,3 +3965,4 @@ Start_Time    2024-10-16 10:00:00
 End_Time      2024-10-16 12:30:00
 Name: 1226, dtype: object"
 2024-10-16 09:44:51,Add Reservation,chomphoonut_4511,"{'Name': 'chomphoonut_4511', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave For Waste (Drain the water everytime after using)', 'Start_Time': datetime.datetime(2024, 10, 16, 12, 30), 'End_Time': datetime.datetime(2024, 10, 16, 14, 30)}"
+2024-10-16 09:57:21,Add Reservation,Siriphattrarat_4511,"{'Name': 'Siriphattrarat_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 10, 16, 10, 30), 'End_Time': datetime.datetime(2024, 10, 16, 12, 0)}"
