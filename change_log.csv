@@ -3968,3 +3968,7 @@ Name: 1226, dtype: object"
 2024-10-16 09:57:21,Add Reservation,Siriphattrarat_4511,"{'Name': 'Siriphattrarat_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 10, 16, 10, 30), 'End_Time': datetime.datetime(2024, 10, 16, 12, 0)}"
 2024-10-16 11:02:32,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 10, 16, 12, 0), 'End_Time': datetime.datetime(2024, 10, 16, 15, 0)}"
 2024-10-16 12:47:35,Add Reservation,Wuthichai_4505,"{'Name': 'Wuthichai_4505', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave For Waste (Drain the water everytime after using)', 'Start_Time': datetime.datetime(2024, 10, 16, 14, 30), 'End_Time': datetime.datetime(2024, 10, 16, 16, 30)}"
+2024-10-16 13:11:42,Add Reservation,Phasanat_4615,"            Name          Room  ...          Start_Time            End_Time
+0  Phasanat_4615  PCR Machines  ... 2024-10-16 14:00:00 2024-10-16 17:00:00
+
+[1 rows x 5 columns]"
