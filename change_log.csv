@@ -3977,3 +3977,4 @@ Name: 1226, dtype: object"
 0  Yada_4507  PCR Machines     PCR 11 2024-10-16 17:00:00 2024-10-16 20:00:00"
 2024-10-16 13:18:25,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
 0  Yada_4507  PCR Machines     PCR 12 2024-10-16 17:00:00 2024-10-16 20:00:00"
+2024-10-16 13:41:53,Add Reservation,Arisa_4505,"{'Name': 'Arisa_4505', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Laminar flow', 'Start_Time': datetime.datetime(2024, 10, 16, 14, 0), 'End_Time': datetime.datetime(2024, 10, 16, 16, 0)}"
