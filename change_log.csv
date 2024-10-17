@@ -4008,3 +4008,4 @@ Equipments                 PCR 10
 Start_Time    2024-10-17 14:00:00
 End_Time      2024-10-17 17:00:00
 Name: 601, dtype: object"
+2024-10-17 13:01:43,Add Reservation,Wilasinee_4612,"{'Name': 'Wilasinee_4612', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Refrigerated Incubator Shaker', 'Start_Time': datetime.datetime(2024, 10, 17, 13, 30), 'End_Time': datetime.datetime(2024, 10, 17, 15, 30)}"
