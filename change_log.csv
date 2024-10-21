@@ -4072,3 +4072,9 @@ Equipments    Refrigerated Centrifuge 4
 Start_Time          2024-10-21 09:30:00
 End_Time            2024-10-21 10:00:00
 Name: 1270, dtype: object"
+2024-10-21 10:17:07,Delete Reservation,Dechaphon_4612,"Details: Name                  Dechaphon_4612
+Room          Central Lab, 5th floor
+Equipments        Incubator Shaker 2
+Start_Time       2024-10-21 00:00:00
+End_Time         2024-10-21 23:45:00
+Name: 1210, dtype: object"
