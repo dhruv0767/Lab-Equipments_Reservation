@@ -4110,3 +4110,9 @@ Equipments                 PCR 15
 Start_Time    2024-10-22 11:00:00
 End_Time      2024-10-22 14:00:00
 Name: 604, dtype: object"
+2024-10-22 11:31:13,Delete Reservation,Viroj_4511,"Details: Name                   Viroj_4511
+Room                 PCR Machines
+Equipments                 PCR 15
+Start_Time    2024-10-22 11:00:00
+End_Time      2024-10-22 14:00:00
+Name: 604, dtype: object"
