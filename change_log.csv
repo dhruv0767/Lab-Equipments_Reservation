@@ -4130,3 +4130,4 @@ Name: 604, dtype: object"
 0  Mayuree_4606  PCR Machines  ... 2024-10-22 14:00:00 2024-10-22 17:00:00
 
 [1 rows x 5 columns]"
+2024-10-22 18:34:54,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 10, 23, 10, 0), 'End_Time': datetime.datetime(2024, 10, 23, 13, 0)}"
