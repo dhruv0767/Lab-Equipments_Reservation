@@ -4098,3 +4098,9 @@ Name: 1210, dtype: object"
 2024-10-22 11:09:17,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 10, 22, 12, 0), 'End_Time': datetime.datetime(2024, 10, 22, 14, 0)}"
 2024-10-22 11:11:50,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 1', 'Start_Time': datetime.datetime(2024, 10, 22, 12, 0), 'End_Time': datetime.datetime(2024, 10, 22, 15, 30)}"
 2024-10-22 11:12:30,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'TissueLyser II', 'Start_Time': datetime.datetime(2024, 10, 22, 12, 0), 'End_Time': datetime.datetime(2024, 10, 22, 12, 15)}"
+2024-10-22 11:31:04,Delete Reservation,Viroj_4511,"Details: Name                   Viroj_4511
+Room                 PCR Machines
+Equipments                PCR 9.3
+Start_Time    2024-10-22 11:00:00
+End_Time      2024-10-22 14:00:00
+Name: 604, dtype: object"
