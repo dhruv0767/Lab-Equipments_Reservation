@@ -4188,3 +4188,4 @@ Name: 604, dtype: object"
 0  Narumon_4511  PCR Machines  ... 2024-10-26 11:00:00 2024-10-26 14:00:00
 
 [1 rows x 5 columns]"
+2024-10-25 12:57:48,Add Reservation,Narumon_4511,"{'Name': 'Narumon_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 1', 'Start_Time': datetime.datetime(2024, 10, 26, 9, 30), 'End_Time': datetime.datetime(2024, 10, 26, 10, 30)}"
