@@ -4196,3 +4196,4 @@ Start_Time       2024-10-25 00:00:00
 End_Time         2024-10-25 14:00:00
 Name: 1298, dtype: object"
 2024-10-25 13:07:34,Add Reservation,Napassorn_4505,"{'Name': 'Napassorn_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 10, 25, 15, 0), 'End_Time': datetime.datetime(2024, 10, 25, 23, 45)}"
+2024-10-25 13:07:51,Add Reservation,Napassorn_4505,"{'Name': 'Napassorn_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 10, 26, 0, 0), 'End_Time': datetime.datetime(2024, 10, 26, 23, 45)}"
