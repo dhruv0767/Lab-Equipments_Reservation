@@ -4224,3 +4224,4 @@ Equipments                 PCR 15
 Start_Time    2024-10-28 11:00:00
 End_Time      2024-10-28 14:00:00
 Name: 621, dtype: object"
+2024-10-28 10:32:22,Add Reservation,Fah_4606,"{'Name': 'Fah_4606', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Digital Dry Bath 2', 'Start_Time': datetime.datetime(2024, 10, 28, 11, 0), 'End_Time': datetime.datetime(2024, 10, 28, 14, 0)}"
