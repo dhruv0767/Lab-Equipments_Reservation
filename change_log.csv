@@ -4233,3 +4233,9 @@ Name: 621, dtype: object"
 0  Pornchai_4511  PCR Machines  ... 2024-10-28 11:00:00 2024-10-28 14:00:00
 
 [1 rows x 5 columns]"
+2024-10-28 12:24:25,Delete Reservation,Pornchai_4511,"Details: Name                Pornchai_4511
+Room                 PCR Machines
+Equipments                PCR 9.3
+Start_Time    2024-10-28 14:00:00
+End_Time      2024-10-28 17:00:00
+Name: 621, dtype: object"
