@@ -4245,3 +4245,4 @@ Name: 621, dtype: object"
 2024-10-28 14:29:05,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
 0  Yada_4507  PCR Machines     PCR 14 2024-10-28 14:00:00 2024-10-28 17:00:00"
 2024-10-28 14:45:08,Add Reservation,Arisa_4505,"{'Name': 'Arisa_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 2', 'Start_Time': datetime.datetime(2024, 11, 4, 0, 0), 'End_Time': datetime.datetime(2024, 11, 4, 23, 45)}"
+2024-10-28 14:45:24,Add Reservation,Arisa_4505,"{'Name': 'Arisa_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 2', 'Start_Time': datetime.datetime(2024, 11, 5, 0, 0), 'End_Time': datetime.datetime(2024, 11, 5, 23, 45)}"
