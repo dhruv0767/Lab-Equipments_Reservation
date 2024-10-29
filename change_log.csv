@@ -4279,3 +4279,4 @@ Name: 621, dtype: object"
 0  Narumon_4511  PCR Machines  ... 2024-10-30 11:00:00 2024-10-30 14:00:00
 
 [1 rows x 5 columns]"
+2024-10-29 11:54:03,Add Reservation,Napassorn_4505,"{'Name': 'Napassorn_4505', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave For Waste (Drain the water everytime after using)', 'Start_Time': datetime.datetime(2024, 10, 29, 13, 30), 'End_Time': datetime.datetime(2024, 10, 29, 16, 0)}"
