@@ -4271,3 +4271,7 @@ Name: 621, dtype: object"
 2024-10-29 10:00:43,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Laminar flow', 'Start_Time': datetime.datetime(2024, 10, 29, 13, 0), 'End_Time': datetime.datetime(2024, 10, 29, 14, 30)}"
 2024-10-29 10:33:39,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
 0  Yada_4507  PCR Machines     PCR 14 2024-10-29 11:00:00 2024-10-29 14:00:00"
+2024-10-29 11:09:08,Add Reservation,Narumon_4511,"           Name          Room  ...          Start_Time            End_Time
+0  Narumon_4511  PCR Machines  ... 2024-10-29 11:00:00 2024-10-29 14:00:00
+
+[1 rows x 5 columns]"
