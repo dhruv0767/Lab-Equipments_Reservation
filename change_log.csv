@@ -4314,3 +4314,9 @@ Equipments        Incubator Shaker 1
 Start_Time       2024-11-01 00:00:00
 End_Time         2024-11-01 23:45:00
 Name: 1253, dtype: object"
+2024-10-30 09:28:19,Delete Reservation,Supanut_4612,"Details: Name                    Supanut_4612
+Room          Central Lab, 5th floor
+Equipments        Incubator Shaker 1
+Start_Time       2024-11-04 15:00:00
+End_Time         2024-11-04 23:45:00
+Name: 1253, dtype: object"
