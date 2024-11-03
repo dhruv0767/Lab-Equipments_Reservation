@@ -4382,3 +4382,9 @@ Name: 1337, dtype: object"
 [1 rows x 5 columns]"
 2024-11-03 11:10:33,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
 0  Yada_4507  PCR Machines     PCR 12 2024-11-03 11:00:00 2024-11-03 14:00:00"
+2024-11-03 12:35:10,Delete Reservation,Thanathip_4505,"Details: Name                  Thanathip_4505
+Room          Central Lab, 5th floor
+Equipments        Incubator Shaker 2
+Start_Time       2024-11-03 09:00:00
+End_Time         2024-11-03 23:45:00
+Name: 1348, dtype: object"
