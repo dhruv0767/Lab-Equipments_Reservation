@@ -4399,3 +4399,4 @@ Name: 1348, dtype: object"
 0  Viroj_4511  PCR Machines     PCR 14 2024-11-04 11:00:00 2024-11-04 14:00:00"
 2024-11-04 09:38:41,Add Reservation,Viroj_4511,"         Name          Room Equipments          Start_Time            End_Time
 0  Viroj_4511  PCR Machines     PCR 15 2024-11-04 11:00:00 2024-11-04 14:00:00"
+2024-11-04 09:39:19,Add Reservation,Tanatad_4606,"{'Name': 'Tanatad_4606', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Digital Dry Bath 2', 'Start_Time': datetime.datetime(2024, 11, 4, 10, 0), 'End_Time': datetime.datetime(2024, 11, 4, 13, 0)}"
