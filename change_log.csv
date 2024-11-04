@@ -4418,3 +4418,9 @@ Name: 1348, dtype: object"
 0  Mayuree_4606  PCR Machines  ... 2024-11-04 14:00:00 2024-11-04 17:00:00
 
 [1 rows x 5 columns]"
+2024-11-04 12:02:28,Delete Reservation,Dechaphon_4612,"Details: Name               Dechaphon_4612
+Room                        BSL-2
+Equipments                  BSC-1
+Start_Time    2024-11-04 12:00:00
+End_Time      2024-11-04 13:30:00
+Name: 1357, dtype: object"
