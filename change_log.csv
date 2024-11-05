@@ -4460,3 +4460,7 @@ Name: 1357, dtype: object"
 2024-11-05 14:07:59,Add Reservation,Pornchai_4511,"{'Name': 'Pornchai_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 11, 5, 14, 30), 'End_Time': datetime.datetime(2024, 11, 5, 18, 0)}"
 2024-11-05 14:18:04,Add Reservation,chomphoonut_4607,"{'Name': 'chomphoonut_4607', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave For Waste (Drain the water everytime after using)', 'Start_Time': datetime.datetime(2024, 11, 5, 14, 30), 'End_Time': datetime.datetime(2024, 11, 5, 16, 30)}"
 2024-11-05 14:22:04,Add Reservation,Phasanat_4615,"{'Name': 'Phasanat_4615', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 4 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 11, 6, 12, 0), 'End_Time': datetime.datetime(2024, 11, 6, 15, 0)}"
+2024-11-05 15:19:53,Add Reservation,Narumon_4511,"           Name          Room  ...          Start_Time            End_Time
+0  Narumon_4511  PCR Machines  ... 2024-11-06 11:00:00 2024-11-06 14:00:00
+
+[1 rows x 5 columns]"
