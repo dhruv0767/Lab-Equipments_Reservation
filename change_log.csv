@@ -4505,3 +4505,4 @@ Name: 1357, dtype: object"
 0  Supanida_4511  PCR Machines  ... 2024-11-07 11:00:00 2024-11-07 14:00:00
 
 [1 rows x 5 columns]"
+2024-11-06 16:39:17,Add Reservation,Pornchai_4511,"{'Name': 'Pornchai_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 11, 7, 10, 0), 'End_Time': datetime.datetime(2024, 11, 7, 15, 0)}"
