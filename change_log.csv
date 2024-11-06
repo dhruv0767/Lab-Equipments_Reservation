@@ -4479,3 +4479,5 @@ Name: 1357, dtype: object"
 0  Supanida_4511  PCR Machines  ... 2024-11-06 11:00:00 2024-11-06 14:00:00
 
 [1 rows x 5 columns]"
+2024-11-06 11:17:18,Add Reservation,Viroj_4511,"         Name          Room Equipments          Start_Time            End_Time
+0  Viroj_4511  PCR Machines     PCR 15 2024-11-07 11:00:00 2024-11-07 14:00:00"
