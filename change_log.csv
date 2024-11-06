@@ -4493,3 +4493,4 @@ Name: 1357, dtype: object"
 0  Mayuree_4606  PCR Machines  ... 2024-11-06 14:00:00 2024-11-06 17:00:00
 
 [1 rows x 5 columns]"
+2024-11-06 14:18:33,Add Reservation,Wilasinee_4612,"{'Name': 'Wilasinee_4612', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 1 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 11, 6, 14, 30), 'End_Time': datetime.datetime(2024, 11, 6, 16, 30)}"
