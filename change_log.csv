@@ -4485,3 +4485,7 @@ Name: 1357, dtype: object"
 0  Viroj_4511  PCR Machines     PCR 14 2024-11-07 11:00:00 2024-11-07 14:00:00"
 2024-11-06 11:25:09,Add Reservation,Pornchai_4511,"{'Name': 'Pornchai_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 11, 6, 12, 0), 'End_Time': datetime.datetime(2024, 11, 6, 15, 0)}"
 2024-11-06 12:06:51,Add Reservation,Viroj_4511,"{'Name': 'Viroj_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 11, 6, 13, 30), 'End_Time': datetime.datetime(2024, 11, 6, 15, 30)}"
+2024-11-06 12:31:16,Add Reservation,Supanida_4511,"            Name          Room  ...          Start_Time            End_Time
+0  Supanida_4511  PCR Machines  ... 2024-11-06 14:00:00 2024-11-06 17:00:00
+
+[1 rows x 5 columns]"
