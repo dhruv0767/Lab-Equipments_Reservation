@@ -4468,3 +4468,4 @@ Name: 1357, dtype: object"
 0  Leela_4606  PCR Machines     PCR 10 2024-11-06 11:00:00 2024-11-06 14:00:00"
 2024-11-06 08:51:31,Add Reservation,Leela_4606,"         Name          Room Equipments          Start_Time            End_Time
 0  Leela_4606  PCR Machines     PCR 11 2024-11-06 11:00:00 2024-11-06 14:00:00"
+2024-11-06 09:01:30,Add Reservation,Supanut_4612,"{'Name': 'Supanut_4612', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 11, 12, 12, 0), 'End_Time': datetime.datetime(2024, 11, 12, 23, 45)}"
