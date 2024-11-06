@@ -4506,3 +4506,4 @@ Name: 1357, dtype: object"
 
 [1 rows x 5 columns]"
 2024-11-06 16:39:17,Add Reservation,Pornchai_4511,"{'Name': 'Pornchai_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 11, 7, 10, 0), 'End_Time': datetime.datetime(2024, 11, 7, 15, 0)}"
+2024-11-06 18:03:45,Add Reservation,Arisa_4505,"{'Name': 'Arisa_4505', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Incubator 1', 'Start_Time': datetime.datetime(2024, 11, 7, 3, 0), 'End_Time': datetime.datetime(2024, 11, 7, 23, 45)}"
