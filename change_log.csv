@@ -4536,3 +4536,9 @@ Name: 1357, dtype: object"
 0  Khemrutai_4511  PCR Machines  ... 2024-11-08 11:00:00 2024-11-08 14:00:00
 
 [1 rows x 5 columns]"
+2024-11-07 13:32:39,Delete Reservation,Khemrutai_4511,"Details: Name               Khemrutai_4511
+Room                 PCR Machines
+Equipments                PCR 9.3
+Start_Time    2024-11-07 14:00:00
+End_Time      2024-11-07 17:00:00
+Name: 677, dtype: object"
