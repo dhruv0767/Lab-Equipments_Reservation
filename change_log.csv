@@ -4528,3 +4528,7 @@ Name: 1357, dtype: object"
 0  Nicharee_4606  PCR Machines  ... 2024-11-07 14:00:00 2024-11-07 17:00:00
 
 [1 rows x 5 columns]"
+2024-11-07 12:35:00,Add Reservation,Khemrutai_4511,"             Name          Room  ...          Start_Time            End_Time
+0  Khemrutai_4511  PCR Machines  ... 2024-11-07 14:00:00 2024-11-07 17:00:00
+
+[1 rows x 5 columns]"
