@@ -4583,3 +4583,4 @@ Name: 677, dtype: object"
 2024-11-08 11:22:34,Add Reservation,Leela_4606,"         Name          Room Equipments          Start_Time            End_Time
 0  Leela_4606  PCR Machines     PCR 13 2024-11-08 14:00:00 2024-11-08 17:00:00"
 2024-11-08 11:40:07,Add Reservation,Jantanipa_4607,"{'Name': 'Jantanipa_4607', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 4 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 11, 8, 12, 30), 'End_Time': datetime.datetime(2024, 11, 8, 14, 30)}"
+2024-11-08 15:35:10,Add Reservation,Jantanipa_4607,"{'Name': 'Jantanipa_4607', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 4 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 11, 8, 15, 45), 'End_Time': datetime.datetime(2024, 11, 8, 17, 45)}"
