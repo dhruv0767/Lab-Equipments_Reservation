@@ -4567,3 +4567,5 @@ Name: 677, dtype: object"
 0  Viroj_4511  PCR Machines     PCR 14 2024-11-08 08:00:00 2024-11-08 11:00:00"
 2024-11-08 08:38:45,Add Reservation,Leela_4606,"         Name          Room Equipments          Start_Time            End_Time
 0  Leela_4606  PCR Machines     PCR 11 2024-11-08 11:00:00 2024-11-08 14:00:00"
+2024-11-08 08:38:57,Add Reservation,Leela_4606,"         Name          Room Equipments          Start_Time            End_Time
+0  Leela_4606  PCR Machines     PCR 12 2024-11-08 11:00:00 2024-11-08 14:00:00"
