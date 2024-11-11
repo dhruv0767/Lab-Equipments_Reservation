@@ -4602,3 +4602,5 @@ Name: 677, dtype: object"
 0  Phitchayatida_4511  PCR Machines  ... 2024-11-11 11:00:00 2024-11-11 14:00:00
 
 [1 rows x 5 columns]"
+2024-11-11 11:20:37,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
+0  Yada_4507  PCR Machines     PCR 12 2024-11-11 14:00:00 2024-11-11 17:00:00"
