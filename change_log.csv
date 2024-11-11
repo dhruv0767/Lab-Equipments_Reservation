@@ -4626,3 +4626,4 @@ Name: 696, dtype: object"
 0  Nicharee_4606  PCR Machines  ... 2024-11-11 14:00:00 2024-11-11 17:00:00
 
 [1 rows x 5 columns]"
+2024-11-11 13:53:22,Add Reservation,Fah_4606,"{'Name': 'Fah_4606', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 4 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 11, 11, 15, 0), 'End_Time': datetime.datetime(2024, 11, 11, 17, 0)}"
