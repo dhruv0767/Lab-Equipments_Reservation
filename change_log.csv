@@ -4639,3 +4639,5 @@ Name: 696, dtype: object"
 0  Jirutchaya_4507  PCR Machines  ... 2024-11-12 14:00:00 2024-11-12 17:00:00
 
 [1 rows x 5 columns]"
+2024-11-11 14:28:29,Add Reservation,Pawida_4606,"          Name          Room Equipments          Start_Time            End_Time
+0  Pawida_4606  PCR Machines     PCR 15 2024-11-12 11:00:00 2024-11-12 14:00:00"
