@@ -4657,3 +4657,9 @@ Equipments                 PCR 15
 Start_Time    2024-11-12 11:00:00
 End_Time      2024-11-12 14:00:00
 Name: 700, dtype: object"
+2024-11-11 22:18:27,Delete Reservation,Pawida_4606,"Details: Name                  Pawida_4606
+Room                 PCR Machines
+Equipments                 PCR 14
+Start_Time    2024-11-12 14:00:00
+End_Time      2024-11-12 17:00:00
+Name: 700, dtype: object"
