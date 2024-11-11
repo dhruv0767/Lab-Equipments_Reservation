@@ -4622,3 +4622,7 @@ Equipments                  PCR 1
 Start_Time    2024-11-12 08:00:00
 End_Time      2024-11-12 11:00:00
 Name: 696, dtype: object"
+2024-11-11 13:41:05,Add Reservation,Nicharee_4606,"            Name          Room  ...          Start_Time            End_Time
+0  Nicharee_4606  PCR Machines  ... 2024-11-11 14:00:00 2024-11-11 17:00:00
+
+[1 rows x 5 columns]"
