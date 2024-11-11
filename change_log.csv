@@ -4616,3 +4616,9 @@ Name: 677, dtype: object"
 2024-11-11 13:33:32,Add Reservation,Mayuree_4606,"{'Name': 'Mayuree_4606', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 11, 11, 17, 0), 'End_Time': datetime.datetime(2024, 11, 11, 18, 30)}"
 2024-11-11 13:39:06,Add Reservation,Pawida_4606,"          Name          Room Equipments          Start_Time            End_Time
 0  Pawida_4606  PCR Machines      PCR 1 2024-11-12 08:00:00 2024-11-12 11:00:00"
+2024-11-11 13:40:00,Delete Reservation,Pawida_4606,"Details: Name                  Pawida_4606
+Room                 PCR Machines
+Equipments                  PCR 1
+Start_Time    2024-11-12 08:00:00
+End_Time      2024-11-12 11:00:00
+Name: 696, dtype: object"
