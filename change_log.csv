@@ -4651,3 +4651,9 @@ Name: 696, dtype: object"
 2024-11-11 17:09:16,Add Reservation,chomphoonut_4607,"{'Name': 'chomphoonut_4607', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Incubator 3', 'Start_Time': datetime.datetime(2024, 11, 16, 0, 0), 'End_Time': datetime.datetime(2024, 11, 16, 23, 45)}"
 2024-11-11 17:09:29,Add Reservation,chomphoonut_4607,"{'Name': 'chomphoonut_4607', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Incubator 3', 'Start_Time': datetime.datetime(2024, 11, 17, 0, 0), 'End_Time': datetime.datetime(2024, 11, 17, 23, 45)}"
 2024-11-11 17:09:41,Add Reservation,chomphoonut_4607,"{'Name': 'chomphoonut_4607', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Incubator 3', 'Start_Time': datetime.datetime(2024, 11, 18, 0, 0), 'End_Time': datetime.datetime(2024, 11, 18, 23, 45)}"
+2024-11-11 22:17:03,Delete Reservation,Pawida_4606,"Details: Name                  Pawida_4606
+Room                 PCR Machines
+Equipments                 PCR 15
+Start_Time    2024-11-12 11:00:00
+End_Time      2024-11-12 14:00:00
+Name: 700, dtype: object"
