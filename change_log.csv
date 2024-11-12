@@ -4699,3 +4699,5 @@ Equipments                PCR 9.3
 Start_Time    2024-11-12 11:00:00
 End_Time      2024-11-12 14:00:00
 Name: 700, dtype: object"
+2024-11-12 09:55:12,Add Reservation,Leela_4606,"         Name          Room Equipments          Start_Time            End_Time
+0  Leela_4606  PCR Machines     PCR 15 2024-11-12 11:00:00 2024-11-12 14:00:00"
