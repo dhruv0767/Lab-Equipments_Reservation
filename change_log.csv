@@ -4673,3 +4673,4 @@ Equipments                 PCR 14
 Start_Time    2024-11-12 08:00:00
 End_Time      2024-11-12 11:00:00
 Name: 700, dtype: object"
+2024-11-12 08:42:39,Add Reservation,Jathupat_4615,"{'Name': 'Jathupat_4615', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 11, 12, 8, 45), 'End_Time': datetime.datetime(2024, 11, 12, 9, 0)}"
