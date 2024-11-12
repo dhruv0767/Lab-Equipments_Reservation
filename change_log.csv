@@ -4701,3 +4701,7 @@ End_Time      2024-11-12 14:00:00
 Name: 700, dtype: object"
 2024-11-12 09:55:12,Add Reservation,Leela_4606,"         Name          Room Equipments          Start_Time            End_Time
 0  Leela_4606  PCR Machines     PCR 15 2024-11-12 11:00:00 2024-11-12 14:00:00"
+2024-11-12 09:55:49,Add Reservation,Tanatad_4606,"           Name          Room  ...          Start_Time            End_Time
+0  Tanatad_4606  PCR Machines  ... 2024-11-12 11:00:00 2024-11-12 14:00:00
+
+[1 rows x 5 columns]"
