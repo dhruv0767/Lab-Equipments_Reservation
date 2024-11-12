@@ -4706,3 +4706,7 @@ Name: 700, dtype: object"
 
 [1 rows x 5 columns]"
 2024-11-12 10:21:31,Add Reservation,Pornchai_4511,"{'Name': 'Pornchai_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-2', 'Start_Time': datetime.datetime(2024, 11, 12, 10, 30), 'End_Time': datetime.datetime(2024, 11, 12, 16, 0)}"
+2024-11-12 10:38:18,Add Reservation,Wilasinee_4612,"             Name          Room  ...          Start_Time            End_Time
+0  Wilasinee_4612  PCR Machines  ... 2024-11-12 11:00:00 2024-11-12 14:00:00
+
+[1 rows x 5 columns]"
