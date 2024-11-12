@@ -4675,3 +4675,9 @@ End_Time      2024-11-12 11:00:00
 Name: 700, dtype: object"
 2024-11-12 08:42:39,Add Reservation,Jathupat_4615,"{'Name': 'Jathupat_4615', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 11, 12, 8, 45), 'End_Time': datetime.datetime(2024, 11, 12, 9, 0)}"
 2024-11-12 09:29:45,Add Reservation,Supanida_4511,"{'Name': 'Supanida_4511', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave For Waste (Drain the water everytime after using)', 'Start_Time': datetime.datetime(2024, 11, 12, 9, 30), 'End_Time': datetime.datetime(2024, 11, 12, 11, 0)}"
+2024-11-12 09:49:05,Delete Reservation,Pimmada_4511,"Details: Name                 Pimmada_4511
+Room                 PCR Machines
+Equipments                 PCR 13
+Start_Time    2024-11-12 08:00:00
+End_Time      2024-11-12 11:00:00
+Name: 695, dtype: object"
