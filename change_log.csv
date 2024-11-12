@@ -4719,3 +4719,9 @@ Name: 700, dtype: object"
 0  Nicharee_4606  PCR Machines  ... 2024-11-13 11:00:00 2024-11-13 14:00:00
 
 [1 rows x 5 columns]"
+2024-11-12 11:02:19,Delete Reservation,Leela_4606,"Details: Name                   Leela_4606
+Room                 PCR Machines
+Equipments                 PCR 10
+Start_Time    2024-11-12 14:00:00
+End_Time      2024-11-12 17:00:00
+Name: 694, dtype: object"
