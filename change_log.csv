@@ -4735,3 +4735,4 @@ Name: 701, dtype: object"
 0  Leela_4606  PCR Machines     PCR 10 2024-11-12 14:00:00 2024-11-12 17:00:00"
 2024-11-12 11:03:29,Add Reservation,Leela_4606,"         Name          Room Equipments          Start_Time            End_Time
 0  Leela_4606  PCR Machines     PCR 12 2024-11-12 11:00:00 2024-11-12 14:00:00"
+2024-11-12 11:06:56,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Microscope Room, 5th floor', 'Equipments': 'Stereo Microscope', 'Start_Time': datetime.datetime(2024, 11, 12, 11, 15), 'End_Time': datetime.datetime(2024, 11, 12, 12, 0)}"
