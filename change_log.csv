@@ -4829,3 +4829,7 @@ Name: 1360, dtype: object"
 [1 rows x 5 columns]"
 2024-11-14 09:39:16,Add Reservation,Jirutchaya_4507,"{'Name': 'Jirutchaya_4507', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 4 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 11, 14, 11, 15), 'End_Time': datetime.datetime(2024, 11, 14, 13, 15)}"
 2024-11-14 09:57:10,Add Reservation,Issariya_4612,"{'Name': 'Issariya_4612', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 4 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 11, 14, 13, 30), 'End_Time': datetime.datetime(2024, 11, 14, 15, 30)}"
+2024-11-14 11:38:03,Add Reservation,Jantanipa_4607,"             Name          Room  ...          Start_Time            End_Time
+0  Jantanipa_4607  PCR Machines  ... 2024-11-14 14:00:00 2024-11-14 17:00:00
+
+[1 rows x 5 columns]"
