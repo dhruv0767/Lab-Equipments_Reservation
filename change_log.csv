@@ -4836,3 +4836,9 @@ Name: 1360, dtype: object"
 2024-11-14 12:14:55,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
 0  Yada_4507  PCR Machines     PCR 14 2024-11-14 11:00:00 2024-11-14 14:00:00"
 2024-11-14 12:15:55,Add Reservation,Yada_4507,"{'Name': 'Yada_4507', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Speed Vacuum Concentrator', 'Start_Time': datetime.datetime(2024, 11, 14, 12, 30), 'End_Time': datetime.datetime(2024, 11, 14, 17, 0)}"
+2024-11-14 12:54:32,Delete Reservation,Pimmada_4511,"Details: Name                 Pimmada_4511
+Room                 PCR Machines
+Equipments                 PCR 10
+Start_Time    2024-11-14 11:00:00
+End_Time      2024-11-14 14:00:00
+Name: 717, dtype: object"
