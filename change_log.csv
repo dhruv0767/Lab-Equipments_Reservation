@@ -4864,3 +4864,4 @@ Name: 722, dtype: object"
 0  Pimmada_4511  PCR Machines  ... 2024-11-15 11:00:00 2024-11-15 14:00:00
 
 [1 rows x 5 columns]"
+2024-11-15 10:30:26,Add Reservation,Issariya_4612,"{'Name': 'Issariya_4612', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave For Waste (Drain the water everytime after using)', 'Start_Time': datetime.datetime(2024, 11, 15, 11, 0), 'End_Time': datetime.datetime(2024, 11, 15, 12, 30)}"
