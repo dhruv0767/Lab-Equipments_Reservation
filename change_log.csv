@@ -4884,3 +4884,4 @@ Name: 1438, dtype: object"
 [1 rows x 5 columns]"
 2024-11-18 09:16:03,Add Reservation,Leela_4606,"         Name          Room Equipments          Start_Time            End_Time
 0  Leela_4606  PCR Machines     PCR 11 2024-11-18 11:00:00 2024-11-18 14:00:00"
+2024-11-18 09:22:28,Add Reservation,Janejira_4612,"{'Name': 'Janejira_4612', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 11, 18, 10, 0), 'End_Time': datetime.datetime(2024, 11, 18, 15, 0)}"
