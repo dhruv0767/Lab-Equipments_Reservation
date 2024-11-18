@@ -4937,3 +4937,4 @@ Name: 1448, dtype: object"
 
 [1 rows x 5 columns]"
 2024-11-18 21:15:18,Add Reservation,Khemrutai_4511,"{'Name': 'Khemrutai_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Incubator Shaker', 'Start_Time': datetime.datetime(2024, 11, 19, 10, 0), 'End_Time': datetime.datetime(2024, 11, 19, 23, 59)}"
+2024-11-18 21:15:33,Add Reservation,Khemrutai_4511,"{'Name': 'Khemrutai_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Incubator Shaker', 'Start_Time': datetime.datetime(2024, 11, 20, 0, 0), 'End_Time': datetime.datetime(2024, 11, 20, 10, 0)}"
