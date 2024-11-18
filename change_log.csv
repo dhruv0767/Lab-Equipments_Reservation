@@ -4908,3 +4908,7 @@ End_Time         2024-11-18 15:30:00
 Name: 1448, dtype: object"
 2024-11-18 12:06:12,Add Reservation,Siriphattrarat_4511,"{'Name': 'Siriphattrarat_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Fume Hood', 'Start_Time': datetime.datetime(2024, 11, 18, 15, 0), 'End_Time': datetime.datetime(2024, 11, 18, 16, 0)}"
 2024-11-18 12:07:04,Add Reservation,Siriphattrarat_4511,"{'Name': 'Siriphattrarat_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 1', 'Start_Time': datetime.datetime(2024, 11, 18, 15, 0), 'End_Time': datetime.datetime(2024, 11, 18, 16, 0)}"
+2024-11-18 12:08:45,Add Reservation,Siriphattrarat_4511,"                  Name          Room  ...          Start_Time            End_Time
+0  Siriphattrarat_4511  PCR Machines  ... 2024-11-18 14:00:00 2024-11-18 17:00:00
+
+[1 rows x 5 columns]"
