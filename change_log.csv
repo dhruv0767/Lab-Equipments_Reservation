@@ -4970,3 +4970,4 @@ Name: 731, dtype: object"
 0  Mayuree_4606  PCR Machines  ... 2024-11-19 14:00:00 2024-11-19 17:00:00
 
 [1 rows x 5 columns]"
+2024-11-19 16:24:03,Add Reservation,Pimmada_4511,"{'Name': 'Pimmada_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 11, 20, 9, 0), 'End_Time': datetime.datetime(2024, 11, 20, 12, 0)}"
