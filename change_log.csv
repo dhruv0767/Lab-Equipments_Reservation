@@ -5032,3 +5032,5 @@ End_Time      2024-11-21 14:00:00
 Name: 750, dtype: object"
 2024-11-21 06:49:35,Add Reservation,Pawida_4606,"          Name          Room Equipments          Start_Time            End_Time
 0  Pawida_4606  PCR Machines     PCR 15 2024-11-21 08:00:00 2024-11-21 11:00:00"
+2024-11-21 08:48:36,Add Reservation,Leela_4606,"         Name          Room Equipments          Start_Time            End_Time
+0  Leela_4606  PCR Machines     PCR 11 2024-11-21 11:00:00 2024-11-21 14:00:00"
