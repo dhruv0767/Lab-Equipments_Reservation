@@ -5074,3 +5074,9 @@ Equipments                 PCR 11
 Start_Time    2024-11-22 11:00:00
 End_Time      2024-11-22 14:00:00
 Name: 756, dtype: object"
+2024-11-22 11:49:00,Delete Reservation,Leela_4606,"Details: Name                      Leela_4606
+Room          Central Lab, 6th floor
+Equipments               Incubator 3
+Start_Time       2024-11-22 12:00:00
+End_Time         2024-11-22 12:30:00
+Name: 1470, dtype: object"
