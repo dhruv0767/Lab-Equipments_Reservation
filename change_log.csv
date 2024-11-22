@@ -5068,3 +5068,9 @@ Name: 750, dtype: object"
 2024-11-22 11:41:46,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 4 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 11, 22, 12, 0), 'End_Time': datetime.datetime(2024, 11, 22, 14, 0)}"
 2024-11-22 11:47:25,Add Reservation,Leela_4606,"{'Name': 'Leela_4606', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Incubator 3', 'Start_Time': datetime.datetime(2024, 11, 22, 12, 0), 'End_Time': datetime.datetime(2024, 11, 22, 12, 30)}"
 2024-11-22 11:47:44,Add Reservation,Leela_4606,"{'Name': 'Leela_4606', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Digital Dry Bath 3', 'Start_Time': datetime.datetime(2024, 11, 22, 12, 0), 'End_Time': datetime.datetime(2024, 11, 22, 12, 30)}"
+2024-11-22 11:48:07,Delete Reservation,Leela_4606,"Details: Name                   Leela_4606
+Room                 PCR Machines
+Equipments                 PCR 11
+Start_Time    2024-11-22 11:00:00
+End_Time      2024-11-22 14:00:00
+Name: 756, dtype: object"
