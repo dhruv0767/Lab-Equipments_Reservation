@@ -5054,3 +5054,5 @@ Name: 750, dtype: object"
 2024-11-21 12:42:48,Add Reservation,Pimmada_4511,"{'Name': 'Pimmada_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 11, 22, 9, 0), 'End_Time': datetime.datetime(2024, 11, 22, 11, 0)}"
 2024-11-22 08:55:28,Add Reservation,Leela_4606,"         Name          Room Equipments          Start_Time            End_Time
 0  Leela_4606  PCR Machines     PCR 11 2024-11-22 11:00:00 2024-11-22 14:00:00"
+2024-11-22 08:55:38,Add Reservation,Leela_4606,"         Name          Room Equipments          Start_Time            End_Time
+0  Leela_4606  PCR Machines     PCR 12 2024-11-22 11:00:00 2024-11-22 14:00:00"
