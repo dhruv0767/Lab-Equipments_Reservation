@@ -5062,3 +5062,5 @@ Name: 750, dtype: object"
 [1 rows x 5 columns]"
 2024-11-22 09:48:33,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
 0  Yada_4507  PCR Machines     PCR 15 2024-11-22 11:00:00 2024-11-22 14:00:00"
+2024-11-22 09:49:30,Add Reservation,Pee_4507,"       Name          Room Equipments          Start_Time            End_Time
+0  Pee_4507  PCR Machines     PCR 15 2024-11-22 14:00:00 2024-11-22 17:00:00"
