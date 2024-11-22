@@ -5084,3 +5084,9 @@ Name: 1470, dtype: object"
 2024-11-22 12:02:21,Add Reservation,Kanyarat_4505,"{'Name': 'Kanyarat_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 11, 23, 0, 0), 'End_Time': datetime.datetime(2024, 11, 23, 23, 45)}"
 2024-11-22 12:02:39,Add Reservation,Kanyarat_4505,"{'Name': 'Kanyarat_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 11, 24, 0, 0), 'End_Time': datetime.datetime(2024, 11, 24, 23, 45)}"
 2024-11-22 12:02:56,Add Reservation,Kanyarat_4505,"{'Name': 'Kanyarat_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 11, 25, 0, 0), 'End_Time': datetime.datetime(2024, 11, 25, 10, 30)}"
+2024-11-22 12:09:48,Delete Reservation,Pee_4507,"Details: Name                     Pee_4507
+Room                 PCR Machines
+Equipments                 PCR 15
+Start_Time    2024-11-22 14:00:00
+End_Time      2024-11-22 17:00:00
+Name: 759, dtype: object"
