@@ -5189,3 +5189,7 @@ Name: 1473, dtype: object"
 
 [1 rows x 5 columns]"
 2024-11-26 09:35:49,Add Reservation,chomphoonut_4607,"{'Name': 'chomphoonut_4607', 'Room': 'Central Lab, 6th floor', 'Equipments': 'pH Meter 2', 'Start_Time': datetime.datetime(2024, 11, 26, 9, 45), 'End_Time': datetime.datetime(2024, 11, 26, 10, 0)}"
+2024-11-26 11:07:27,Add Reservation,Mayuree_4606,"           Name          Room  ...          Start_Time            End_Time
+0  Mayuree_4606  PCR Machines  ... 2024-11-26 11:00:00 2024-11-26 14:00:00
+
+[1 rows x 5 columns]"
