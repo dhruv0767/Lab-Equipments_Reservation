@@ -5204,3 +5204,7 @@ Name: 1473, dtype: object"
 2024-11-26 16:10:36,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 12, 4, 0, 0), 'End_Time': datetime.datetime(2024, 12, 4, 23, 45)}"
 2024-11-26 16:10:45,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 12, 5, 0, 0), 'End_Time': datetime.datetime(2024, 12, 5, 23, 45)}"
 2024-11-26 16:10:55,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 12, 6, 0, 0), 'End_Time': datetime.datetime(2024, 12, 6, 23, 45)}"
+2024-11-26 22:36:15,Add Reservation,Narumon_4511,"           Name          Room  ...          Start_Time            End_Time
+0  Narumon_4511  PCR Machines  ... 2024-11-27 11:00:00 2024-11-27 14:00:00
+
+[1 rows x 5 columns]"
