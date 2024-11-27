@@ -5209,3 +5209,4 @@ Name: 1473, dtype: object"
 
 [1 rows x 5 columns]"
 2024-11-27 00:34:53,Add Reservation,Pimmada_4511,"{'Name': 'Pimmada_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 11, 27, 10, 0), 'End_Time': datetime.datetime(2024, 11, 27, 12, 0)}"
+2024-11-27 07:17:33,Add Reservation,chomphoonut_4607,"{'Name': 'chomphoonut_4607', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 4 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 11, 27, 10, 0), 'End_Time': datetime.datetime(2024, 11, 27, 12, 0)}"
