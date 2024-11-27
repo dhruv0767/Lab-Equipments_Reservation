@@ -5231,3 +5231,7 @@ Name: 1473, dtype: object"
 0  Jantanipa_4607  PCR Machines  ... 2024-11-27 14:00:00 2024-11-27 17:00:00
 
 [1 rows x 5 columns]"
+2024-11-27 13:23:21,Add Reservation,Jantanipa_4607,"             Name          Room  ...          Start_Time            End_Time
+0  Jantanipa_4607  PCR Machines  ... 2024-11-27 14:00:00 2024-11-27 17:00:00
+
+[1 rows x 5 columns]"
