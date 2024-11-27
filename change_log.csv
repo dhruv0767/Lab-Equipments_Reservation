@@ -5245,3 +5245,4 @@ Name: 1473, dtype: object"
 0  Sirintip_4511  PCR Machines  ... 2024-11-28 14:00:00 2024-11-28 17:00:00
 
 [1 rows x 5 columns]"
+2024-11-28 00:41:51,Add Reservation,Pimmada_4511,"{'Name': 'Pimmada_4511', 'Room': 'BSL-2', 'Equipments': 'BSC-1', 'Start_Time': datetime.datetime(2024, 11, 28, 9, 0), 'End_Time': datetime.datetime(2024, 11, 28, 11, 0)}"
