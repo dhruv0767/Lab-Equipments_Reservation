@@ -484,17 +484,17 @@
             "enabled": true
         },
         "PCR 16": {
-            "image": "PCR_16.jpeg",
+            "image": "PCR_16.jpg",
             "details": "T100 Thermal Cycler BIO RAD",
             "enabled": true
         },
         "PCR 17": {
-            "image": "PCR_17.jpeg",
+            "image": "PCR_17.jpg",
             "details": "T100 Thermal Cycler BIO RAD",
             "enabled": true
         },
         "PCR 18": {
-            "image": "PCR_18.jpeg",
+            "image": "PCR_18.jpg",
             "details": "T100 Thermal Cycler BIO RAD",
             "enabled": true
         },
