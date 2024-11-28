@@ -483,6 +483,21 @@
             "details": "T100 Thermal Cycler BIO RAD",
             "enabled": true
         },
+        "PCR 16": {
+            "image": "PCR_16.jpg",
+            "details": "T100 Thermal Cycler BIO RAD",
+            "enabled": true
+        },
+        "PCR 17": {
+            "image": "PCR_17.jpg",
+            "details": "T100 Thermal Cycler BIO RAD",
+            "enabled": true
+        },
+        "PCR 18": {
+            "image": "PCR_18.jpg",
+            "details": "T100 Thermal Cycler BIO RAD",
+            "enabled": true
+        },
         "Real Time PCR 1": {
             "image": "RT_PCR_1.jpg",
             "details": "CFX Connect Real Time System BIO RAD",
