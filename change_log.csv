@@ -5257,3 +5257,5 @@ Start_Time                                  2024-11-28 09:00:00
 End_Time                                    2024-11-28 11:00:00
 Name: 1504, dtype: object"
 2024-11-28 08:07:54,Add Reservation,Siriphattrarat_4511,"{'Name': 'Siriphattrarat_4511', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 4 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 11, 28, 10, 0), 'End_Time': datetime.datetime(2024, 11, 28, 12, 0)}"
+2024-11-28 09:05:00,Add Reservation,Yada_4507,"        Name          Room Equipments          Start_Time            End_Time
+0  Yada_4507  PCR Machines     PCR 15 2024-11-28 11:00:00 2024-11-28 14:00:00"
