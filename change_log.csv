@@ -5250,3 +5250,9 @@ Name: 1473, dtype: object"
 0  Phitchayatida_4511  PCR Machines  ... 2024-11-28 11:00:00 2024-11-28 14:00:00
 
 [1 rows x 5 columns]"
+2024-11-28 08:07:23,Delete Reservation,Siriphattrarat_4511,"Details: Name                                        Siriphattrarat_4511
+Room                                         Hallway, 6th floor
+Equipments    Autoclave 4 (Drain the water every 5 times aft...
+Start_Time                                  2024-11-28 09:00:00
+End_Time                                    2024-11-28 11:00:00
+Name: 1504, dtype: object"
