@@ -5335,3 +5335,4 @@ Name: 795, dtype: object"
 0  Napassorn_4505  PCR Machines  ... 2024-11-29 14:00:00 2024-11-29 17:00:00
 
 [1 rows x 5 columns]"
+2024-11-29 13:17:07,Add Reservation,Supanut_4612,"{'Name': 'Supanut_4612', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 4 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 11, 29, 13, 30), 'End_Time': datetime.datetime(2024, 11, 29, 15, 30)}"
