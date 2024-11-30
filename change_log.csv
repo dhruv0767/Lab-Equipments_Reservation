@@ -5341,3 +5341,4 @@ Name: 795, dtype: object"
 2024-11-29 14:58:44,Add Reservation,Pee_4507,"       Name          Room Equipments          Start_Time            End_Time
 0  Pee_4507  PCR Machines     PCR 11 2024-11-29 17:00:00 2024-11-29 20:00:00"
 2024-11-29 15:14:55,Add Reservation,Jirutchaya_4507,"{'Name': 'Jirutchaya_4507', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave For Waste (Drain the water everytime after using)', 'Start_Time': datetime.datetime(2024, 11, 29, 15, 30), 'End_Time': datetime.datetime(2024, 11, 29, 17, 0)}"
+2024-11-30 08:37:25,Add Reservation,Chanikarn_4511,"{'Name': 'Chanikarn_4511', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Refrigerated Centrifuge 1', 'Start_Time': datetime.datetime(2024, 11, 30, 9, 0), 'End_Time': datetime.datetime(2024, 11, 30, 15, 0)}"
