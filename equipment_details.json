@@ -54,7 +54,7 @@
             "details": "HICLAVE HV-85II",
             "enabled": true
         },
-        "Autoclave 3": {
+        "Autoclave 3 (Drain the water every 5 times after using)": {
             "image": "Autoclave_3.jpg",
             "details": "SX-700 TOMY",
             "enabled": true
