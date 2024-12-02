@@ -5419,3 +5419,4 @@ Name: 1523, dtype: object"
 0  Pornchanok_4507  PCR Machines  ... 2024-12-02 14:00:00 2024-12-02 17:00:00
 
 [1 rows x 5 columns]"
+2024-12-02 11:32:21,Add Reservation,Fah_4606,"{'Name': 'Fah_4606', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Digital Dry Bath 2', 'Start_Time': datetime.datetime(2024, 12, 2, 12, 15), 'End_Time': datetime.datetime(2024, 12, 2, 13, 15)}"
