@@ -802,41 +802,41 @@ if mobile:
 
                                 save_data(df_non_pcr_buffer, NON_PCR_FILE_PATH)
 
-                                # Handle autoclave usage counting
+                                # # Handle autoclave usage counting
 
-                                if selected_equipment in ['Autoclave 1 (Drain the water every 5 times after using)',
+                                # if selected_equipment in ['Autoclave 1 (Drain the water every 5 times after using)',
 
-                                                          'Autoclave 2 (Drain the water every 5 times after using)']:
+                                #                           'Autoclave 2 (Drain the water every 5 times after using)']:
 
-                                    autoclaves_count = load_data(AUTOCLAVES_PATH)
+                                #     autoclaves_count = load_data(AUTOCLAVES_PATH)
 
-                                    current_count = len(
-                                        autoclaves_count[autoclaves_count['Counts'] == selected_equipment])
+                                #     current_count = len(
+                                #         autoclaves_count[autoclaves_count['Counts'] == selected_equipment])
 
-                                    new_count = current_count + 1
+                                #     new_count = current_count + 1
 
-                                    if new_count >= 5:
+                                #     if new_count >= 5:
 
-                                        st.info(
-                                            "You are the fifth user of this autoclave. Please remember to drain the water after using it.")
+                                #         st.info(
+                                #             "You are the fifth user of this autoclave. Please remember to drain the water after using it.")
 
-                                        autoclaves_count = autoclaves_count.drop(
-                                            autoclaves_count[autoclaves_count['Counts'] == selected_equipment].index)
+                                #         autoclaves_count = autoclaves_count.drop(
+                                #             autoclaves_count[autoclaves_count['Counts'] == selected_equipment].index)
 
-                                        save_data(autoclaves_count, AUTOCLAVES_PATH)
+                                #         save_data(autoclaves_count, AUTOCLAVES_PATH)
 
-                                    else:
+                                #     else:
 
-                                        st.info(f"You are the {new_count} user of this autoclave.")
+                                #         st.info(f"You are the {new_count} user of this autoclave.")
 
-                                        counts = {'Counts': selected_equipment}
+                                #         counts = {'Counts': selected_equipment}
 
-                                        counts_df = pd.DataFrame([counts])
+                                #         counts_df = pd.DataFrame([counts])
 
-                                        autoclaves_count_buffer = pd.concat([autoclaves_count, counts_df],
-                                                                            ignore_index=True)
+                                #         autoclaves_count_buffer = pd.concat([autoclaves_count, counts_df],
+                                #                                             ignore_index=True)
 
-                                        save_data(autoclaves_count_buffer, AUTOCLAVES_PATH)
+                                #         save_data(autoclaves_count_buffer, AUTOCLAVES_PATH)
 
                                 log_action("Add Reservation", st.session_state["name"], new_reservation)
 
@@ -1362,41 +1362,41 @@ else:
 
                                 save_data(df_non_pcr_buffer, NON_PCR_FILE_PATH)
 
-                                # Handle autoclave usage counting
+                                # # Handle autoclave usage counting
 
-                                if selected_equipment in ['Autoclave 1 (Drain the water every 5 times after using)',
+                                # if selected_equipment in ['Autoclave 1 (Drain the water every 5 times after using)',
 
-                                                          'Autoclave 2 (Drain the water every 5 times after using)']:
+                                #                           'Autoclave 2 (Drain the water every 5 times after using)']:
 
-                                    autoclaves_count = load_data(AUTOCLAVES_PATH)
+                                #     autoclaves_count = load_data(AUTOCLAVES_PATH)
 
-                                    current_count = len(
-                                        autoclaves_count[autoclaves_count['Counts'] == selected_equipment])
+                                #     current_count = len(
+                                #         autoclaves_count[autoclaves_count['Counts'] == selected_equipment])
 
-                                    new_count = current_count + 1
+                                #     new_count = current_count + 1
 
-                                    if new_count >= 5:
+                                #     if new_count >= 5:
 
-                                        st.info(
-                                            "You are the fifth user of this autoclave. Please remember to drain the water after using it.")
+                                #         st.info(
+                                #             "You are the fifth user of this autoclave. Please remember to drain the water after using it.")
 
-                                        autoclaves_count = autoclaves_count.drop(
-                                            autoclaves_count[autoclaves_count['Counts'] == selected_equipment].index)
+                                #         autoclaves_count = autoclaves_count.drop(
+                                #             autoclaves_count[autoclaves_count['Counts'] == selected_equipment].index)
 
-                                        save_data(autoclaves_count, AUTOCLAVES_PATH)
+                                #         save_data(autoclaves_count, AUTOCLAVES_PATH)
 
-                                    else:
+                                #     else:
 
-                                        st.info(f"You are the {new_count} user of this autoclave.")
+                                #         st.info(f"You are the {new_count} user of this autoclave.")
 
-                                        counts = {'Counts': selected_equipment}
+                                #         counts = {'Counts': selected_equipment}
 
-                                        counts_df = pd.DataFrame([counts])
+                                #         counts_df = pd.DataFrame([counts])
 
-                                        autoclaves_count_buffer = pd.concat([autoclaves_count, counts_df],
-                                                                            ignore_index=True)
+                                #         autoclaves_count_buffer = pd.concat([autoclaves_count, counts_df],
+                                #                                             ignore_index=True)
 
-                                        save_data(autoclaves_count_buffer, AUTOCLAVES_PATH)
+                                #         save_data(autoclaves_count_buffer, AUTOCLAVES_PATH)
 
                                 log_action("Add Reservation", st.session_state["name"],new_reservation)
                                 st.success(
@@ -1592,23 +1592,23 @@ else:
                     except Exception as e:
                         st.error(f"Error updating reservation: {e}")
 
-                # Update autoclaves count
-                st.write("#### Update Autoclaves Count")
-                autoclave_options = ["Autoclave 1 (Drain the water every 5 times after using)",
-                                     "Autoclave 2 (Drain the water every 5 times after using)"]
-                selected_autoclave = st.selectbox("Select Autoclave", autoclave_options)
-                new_count = st.number_input("New Count", min_value=0, step=1)
+                # # Update autoclaves count
+                # st.write("#### Update Autoclaves Count")
+                # autoclave_options = ["Autoclave 1 (Drain the water every 5 times after using)",
+                #                      "Autoclave 2 (Drain the water every 5 times after using)"]
+                # selected_autoclave = st.selectbox("Select Autoclave", autoclave_options)
+                # new_count = st.number_input("New Count", min_value=0, step=1)
 
-                if st.button("Update Autoclave Count"):
-                    try:
-                        autoclaves_count = load_data(AUTOCLAVES_PATH)
-                        autoclaves_count = autoclaves_count[autoclaves_count['Counts'] != selected_autoclave]
-                        new_entries = pd.DataFrame([{'Counts': selected_autoclave}] * new_count)
-                        autoclaves_count = pd.concat([autoclaves_count, new_entries], ignore_index=True)
-                        save_data(autoclaves_count, AUTOCLAVES_PATH)
-                        st.success(f"{selected_autoclave} count updated successfully.")
-                    except Exception as e:
-                        st.error(f"Error updating autoclave count: {e}")
+                # if st.button("Update Autoclave Count"):
+                #     try:
+                #         autoclaves_count = load_data(AUTOCLAVES_PATH)
+                #         autoclaves_count = autoclaves_count[autoclaves_count['Counts'] != selected_autoclave]
+                #         new_entries = pd.DataFrame([{'Counts': selected_autoclave}] * new_count)
+                #         autoclaves_count = pd.concat([autoclaves_count, new_entries], ignore_index=True)
+                #         save_data(autoclaves_count, AUTOCLAVES_PATH)
+                #         st.success(f"{selected_autoclave} count updated successfully.")
+                #     except Exception as e:
+                #         st.error(f"Error updating autoclave count: {e}")
 
                 # Equipment Availability
                 st.write("### Equipment Availability")
