@@ -5364,3 +5364,5 @@ Name: 795, dtype: object"
 2024-12-02 09:53:25,Add Reservation,chomphoonut_4607,"{'Name': 'chomphoonut_4607', 'Room': 'Central Lab, 6th floor', 'Equipments': 'pH Meter 2', 'Start_Time': datetime.datetime(2024, 12, 2, 10, 0), 'End_Time': datetime.datetime(2024, 12, 2, 10, 30)}"
 2024-12-02 09:58:26,Add Reservation,Leela_4606,"         Name          Room Equipments          Start_Time            End_Time
 0  Leela_4606  PCR Machines     PCR 12 2024-12-02 11:00:00 2024-12-02 14:00:00"
+2024-12-02 09:58:40,Add Reservation,Leela_4606,"         Name          Room Equipments          Start_Time            End_Time
+0  Leela_4606  PCR Machines     PCR 13 2024-12-02 11:00:00 2024-12-02 14:00:00"
