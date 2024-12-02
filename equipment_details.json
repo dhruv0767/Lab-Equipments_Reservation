@@ -59,14 +59,14 @@
             "details": "SX-700 TOMY",
             "enabled": true
         },
-        "Autoclave For Waste (Drain the water everytime after using)": {
-            "image": "Autoclave_Waste.jpg",
-            "details": "SX-700 TOMY",
-            "enabled": true
-        },
         "Autoclave 4 (Drain the water every 5 times after using)": {
             "image": "Autoclave_4.jpg",
             "details": "SX-700E TOMY",
+            "enabled": true
+        },
+        "Autoclave For Waste (Drain the water everytime after using)": {
+            "image": "Autoclave_Waste.jpg",
+            "details": "SX-700 TOMY",
             "enabled": true
         },
         "Isotemp Oven": {
