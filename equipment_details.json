@@ -54,8 +54,13 @@
             "details": "HICLAVE HV-85II",
             "enabled": true
         },
-        "Autoclave For Waste (Drain the water everytime after using)": {
+        "Autoclave 3": {
             "image": "Autoclave_3.jpg",
+            "details": "SX-700 TOMY",
+            "enabled": true
+        },
+        "Autoclave For Waste (Drain the water everytime after using)": {
+            "image": "Autoclave_Waste.jpg",
             "details": "SX-700 TOMY",
             "enabled": true
         },
