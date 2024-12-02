@@ -5393,3 +5393,9 @@ End_Time                                    2024-12-03 03:00:00
 Name: 1523, dtype: object"
 2024-12-02 11:05:45,Add Reservation,Yanawat_4511,"{'Name': 'Yanawat_4511', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 3 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 12, 3, 0, 0), 'End_Time': datetime.datetime(2024, 12, 3, 3, 0)}"
 2024-12-02 11:11:42,Add Reservation,Yanawat_4511,"{'Name': 'Yanawat_4511', 'Room': 'Hallway, 6th floor', 'Equipments': 'Autoclave 1 (Drain the water every 5 times after using)', 'Start_Time': datetime.datetime(2024, 12, 3, 0, 0), 'End_Time': datetime.datetime(2024, 12, 3, 3, 0)}"
+2024-12-02 11:11:50,Delete Reservation,Yanawat_4511,"Details: Name                                               Yanawat_4511
+Room                                         Hallway, 6th floor
+Equipments    Autoclave 3 (Drain the water every 5 times aft...
+Start_Time                                  2024-12-03 00:00:00
+End_Time                                    2024-12-03 03:00:00
+Name: 1523, dtype: object"
