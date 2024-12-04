@@ -5502,3 +5502,4 @@ Name: 830, dtype: object"
 0  Siriphattrarat_4511  PCR Machines  ... 2024-12-04 11:00:00 2024-12-04 14:00:00
 
 [1 rows x 5 columns]"
+2024-12-04 12:29:13,Add Reservation,Thanathip_4505,"{'Name': 'Thanathip_4505', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 2', 'Start_Time': datetime.datetime(2024, 12, 4, 15, 30), 'End_Time': datetime.datetime(2024, 12, 4, 23, 45)}"
