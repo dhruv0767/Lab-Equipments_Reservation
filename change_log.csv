@@ -5539,3 +5539,4 @@ Equipments              Water Bath 1
 Start_Time       2024-12-04 16:00:00
 End_Time         2024-12-04 17:00:00
 Name: 1537, dtype: object"
+2024-12-04 16:32:24,Add Reservation,Danthai_4606,"{'Name': 'Danthai_4606', 'Room': 'Central Lab, 6th floor', 'Equipments': 'Heat Block', 'Start_Time': datetime.datetime(2024, 12, 4, 16, 45), 'End_Time': datetime.datetime(2024, 12, 4, 18, 0)}"
