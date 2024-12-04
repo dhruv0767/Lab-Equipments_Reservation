@@ -5522,3 +5522,9 @@ Name: 830, dtype: object"
 0  Siriphattrarat_4511  PCR Machines  ... 2024-12-05 11:00:00 2024-12-05 14:00:00
 
 [1 rows x 5 columns]"
+2024-12-04 14:59:54,Delete Reservation,Danthai_4606,"Details: Name                    Danthai_4606
+Room          Central Lab, 6th floor
+Equipments                 Fume Hood
+Start_Time       2024-12-04 16:00:00
+End_Time         2024-12-04 20:00:00
+Name: 1537, dtype: object"
