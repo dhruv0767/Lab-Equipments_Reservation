@@ -5482,3 +5482,9 @@ Name: 1513, dtype: object"
 0  Narumon_4511  PCR Machines  ... 2024-12-04 14:00:00 2024-12-04 17:00:00
 
 [1 rows x 5 columns]"
+2024-12-04 08:41:25,Delete Reservation,Pawida_4606,"Details: Name                  Pawida_4606
+Room                 PCR Machines
+Equipments                 PCR 14
+Start_Time    2024-12-04 08:00:00
+End_Time      2024-12-04 11:00:00
+Name: 830, dtype: object"
