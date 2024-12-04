@@ -5490,3 +5490,5 @@ End_Time      2024-12-04 11:00:00
 Name: 830, dtype: object"
 2024-12-04 09:13:12,Add Reservation,Leela_4606,"         Name          Room Equipments          Start_Time            End_Time
 0  Leela_4606  PCR Machines     PCR 11 2024-12-04 11:00:00 2024-12-04 14:00:00"
+2024-12-04 09:13:31,Add Reservation,Leela_4606,"         Name          Room Equipments          Start_Time            End_Time
+0  Leela_4606  PCR Machines     PCR 12 2024-12-04 11:00:00 2024-12-04 14:00:00"
