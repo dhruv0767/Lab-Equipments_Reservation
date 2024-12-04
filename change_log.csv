@@ -5533,3 +5533,9 @@ Name: 1537, dtype: object"
 2024-12-04 15:40:40,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 12, 8, 0, 0), 'End_Time': datetime.datetime(2024, 12, 8, 23, 45)}"
 2024-12-04 15:40:46,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 12, 9, 0, 0), 'End_Time': datetime.datetime(2024, 12, 9, 23, 45)}"
 2024-12-04 15:41:27,Add Reservation,Dechaphon_4612,"{'Name': 'Dechaphon_4612', 'Room': 'Central Lab, 5th floor', 'Equipments': 'Incubator Shaker 1', 'Start_Time': datetime.datetime(2024, 12, 10, 0, 0), 'End_Time': datetime.datetime(2024, 12, 10, 23, 45)}"
+2024-12-04 16:29:34,Delete Reservation,Danthai_4606,"Details: Name                    Danthai_4606
+Room          Central Lab, 6th floor
+Equipments              Water Bath 1
+Start_Time       2024-12-04 16:00:00
+End_Time         2024-12-04 17:00:00
+Name: 1537, dtype: object"
