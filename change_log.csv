@@ -5496,3 +5496,5 @@ Name: 830, dtype: object"
 0  Tanatad_4606  PCR Machines  ... 2024-12-04 11:00:00 2024-12-04 14:00:00
 
 [1 rows x 5 columns]"
+2024-12-04 10:29:42,Add Reservation,Fah_4606,"       Name          Room Equipments          Start_Time            End_Time
+0  Fah_4606  PCR Machines     PCR 14 2024-12-04 11:00:00 2024-12-04 14:00:00"
